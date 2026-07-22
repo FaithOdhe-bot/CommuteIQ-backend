@@ -1,0 +1,24 @@
+{
+  "_comment": "Copy this file and edit it to match your CSV columns. Then pass it with --schema my_schema.json",
+
+  "mode": "driving",
+  "city": "accra",
+
+  "columns": {
+    "distance_km":     "Road Length (km)",
+    "travel_time_min": "Travel Time (min)",
+    "congestion_enc":  "Congestion Level",
+    "weather_enc":     "Weather",
+    "alternatives":    "Alternative Routes"
+  },
+
+  "_notes": {
+    "distance_km":     "REQUIRED. Column containing road/route distance in kilometres.",
+    "travel_time_min": "REQUIRED. Column containing travel time in minutes.",
+    "congestion_enc":  "OPTIONAL. If text, values must be: Low / Medium / High. If missing, defaults to Medium.",
+    "weather_enc":     "OPTIONAL. If text, values must be: Clear / Cloudy / Foggy / Rainy. If missing, defaults to Clear.",
+    "alternatives":    "OPTIONAL. Number of alternative routes. If missing, defaults to 2.",
+    "mode":            "Transport mode for this dataset: driving / matatu / danfo / boda / walking / rideshare",
+    "city":            "City name — used in dataset summary and future per-city model splits"
+  }
+}
