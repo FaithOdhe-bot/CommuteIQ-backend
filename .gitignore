@@ -1,0 +1,12 @@
+# Model files — regenerate with train_models.py
+models/*.pkl
+
+# Data files
+data/*.csv
+data/*.zip
+
+# Environment
+.env
+.env.local
+__pycache__/
+*.pyc
