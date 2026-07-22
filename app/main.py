@@ -1,5 +1,5 @@
 """
-SmartCommute AI — FastAPI Backend
+CommuteIQ — FastAPI Backend
 main.py
 
 Endpoints:
@@ -30,7 +30,7 @@ from storage import save_report, list_reports
 # ── App setup ────────────────────────────────────────────────────────────────
 
 app = FastAPI(
-    title="SmartCommute AI",
+    title="CommuteIQ",
     description="Community-powered AI mobility assistant for African cities",
     version="1.0.0",
 )
@@ -46,7 +46,7 @@ app.add_middleware(
 
 # ── Load ML models at startup ─────────────────────────────────────────────────
 
-MODELS_DIR = Path(__file__).parent / "models"
+MODELS_DIR = Path(__file__).parent.parent / "models"
 
 def load_models():
     """Load pkl files. Fail loudly so you know immediately if paths are wrong."""
