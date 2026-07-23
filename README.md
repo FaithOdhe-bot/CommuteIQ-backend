@@ -1,7 +1,7 @@
 # 🚗 CommuteIQ — Backend
 
 > **Community-powered AI mobility assistant for African cities.**  
-> Built for the Girls in STEM Hackathon.
+> Built for the Girls in STEM Hackathon
 
 CommuteIQ combines ML travel time prediction, real African crash data safety scoring, live weather, and community-powered road reports to generate **personalized, AI-explained commute decisions** — built specifically for Lagos and Nairobi commuters.
 
@@ -10,7 +10,7 @@ CommuteIQ combines ML travel time prediction, real African crash data safety sco
 ## 🗂️ Project Structure
 
 ```
-smartcommute-backend/
+commuteiq-backend/
 ├── app/
 │   ├── __init__.py
 │   ├── main.py                   # FastAPI app — all endpoints
