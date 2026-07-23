@@ -1,0 +1,897 @@
+Source,Destination,Road Length (km),Congestion Level,Average Speed (km/h),Travel Time (min),Weather,Alternative Routes,Suitability Score
+Lagos,Kaduna,772.2622439999999,Low,92.37,501.65,Cloudy,2,5.76
+Lagos,Kano,989.642155,Medium,90.9,653.26,Rainy,2,4.79
+Port Harcourt,Jos,749.665038,Medium,72.01,624.64,Foggy,0,3.21
+Jos,Benin City,694.3199649999999,Medium,74.94,555.87,Cloudy,2,8.48
+Lagos,Enugu,558.684404,Low,82.89,404.41,Clear,1,3.93
+Benin City,Port Harcourt,285.48321799999997,Medium,62.39,274.55,Cloudy,0,8.87
+Port Harcourt,Kano,1035.643893,Medium,76.82,808.93,Cloudy,3,8.2
+Jos,Abuja,232.62361199999998,High,64.08,217.8,Rainy,1,8.5
+Benin City,Jos,694.722628,High,75.52,551.95,Foggy,0,4.64
+Jos,Ibadan,831.543971,High,82.63,603.83,Foggy,2,3.82
+Abuja,Ibadan,621.453446,High,89.57,416.3,Foggy,2,5.51
+Ibadan,Kano,863.3503129999999,Medium,89.04,581.74,Clear,1,9.27
+Abuja,Kano,422.73338,Medium,78.67,322.4,Foggy,1,5.8
+Kano,Kaduna,236.466712,Medium,78.23,181.36,Cloudy,0,3.48
+Jos,Benin City,694.3199649999999,Low,74.94,555.87,Foggy,2,8.72
+Jos,Port Harcourt,756.550337,High,72.67,624.63,Rainy,1,4.3
+Ibadan,Kano,863.3503129999999,High,89.04,581.74,Foggy,2,9.05
+Abuja,Enugu,365.950705,Low,64.12,342.42,Foggy,1,4.1
+Benin City,Ibadan,288.223862,Low,77.21,223.98,Foggy,1,4.75
+Benin City,Ibadan,288.223862,High,77.21,223.98,Cloudy,2,5.51
+Kano,Kaduna,236.466712,Low,78.23,181.36,Rainy,1,1.01
+Port Harcourt,Enugu,234.03965599999998,Low,75.18,186.79,Cloudy,3,8.06
+Enugu,Ibadan,531.74483,Low,78.51,406.38,Cloudy,3,1.22
+Kaduna,Ibadan,649.7918880000001,Low,90.41,431.24,Foggy,1,5.04
+Kano,Kaduna,236.466712,Low,78.23,181.36,Cloudy,1,6.48
+Kano,Benin City,837.512468,High,80.9,621.12,Rainy,3,7.0
+Port Harcourt,Lagos,602.375745,Low,72.79,496.52,Clear,0,2.61
+Enugu,Kano,800.2986940000001,Medium,76.33,629.07,Cloudy,2,5.83
+Benin City,Abuja,460.432114,High,79.74,346.47,Foggy,3,4.08
+Port Harcourt,Enugu,234.03965599999998,High,75.18,186.79,Cloudy,2,8.84
+Port Harcourt,Kano,1035.643893,Low,76.82,808.93,Rainy,1,7.85
+Benin City,Jos,694.722628,Medium,75.52,551.95,Clear,3,7.4
+Jos,Port Harcourt,756.550337,Medium,72.67,624.63,Clear,3,6.46
+Jos,Benin City,694.3199649999999,Low,74.94,555.87,Cloudy,3,3.71
+Ibadan,Port Harcourt,573.254762,High,69.16,497.31,Rainy,1,3.2
+Lagos,Jos,957.130399,Medium,84.88,676.55,Clear,1,6.1
+Benin City,Ibadan,288.223862,High,77.21,223.98,Cloudy,1,7.39
+Ibadan,Kano,863.3503129999999,Medium,89.04,581.74,Foggy,0,1.35
+Lagos,Abuja,743.5049889999999,Low,91.03,490.07,Rainy,3,4.57
+Port Harcourt,Lagos,602.375745,Low,72.79,496.52,Foggy,3,4.09
+Benin City,Port Harcourt,285.48321799999997,High,62.39,274.55,Clear,2,4.38
+Abuja,Benin City,466.008375,High,80.1,349.05,Rainy,2,5.69
+Kaduna,Jos,279.96749200000005,Low,81.62,205.82,Clear,2,8.44
+Port Harcourt,Benin City,286.647561,Medium,61.95,277.63,Foggy,0,2.46
+Abuja,Jos,233.943249,High,64.72,216.89,Cloudy,1,7.64
+Kano,Enugu,801.3729229999999,Low,76.41,629.28,Clear,3,1.79
+Kaduna,Abuja,195.514772,Medium,73.89,158.76,Rainy,1,8.47
+Enugu,Kano,800.2986940000001,Low,76.33,629.07,Foggy,2,2.52
+Abuja,Kano,422.73338,High,78.67,322.4,Cloudy,2,9.1
+Kaduna,Kano,235.727685,Medium,79.12,178.76,Rainy,1,7.96
+Ibadan,Port Harcourt,573.254762,Medium,69.16,497.31,Cloudy,2,3.46
+Abuja,Enugu,365.950705,Low,64.12,342.42,Rainy,3,5.91
+Enugu,Port Harcourt,236.16038,Low,74.19,190.99,Rainy,0,6.44
+Port Harcourt,Lagos,602.375745,Low,72.79,496.52,Rainy,0,8.4
+Kano,Ibadan,865.3527290000001,Low,88.78,584.82,Rainy,2,8.17
+Kano,Lagos,992.0745420000001,High,90.67,656.51,Cloudy,2,1.81
+Enugu,Lagos,559.54563,Low,83.3,403.02,Rainy,2,1.79
+Kaduna,Lagos,776.5137,High,92.64,502.93,Cloudy,2,2.21
+Benin City,Abuja,460.432114,High,79.74,346.47,Foggy,3,5.28
+Kano,Enugu,801.3729229999999,High,76.41,629.28,Clear,1,5.46
+Lagos,Abuja,743.5049889999999,High,91.03,490.07,Foggy,0,2.99
+Enugu,Lagos,559.54563,Low,83.3,403.02,Cloudy,2,1.46
+Port Harcourt,Benin City,286.647561,High,61.95,277.63,Cloudy,2,9.82
+Abuja,Kano,422.73338,Medium,78.67,322.4,Rainy,3,2.12
+Benin City,Ibadan,288.223862,Low,77.21,223.98,Clear,1,3.21
+Ibadan,Benin City,288.971264,High,76.78,225.81,Rainy,3,5.32
+Jos,Benin City,694.3199649999999,Low,74.94,555.87,Foggy,2,5.39
+Benin City,Port Harcourt,285.48321799999997,High,62.39,274.55,Clear,2,2.24
+Enugu,Kaduna,567.6790520000001,Low,74.09,459.74,Rainy,3,4.48
+Lagos,Jos,957.130399,Medium,84.88,676.55,Clear,1,3.75
+Benin City,Abuja,460.432114,High,79.74,346.47,Foggy,3,7.95
+Lagos,Ibadan,129.681812,Medium,98.72,78.82,Cloudy,1,7.21
+Abuja,Enugu,365.950705,Low,64.12,342.42,Clear,1,2.27
+Enugu,Ibadan,531.74483,Low,78.51,406.38,Foggy,3,9.04
+Jos,Lagos,958.265783,High,85.11,675.52,Foggy,1,1.13
+Ibadan,Enugu,533.282679,Low,78.12,409.57,Clear,0,2.85
+Kano,Port Harcourt,1040.284478,Low,77.05,810.08,Clear,2,1.37
+Abuja,Lagos,748.175259,Medium,91.99,487.99,Foggy,2,5.5
+Ibadan,Abuja,617.213147,Low,88.48,418.55,Clear,0,9.97
+Kaduna,Benin City,604.258093,Medium,80.69,449.32,Cloudy,0,3.03
+Kaduna,Jos,279.96749200000005,High,81.62,205.82,Rainy,3,1.69
+Abuja,Kano,422.73338,Medium,78.67,322.4,Cloudy,3,5.51
+Enugu,Benin City,248.853819,High,74.33,200.88,Cloudy,3,3.67
+Abuja,Jos,233.943249,Medium,64.72,216.89,Cloudy,3,3.46
+Ibadan,Benin City,288.971264,High,76.78,225.81,Foggy,0,5.15
+Enugu,Abuja,368.41768,Low,63.91,345.87,Clear,0,4.11
+Ibadan,Lagos,130.81879700000002,Low,97.79,80.27,Cloudy,0,3.56
+Lagos,Benin City,314.372988,Low,85.49,220.65,Rainy,3,8.36
+Ibadan,Abuja,617.213147,Medium,88.48,418.55,Rainy,1,9.79
+Lagos,Benin City,314.372988,Medium,85.49,220.65,Cloudy,1,7.67
+Benin City,Kaduna,604.540681,Medium,81.45,445.34,Clear,3,2.35
+Kaduna,Enugu,568.118549,Medium,74.51,457.49,Cloudy,0,9.6
+Lagos,Port Harcourt,598.656487,High,72.99,492.15,Rainy,2,5.72
+Kano,Lagos,992.0745420000001,Medium,90.67,656.51,Rainy,3,6.11
+Abuja,Benin City,466.008375,High,80.1,349.05,Foggy,1,2.19
+Lagos,Benin City,314.372988,Medium,85.49,220.65,Clear,3,7.68
+Port Harcourt,Benin City,286.647561,High,61.95,277.63,Cloudy,0,1.19
+Benin City,Abuja,460.432114,Low,79.74,346.47,Clear,0,2.66
+Benin City,Ibadan,288.223862,Medium,77.21,223.98,Cloudy,3,8.35
+Kaduna,Lagos,776.5137,High,92.64,502.93,Clear,0,4.2
+Benin City,Kaduna,604.540681,High,81.45,445.34,Clear,0,1.08
+Kano,Kaduna,236.466712,High,78.23,181.36,Rainy,3,4.16
+Jos,Port Harcourt,756.550337,Medium,72.67,624.63,Rainy,1,9.77
+Enugu,Jos,515.719762,Low,70.61,438.21,Cloudy,1,1.82
+Jos,Kano,297.056731,Medium,65.73,271.15,Cloudy,3,2.16
+Benin City,Abuja,460.432114,Low,79.74,346.47,Rainy,0,8.67
+Abuja,Port Harcourt,606.982748,Low,68.85,528.96,Rainy,3,3.3
+Abuja,Kano,422.73338,Low,78.67,322.4,Foggy,2,5.22
+Benin City,Lagos,316.02466100000004,Low,85.94,220.63,Clear,0,4.54
+Abuja,Lagos,748.175259,Medium,91.99,487.99,Rainy,1,3.91
+Abuja,Enugu,365.950705,Low,64.12,342.42,Clear,1,8.66
+Port Harcourt,Benin City,286.647561,Medium,61.95,277.63,Foggy,3,8.85
+Lagos,Port Harcourt,598.656487,Low,72.99,492.15,Foggy,3,6.26
+Lagos,Jos,957.130399,Medium,84.88,676.55,Cloudy,0,2.44
+Port Harcourt,Benin City,286.647561,Medium,61.95,277.63,Rainy,0,4.77
+Kaduna,Abuja,195.514772,High,73.89,158.76,Clear,0,8.96
+Enugu,Jos,515.719762,Low,70.61,438.21,Foggy,1,3.18
+Port Harcourt,Lagos,602.375745,High,72.79,496.52,Rainy,1,6.27
+Abuja,Kano,422.73338,High,78.67,322.4,Foggy,1,1.35
+Kano,Ibadan,865.3527290000001,High,88.78,584.82,Cloudy,3,6.46
+Benin City,Kaduna,604.540681,Medium,81.45,445.34,Clear,2,2.02
+Kano,Lagos,992.0745420000001,High,90.67,656.51,Rainy,0,7.42
+Jos,Port Harcourt,756.550337,Medium,72.67,624.63,Foggy,0,2.45
+Lagos,Jos,957.130399,Medium,84.88,676.55,Cloudy,1,8.23
+Benin City,Lagos,316.02466100000004,High,85.94,220.63,Cloudy,0,1.71
+Kano,Jos,297.862866,Low,65.51,272.81,Rainy,1,3.27
+Kano,Benin City,837.512468,Low,80.9,621.12,Rainy,0,1.96
+Abuja,Lagos,748.175259,Medium,91.99,487.99,Cloudy,1,7.54
+Enugu,Kaduna,567.6790520000001,Low,74.09,459.74,Clear,0,6.36
+Jos,Ibadan,831.543971,Medium,82.63,603.83,Rainy,3,3.79
+Lagos,Ibadan,129.681812,High,98.72,78.82,Clear,1,7.24
+Ibadan,Benin City,288.971264,Low,76.78,225.81,Foggy,3,5.4
+Benin City,Enugu,247.974675,Low,75.47,197.15,Clear,2,9.76
+Kano,Port Harcourt,1040.284478,Medium,77.05,810.08,Rainy,1,9.62
+Jos,Kaduna,280.593707,Low,81.45,206.7,Foggy,2,1.67
+Port Harcourt,Enugu,234.03965599999998,Medium,75.18,186.79,Rainy,3,7.78
+Lagos,Jos,957.130399,Low,84.88,676.55,Foggy,3,1.78
+Benin City,Enugu,247.974675,High,75.47,197.15,Foggy,2,6.25
+Kano,Enugu,801.3729229999999,Low,76.41,629.28,Cloudy,3,4.08
+Benin City,Kano,837.1603240000001,Low,81.72,614.67,Cloudy,2,5.04
+Kano,Jos,297.862866,Low,65.51,272.81,Rainy,2,3.14
+Port Harcourt,Abuja,602.3629549999999,Low,67.9,532.3,Clear,2,1.32
+Kano,Jos,297.862866,Low,65.51,272.81,Rainy,2,6.5
+Kano,Jos,297.862866,Low,65.51,272.81,Cloudy,2,1.05
+Enugu,Ibadan,531.74483,Medium,78.51,406.38,Foggy,2,3.01
+Benin City,Kaduna,604.540681,Low,81.45,445.34,Clear,3,9.36
+Kaduna,Ibadan,649.7918880000001,Medium,90.41,431.24,Clear,3,8.2
+Lagos,Benin City,314.372988,High,85.49,220.65,Rainy,2,6.64
+Kano,Lagos,992.0745420000001,Medium,90.67,656.51,Cloudy,2,4.03
+Ibadan,Lagos,130.81879700000002,Medium,97.79,80.27,Rainy,2,6.83
+Jos,Kano,297.056731,Medium,65.73,271.15,Foggy,1,2.37
+Lagos,Enugu,558.684404,Low,82.89,404.41,Cloudy,2,6.94
+Lagos,Benin City,314.372988,Medium,85.49,220.65,Cloudy,1,8.53
+Port Harcourt,Enugu,234.03965599999998,High,75.18,186.79,Cloudy,1,2.93
+Abuja,Ibadan,621.453446,Low,89.57,416.3,Rainy,2,2.69
+Port Harcourt,Ibadan,574.574945,High,68.97,499.88,Cloudy,2,3.3
+Lagos,Benin City,314.372988,High,85.49,220.65,Foggy,3,3.37
+Jos,Enugu,515.518293,High,70.6,438.09,Foggy,2,1.31
+Jos,Abuja,232.62361199999998,Low,64.08,217.8,Clear,3,5.03
+Enugu,Port Harcourt,236.16038,Medium,74.19,190.99,Cloudy,0,6.19
+Jos,Kano,297.056731,Low,65.73,271.15,Rainy,3,4.81
+Abuja,Ibadan,621.453446,Low,89.57,416.3,Foggy,0,7.94
+Port Harcourt,Lagos,602.375745,High,72.79,496.52,Rainy,2,6.48
+Kaduna,Ibadan,649.7918880000001,High,90.41,431.24,Cloudy,0,2.63
+Port Harcourt,Jos,749.665038,Low,72.01,624.64,Clear,3,5.98
+Benin City,Port Harcourt,285.48321799999997,High,62.39,274.55,Clear,1,9.76
+Jos,Abuja,232.62361199999998,Medium,64.08,217.8,Rainy,3,9.65
+Enugu,Lagos,559.54563,High,83.3,403.02,Foggy,1,9.23
+Lagos,Abuja,743.5049889999999,Low,91.03,490.07,Clear,1,2.17
+Kano,Kaduna,236.466712,Low,78.23,181.36,Foggy,0,2.42
+Abuja,Kaduna,190.113738,Medium,74.52,153.07,Cloudy,1,5.8
+Abuja,Kaduna,190.113738,Medium,74.52,153.07,Cloudy,0,7.17
+Abuja,Lagos,748.175259,High,91.99,487.99,Clear,0,5.5
+Ibadan,Lagos,130.81879700000002,Low,97.79,80.27,Cloudy,0,6.49
+Port Harcourt,Enugu,234.03965599999998,Low,75.18,186.79,Foggy,3,5.57
+Enugu,Kaduna,567.6790520000001,Medium,74.09,459.74,Foggy,1,8.86
+Port Harcourt,Kaduna,803.024251,High,75.33,639.59,Cloudy,1,6.03
+Kaduna,Enugu,568.118549,Low,74.51,457.49,Clear,2,1.33
+Abuja,Enugu,365.950705,Medium,64.12,342.42,Clear,0,9.73
+Port Harcourt,Jos,749.665038,High,72.01,624.64,Cloudy,1,5.66
+Lagos,Enugu,558.684404,Medium,82.89,404.41,Cloudy,0,5.23
+Jos,Lagos,958.265783,Medium,85.11,675.52,Clear,2,9.11
+Jos,Abuja,232.62361199999998,High,64.08,217.8,Clear,3,5.42
+Ibadan,Benin City,288.971264,Low,76.78,225.81,Clear,2,8.74
+Enugu,Benin City,248.853819,High,74.33,200.88,Cloudy,0,3.67
+Jos,Ibadan,831.543971,Low,82.63,603.83,Clear,0,7.37
+Benin City,Kano,837.1603240000001,High,81.72,614.67,Clear,0,8.45
+Kaduna,Enugu,568.118549,Low,74.51,457.49,Rainy,2,3.62
+Jos,Lagos,958.265783,Low,85.11,675.52,Cloudy,3,3.88
+Port Harcourt,Abuja,602.3629549999999,High,67.9,532.3,Cloudy,1,4.28
+Lagos,Kaduna,772.2622439999999,High,92.37,501.65,Foggy,2,5.83
+Lagos,Kaduna,772.2622439999999,Medium,92.37,501.65,Clear,3,8.41
+Jos,Kano,297.056731,High,65.73,271.15,Cloudy,0,2.45
+Port Harcourt,Ibadan,574.574945,Low,68.97,499.88,Foggy,0,1.7
+Enugu,Kaduna,567.6790520000001,High,74.09,459.74,Foggy,2,8.97
+Lagos,Ibadan,129.681812,Medium,98.72,78.82,Rainy,1,4.32
+Kaduna,Jos,279.96749200000005,Medium,81.62,205.82,Foggy,0,3.56
+Port Harcourt,Enugu,234.03965599999998,Low,75.18,186.79,Rainy,2,3.31
+Lagos,Abuja,743.5049889999999,Low,91.03,490.07,Foggy,0,3.74
+Kano,Benin City,837.512468,Medium,80.9,621.12,Cloudy,0,6.14
+Benin City,Enugu,247.974675,High,75.47,197.15,Clear,3,4.06
+Kano,Jos,297.862866,Medium,65.51,272.81,Rainy,3,3.24
+Jos,Kaduna,280.593707,High,81.45,206.7,Clear,3,3.98
+Jos,Lagos,958.265783,Medium,85.11,675.52,Rainy,2,9.85
+Port Harcourt,Kaduna,803.024251,High,75.33,639.59,Clear,2,2.91
+Kano,Benin City,837.512468,High,80.9,621.12,Foggy,3,7.71
+Port Harcourt,Benin City,286.647561,Medium,61.95,277.63,Rainy,3,8.23
+Abuja,Port Harcourt,606.982748,Medium,68.85,528.96,Foggy,3,2.87
+Enugu,Ibadan,531.74483,High,78.51,406.38,Foggy,2,5.31
+Ibadan,Port Harcourt,573.254762,Medium,69.16,497.31,Rainy,1,2.26
+Enugu,Lagos,559.54563,Medium,83.3,403.02,Foggy,1,7.21
+Lagos,Port Harcourt,598.656487,Medium,72.99,492.15,Clear,3,4.97
+Kaduna,Ibadan,649.7918880000001,Low,90.41,431.24,Rainy,3,9.1
+Port Harcourt,Enugu,234.03965599999998,Low,75.18,186.79,Clear,3,1.25
+Jos,Kaduna,280.593707,Medium,81.45,206.7,Foggy,2,2.77
+Enugu,Kaduna,567.6790520000001,Medium,74.09,459.74,Rainy,2,7.08
+Benin City,Abuja,460.432114,Low,79.74,346.47,Cloudy,2,4.91
+Abuja,Port Harcourt,606.982748,Low,68.85,528.96,Clear,0,3.94
+Benin City,Enugu,247.974675,Low,75.47,197.15,Cloudy,1,6.92
+Jos,Enugu,515.518293,High,70.6,438.09,Clear,3,3.91
+Jos,Enugu,515.518293,High,70.6,438.09,Clear,0,9.06
+Jos,Enugu,515.518293,Low,70.6,438.09,Clear,3,3.46
+Kano,Jos,297.862866,High,65.51,272.81,Cloudy,0,9.55
+Port Harcourt,Enugu,234.03965599999998,High,75.18,186.79,Rainy,2,1.01
+Jos,Enugu,515.518293,Medium,70.6,438.09,Rainy,0,4.03
+Ibadan,Benin City,288.971264,Medium,76.78,225.81,Rainy,2,3.63
+Enugu,Jos,515.719762,High,70.61,438.21,Cloudy,2,9.37
+Abuja,Port Harcourt,606.982748,Low,68.85,528.96,Cloudy,0,3.36
+Kaduna,Benin City,604.258093,Low,80.69,449.32,Cloudy,0,9.6
+Ibadan,Benin City,288.971264,High,76.78,225.81,Foggy,1,9.48
+Port Harcourt,Kaduna,803.024251,Low,75.33,639.59,Cloudy,3,1.88
+Port Harcourt,Jos,749.665038,Low,72.01,624.64,Clear,1,5.76
+Abuja,Lagos,748.175259,Low,91.99,487.99,Clear,1,6.05
+Enugu,Ibadan,531.74483,Low,78.51,406.38,Rainy,2,9.35
+Kaduna,Jos,279.96749200000005,High,81.62,205.82,Cloudy,1,5.82
+Ibadan,Kaduna,645.970403,Low,90.11,430.13,Rainy,2,3.85
+Port Harcourt,Lagos,602.375745,Low,72.79,496.52,Cloudy,3,5.94
+Port Harcourt,Enugu,234.03965599999998,Low,75.18,186.79,Cloudy,2,1.52
+Lagos,Enugu,558.684404,High,82.89,404.41,Foggy,0,5.01
+Lagos,Kaduna,772.2622439999999,Medium,92.37,501.65,Cloudy,0,2.89
+Ibadan,Benin City,288.971264,Medium,76.78,225.81,Rainy,1,3.1
+Jos,Ibadan,831.543971,High,82.63,603.83,Rainy,1,8.94
+Port Harcourt,Kaduna,803.024251,Medium,75.33,639.59,Foggy,3,2.95
+Abuja,Enugu,365.950705,High,64.12,342.42,Foggy,2,5.69
+Jos,Kano,297.056731,Medium,65.73,271.15,Clear,2,7.13
+Kano,Kaduna,236.466712,Medium,78.23,181.36,Rainy,0,7.04
+Jos,Enugu,515.518293,Low,70.6,438.09,Cloudy,0,7.91
+Kano,Enugu,801.3729229999999,Medium,76.41,629.28,Rainy,2,2.15
+Enugu,Port Harcourt,236.16038,Low,74.19,190.99,Rainy,3,4.3
+Kaduna,Benin City,604.258093,High,80.69,449.32,Clear,3,8.52
+Port Harcourt,Jos,749.665038,Low,72.01,624.64,Cloudy,0,1.05
+Jos,Benin City,694.3199649999999,High,74.94,555.87,Clear,3,4.92
+Kano,Port Harcourt,1040.284478,Low,77.05,810.08,Rainy,1,8.36
+Jos,Port Harcourt,756.550337,Medium,72.67,624.63,Cloudy,0,8.04
+Kaduna,Port Harcourt,807.030104,Low,75.86,638.29,Clear,1,2.6
+Kano,Jos,297.862866,Medium,65.51,272.81,Cloudy,0,5.46
+Enugu,Ibadan,531.74483,High,78.51,406.38,Rainy,1,6.91
+Benin City,Port Harcourt,285.48321799999997,High,62.39,274.55,Foggy,3,5.1
+Abuja,Jos,233.943249,Medium,64.72,216.89,Foggy,3,2.26
+Enugu,Port Harcourt,236.16038,Low,74.19,190.99,Cloudy,2,7.2
+Benin City,Kaduna,604.540681,High,81.45,445.34,Rainy,3,7.46
+Kano,Kaduna,236.466712,High,78.23,181.36,Clear,2,3.29
+Enugu,Ibadan,531.74483,Low,78.51,406.38,Foggy,2,2.69
+Jos,Lagos,958.265783,Medium,85.11,675.52,Clear,3,9.62
+Kano,Benin City,837.512468,High,80.9,621.12,Rainy,3,1.31
+Enugu,Kano,800.2986940000001,Low,76.33,629.07,Clear,2,6.69
+Kano,Abuja,428.76914600000003,Low,77.83,330.56,Foggy,0,5.64
+Kaduna,Port Harcourt,807.030104,Low,75.86,638.29,Rainy,0,7.91
+Ibadan,Abuja,617.213147,High,88.48,418.55,Rainy,0,7.91
+Jos,Benin City,694.3199649999999,High,74.94,555.87,Clear,1,9.78
+Ibadan,Port Harcourt,573.254762,Low,69.16,497.31,Clear,0,9.5
+Kaduna,Ibadan,649.7918880000001,High,90.41,431.24,Clear,3,6.16
+Jos,Benin City,694.3199649999999,Medium,74.94,555.87,Rainy,3,2.17
+Kano,Benin City,837.512468,Medium,80.9,621.12,Clear,3,3.95
+Ibadan,Port Harcourt,573.254762,Low,69.16,497.31,Foggy,0,7.52
+Lagos,Kano,989.642155,Medium,90.9,653.26,Clear,3,9.23
+Kano,Jos,297.862866,Medium,65.51,272.81,Clear,2,5.36
+Enugu,Kano,800.2986940000001,Medium,76.33,629.07,Clear,2,6.49
+Kaduna,Abuja,195.514772,High,73.89,158.76,Cloudy,0,6.68
+Abuja,Jos,233.943249,Medium,64.72,216.89,Cloudy,3,8.79
+Port Harcourt,Benin City,286.647561,Low,61.95,277.63,Foggy,2,7.06
+Kaduna,Enugu,568.118549,Low,74.51,457.49,Cloudy,1,3.26
+Abuja,Kaduna,190.113738,High,74.52,153.07,Foggy,1,5.43
+Benin City,Jos,694.722628,High,75.52,551.95,Cloudy,3,4.9
+Port Harcourt,Kaduna,803.024251,Medium,75.33,639.59,Foggy,2,7.13
+Lagos,Enugu,558.684404,Low,82.89,404.41,Cloudy,3,7.8
+Abuja,Ibadan,621.453446,Medium,89.57,416.3,Foggy,2,1.59
+Kano,Lagos,992.0745420000001,Low,90.67,656.51,Rainy,2,3.31
+Abuja,Lagos,748.175259,Medium,91.99,487.99,Foggy,0,4.61
+Lagos,Jos,957.130399,Low,84.88,676.55,Foggy,3,6.73
+Ibadan,Kano,863.3503129999999,Medium,89.04,581.74,Clear,2,1.35
+Kano,Port Harcourt,1040.284478,Low,77.05,810.08,Foggy,3,9.64
+Kaduna,Kano,235.727685,High,79.12,178.76,Foggy,1,7.82
+Abuja,Port Harcourt,606.982748,High,68.85,528.96,Foggy,3,8.79
+Abuja,Ibadan,621.453446,Medium,89.57,416.3,Cloudy,1,8.95
+Ibadan,Kano,863.3503129999999,Medium,89.04,581.74,Clear,1,9.74
+Benin City,Kano,837.1603240000001,High,81.72,614.67,Rainy,2,3.86
+Lagos,Ibadan,129.681812,Low,98.72,78.82,Clear,3,3.89
+Enugu,Benin City,248.853819,Low,74.33,200.88,Foggy,1,1.74
+Ibadan,Enugu,533.282679,High,78.12,409.57,Rainy,3,3.88
+Kano,Enugu,801.3729229999999,High,76.41,629.28,Cloudy,1,5.53
+Kano,Enugu,801.3729229999999,High,76.41,629.28,Foggy,3,5.63
+Benin City,Port Harcourt,285.48321799999997,High,62.39,274.55,Rainy,2,5.38
+Lagos,Ibadan,129.681812,Low,98.72,78.82,Clear,1,2.48
+Port Harcourt,Jos,749.665038,High,72.01,624.64,Cloudy,2,9.26
+Lagos,Kano,989.642155,Low,90.9,653.26,Rainy,0,1.59
+Enugu,Benin City,248.853819,High,74.33,200.88,Rainy,2,6.93
+Kaduna,Lagos,776.5137,High,92.64,502.93,Cloudy,1,6.74
+Benin City,Lagos,316.02466100000004,Medium,85.94,220.63,Rainy,1,1.39
+Kano,Enugu,801.3729229999999,High,76.41,629.28,Rainy,1,5.86
+Lagos,Ibadan,129.681812,Medium,98.72,78.82,Clear,3,9.38
+Kaduna,Port Harcourt,807.030104,High,75.86,638.29,Cloudy,1,5.62
+Jos,Kaduna,280.593707,High,81.45,206.7,Foggy,3,9.67
+Kaduna,Ibadan,649.7918880000001,Medium,90.41,431.24,Cloudy,1,1.63
+Enugu,Kaduna,567.6790520000001,Low,74.09,459.74,Cloudy,3,8.41
+Kano,Benin City,837.512468,Medium,80.9,621.12,Rainy,1,2.96
+Ibadan,Lagos,130.81879700000002,High,97.79,80.27,Clear,2,3.82
+Abuja,Lagos,748.175259,High,91.99,487.99,Foggy,2,1.46
+Abuja,Ibadan,621.453446,Low,89.57,416.3,Foggy,0,4.31
+Lagos,Enugu,558.684404,Low,82.89,404.41,Foggy,0,9.61
+Port Harcourt,Abuja,602.3629549999999,High,67.9,532.3,Cloudy,2,8.26
+Benin City,Enugu,247.974675,High,75.47,197.15,Clear,3,1.47
+Lagos,Jos,957.130399,High,84.88,676.55,Cloudy,2,9.77
+Lagos,Port Harcourt,598.656487,High,72.99,492.15,Foggy,1,2.84
+Ibadan,Abuja,617.213147,Low,88.48,418.55,Clear,1,7.07
+Port Harcourt,Ibadan,574.574945,Medium,68.97,499.88,Clear,3,6.24
+Kaduna,Kano,235.727685,High,79.12,178.76,Cloudy,2,7.37
+Abuja,Benin City,466.008375,Medium,80.1,349.05,Clear,1,3.57
+Kano,Ibadan,865.3527290000001,High,88.78,584.82,Rainy,1,3.49
+Kano,Lagos,992.0745420000001,Low,90.67,656.51,Foggy,3,5.75
+Kano,Enugu,801.3729229999999,Medium,76.41,629.28,Rainy,0,2.05
+Kano,Abuja,428.76914600000003,High,77.83,330.56,Foggy,1,3.53
+Kano,Kaduna,236.466712,Medium,78.23,181.36,Rainy,1,1.2
+Jos,Ibadan,831.543971,High,82.63,603.83,Rainy,3,4.69
+Abuja,Enugu,365.950705,Medium,64.12,342.42,Clear,0,3.43
+Abuja,Ibadan,621.453446,Low,89.57,416.3,Rainy,1,8.46
+Enugu,Port Harcourt,236.16038,Low,74.19,190.99,Rainy,3,8.49
+Port Harcourt,Kano,1035.643893,Low,76.82,808.93,Rainy,1,5.03
+Kano,Enugu,801.3729229999999,Medium,76.41,629.28,Cloudy,0,1.98
+Kaduna,Jos,279.96749200000005,Low,81.62,205.82,Clear,0,3.94
+Ibadan,Kano,863.3503129999999,Medium,89.04,581.74,Cloudy,3,9.26
+Ibadan,Kaduna,645.970403,Low,90.11,430.13,Rainy,2,2.81
+Kano,Jos,297.862866,High,65.51,272.81,Rainy,3,7.68
+Kaduna,Kano,235.727685,Low,79.12,178.76,Rainy,0,8.71
+Jos,Kano,297.056731,Medium,65.73,271.15,Foggy,3,1.36
+Jos,Enugu,515.518293,Medium,70.6,438.09,Clear,3,5.04
+Kaduna,Abuja,195.514772,Low,73.89,158.76,Foggy,0,4.35
+Kaduna,Port Harcourt,807.030104,Low,75.86,638.29,Rainy,1,6.48
+Benin City,Ibadan,288.223862,High,77.21,223.98,Foggy,0,7.1
+Ibadan,Abuja,617.213147,Low,88.48,418.55,Cloudy,3,3.57
+Abuja,Kaduna,190.113738,Low,74.52,153.07,Clear,0,6.48
+Enugu,Abuja,368.41768,Low,63.91,345.87,Rainy,1,1.8
+Jos,Lagos,958.265783,Medium,85.11,675.52,Rainy,0,1.93
+Ibadan,Enugu,533.282679,Medium,78.12,409.57,Foggy,2,4.91
+Benin City,Kaduna,604.540681,High,81.45,445.34,Rainy,1,3.57
+Lagos,Kano,989.642155,High,90.9,653.26,Cloudy,3,2.71
+Benin City,Ibadan,288.223862,Medium,77.21,223.98,Cloudy,1,7.6
+Abuja,Enugu,365.950705,Low,64.12,342.42,Foggy,0,7.33
+Lagos,Kaduna,772.2622439999999,High,92.37,501.65,Foggy,2,9.27
+Lagos,Port Harcourt,598.656487,Medium,72.99,492.15,Rainy,2,9.23
+Ibadan,Enugu,533.282679,High,78.12,409.57,Foggy,2,3.81
+Ibadan,Kano,863.3503129999999,High,89.04,581.74,Foggy,0,6.38
+Kaduna,Benin City,604.258093,Low,80.69,449.32,Rainy,2,7.96
+Port Harcourt,Jos,749.665038,High,72.01,624.64,Rainy,3,6.62
+Benin City,Abuja,460.432114,Low,79.74,346.47,Foggy,1,8.71
+Benin City,Port Harcourt,285.48321799999997,Low,62.39,274.55,Clear,1,7.22
+Port Harcourt,Enugu,234.03965599999998,Low,75.18,186.79,Rainy,1,6.83
+Lagos,Benin City,314.372988,Medium,85.49,220.65,Clear,1,3.73
+Kaduna,Port Harcourt,807.030104,High,75.86,638.29,Rainy,3,2.19
+Abuja,Benin City,466.008375,Low,80.1,349.05,Rainy,2,6.94
+Kaduna,Benin City,604.258093,Low,80.69,449.32,Rainy,2,6.67
+Port Harcourt,Ibadan,574.574945,Medium,68.97,499.88,Cloudy,3,4.98
+Enugu,Lagos,559.54563,High,83.3,403.02,Cloudy,2,9.72
+Benin City,Jos,694.722628,Low,75.52,551.95,Clear,2,7.44
+Ibadan,Kaduna,645.970403,Low,90.11,430.13,Foggy,1,8.11
+Enugu,Abuja,368.41768,Low,63.91,345.87,Foggy,2,2.22
+Abuja,Enugu,365.950705,High,64.12,342.42,Foggy,1,9.49
+Kaduna,Enugu,568.118549,High,74.51,457.49,Cloudy,1,1.28
+Kaduna,Kano,235.727685,High,79.12,178.76,Rainy,1,5.02
+Port Harcourt,Kaduna,803.024251,Medium,75.33,639.59,Cloudy,2,4.67
+Lagos,Kano,989.642155,High,90.9,653.26,Clear,1,4.63
+Benin City,Ibadan,288.223862,Medium,77.21,223.98,Clear,3,8.74
+Kano,Port Harcourt,1040.284478,High,77.05,810.08,Clear,0,5.39
+Ibadan,Port Harcourt,573.254762,High,69.16,497.31,Cloudy,1,7.0
+Enugu,Kano,800.2986940000001,Low,76.33,629.07,Cloudy,3,4.5
+Kano,Kaduna,236.466712,High,78.23,181.36,Rainy,1,6.38
+Kaduna,Ibadan,649.7918880000001,High,90.41,431.24,Cloudy,3,2.02
+Lagos,Kaduna,772.2622439999999,Medium,92.37,501.65,Clear,1,8.2
+Kaduna,Lagos,776.5137,Medium,92.64,502.93,Clear,1,3.95
+Kaduna,Kano,235.727685,High,79.12,178.76,Clear,0,6.49
+Kano,Ibadan,865.3527290000001,Medium,88.78,584.82,Cloudy,0,3.19
+Port Harcourt,Lagos,602.375745,High,72.79,496.52,Rainy,3,2.77
+Kaduna,Enugu,568.118549,Medium,74.51,457.49,Clear,2,4.69
+Jos,Abuja,232.62361199999998,Low,64.08,217.8,Foggy,3,9.49
+Ibadan,Benin City,288.971264,Medium,76.78,225.81,Clear,0,9.02
+Lagos,Kano,989.642155,High,90.9,653.26,Foggy,1,1.02
+Kano,Enugu,801.3729229999999,High,76.41,629.28,Cloudy,2,5.07
+Kano,Lagos,992.0745420000001,Low,90.67,656.51,Clear,3,8.6
+Kaduna,Enugu,568.118549,Medium,74.51,457.49,Foggy,3,7.72
+Lagos,Port Harcourt,598.656487,High,72.99,492.15,Foggy,2,9.21
+Abuja,Kaduna,190.113738,Medium,74.52,153.07,Foggy,3,2.78
+Ibadan,Lagos,130.81879700000002,High,97.79,80.27,Clear,1,9.88
+Ibadan,Kaduna,645.970403,High,90.11,430.13,Foggy,1,4.66
+Kano,Port Harcourt,1040.284478,Low,77.05,810.08,Clear,3,6.35
+Ibadan,Jos,830.8385579999999,Low,82.39,605.03,Clear,1,1.16
+Kano,Jos,297.862866,Medium,65.51,272.81,Cloudy,2,9.47
+Lagos,Jos,957.130399,High,84.88,676.55,Clear,3,4.42
+Lagos,Kano,989.642155,Low,90.9,653.26,Cloudy,0,2.1
+Port Harcourt,Enugu,234.03965599999998,Medium,75.18,186.79,Clear,0,7.38
+Jos,Kaduna,280.593707,High,81.45,206.7,Rainy,3,4.42
+Jos,Benin City,694.3199649999999,Medium,74.94,555.87,Foggy,1,7.39
+Ibadan,Kaduna,645.970403,Medium,90.11,430.13,Cloudy,1,4.13
+Jos,Kano,297.056731,Medium,65.73,271.15,Foggy,0,3.41
+Lagos,Abuja,743.5049889999999,High,91.03,490.07,Clear,3,1.9
+Benin City,Lagos,316.02466100000004,Low,85.94,220.63,Foggy,0,4.39
+Port Harcourt,Kaduna,803.024251,Low,75.33,639.59,Rainy,0,5.03
+Port Harcourt,Lagos,602.375745,Medium,72.79,496.52,Foggy,2,9.97
+Jos,Enugu,515.518293,Medium,70.6,438.09,Rainy,0,8.2
+Port Harcourt,Lagos,602.375745,High,72.79,496.52,Clear,3,4.34
+Kaduna,Kano,235.727685,High,79.12,178.76,Rainy,2,1.25
+Kano,Port Harcourt,1040.284478,Medium,77.05,810.08,Cloudy,0,3.64
+Benin City,Lagos,316.02466100000004,Low,85.94,220.63,Clear,0,1.8
+Lagos,Port Harcourt,598.656487,Low,72.99,492.15,Foggy,3,9.96
+Abuja,Port Harcourt,606.982748,High,68.85,528.96,Rainy,0,8.42
+Ibadan,Enugu,533.282679,High,78.12,409.57,Foggy,3,8.22
+Enugu,Port Harcourt,236.16038,Medium,74.19,190.99,Clear,3,5.1
+Abuja,Benin City,466.008375,Low,80.1,349.05,Clear,0,8.0
+Jos,Enugu,515.518293,High,70.6,438.09,Cloudy,3,5.8
+Benin City,Enugu,247.974675,High,75.47,197.15,Clear,1,6.29
+Enugu,Port Harcourt,236.16038,Low,74.19,190.99,Cloudy,0,1.13
+Port Harcourt,Abuja,602.3629549999999,Medium,67.9,532.3,Clear,0,5.8
+Abuja,Port Harcourt,606.982748,Low,68.85,528.96,Foggy,1,3.34
+Enugu,Port Harcourt,236.16038,High,74.19,190.99,Clear,3,3.88
+Port Harcourt,Jos,749.665038,Medium,72.01,624.64,Rainy,2,8.56
+Ibadan,Enugu,533.282679,High,78.12,409.57,Rainy,1,6.99
+Jos,Port Harcourt,756.550337,Low,72.67,624.63,Clear,2,6.92
+Abuja,Jos,233.943249,Medium,64.72,216.89,Foggy,1,2.15
+Kano,Lagos,992.0745420000001,Medium,90.67,656.51,Foggy,3,4.37
+Port Harcourt,Benin City,286.647561,Medium,61.95,277.63,Clear,0,8.16
+Port Harcourt,Jos,749.665038,Medium,72.01,624.64,Cloudy,2,7.2
+Lagos,Ibadan,129.681812,Low,98.72,78.82,Cloudy,1,5.3
+Port Harcourt,Benin City,286.647561,Low,61.95,277.63,Clear,2,1.84
+Port Harcourt,Abuja,602.3629549999999,Low,67.9,532.3,Clear,0,3.92
+Jos,Kano,297.056731,High,65.73,271.15,Cloudy,0,2.94
+Benin City,Abuja,460.432114,Low,79.74,346.47,Foggy,3,7.32
+Abuja,Jos,233.943249,Medium,64.72,216.89,Clear,1,6.97
+Jos,Lagos,958.265783,High,85.11,675.52,Foggy,1,2.14
+Jos,Ibadan,831.543971,Medium,82.63,603.83,Clear,3,6.24
+Kano,Ibadan,865.3527290000001,Medium,88.78,584.82,Foggy,0,2.61
+Kaduna,Port Harcourt,807.030104,Low,75.86,638.29,Foggy,1,1.75
+Ibadan,Enugu,533.282679,Low,78.12,409.57,Foggy,2,5.94
+Kaduna,Abuja,195.514772,Low,73.89,158.76,Cloudy,3,5.91
+Abuja,Jos,233.943249,High,64.72,216.89,Cloudy,3,9.29
+Enugu,Port Harcourt,236.16038,Medium,74.19,190.99,Clear,2,6.86
+Lagos,Kano,989.642155,Low,90.9,653.26,Rainy,1,1.34
+Port Harcourt,Benin City,286.647561,Low,61.95,277.63,Rainy,0,2.89
+Benin City,Abuja,460.432114,High,79.74,346.47,Clear,1,9.83
+Ibadan,Lagos,130.81879700000002,High,97.79,80.27,Cloudy,2,8.83
+Abuja,Benin City,466.008375,High,80.1,349.05,Clear,2,9.32
+Abuja,Lagos,748.175259,Low,91.99,487.99,Clear,0,2.54
+Enugu,Kaduna,567.6790520000001,Medium,74.09,459.74,Cloudy,1,4.42
+Lagos,Enugu,558.684404,Medium,82.89,404.41,Foggy,3,5.18
+Port Harcourt,Kano,1035.643893,Medium,76.82,808.93,Foggy,1,4.85
+Benin City,Ibadan,288.223862,High,77.21,223.98,Foggy,0,5.07
+Lagos,Abuja,743.5049889999999,Low,91.03,490.07,Rainy,3,1.8
+Enugu,Abuja,368.41768,High,63.91,345.87,Rainy,0,4.08
+Ibadan,Benin City,288.971264,Low,76.78,225.81,Foggy,3,7.56
+Benin City,Enugu,247.974675,Medium,75.47,197.15,Cloudy,1,6.59
+Kano,Abuja,428.76914600000003,Low,77.83,330.56,Foggy,1,9.41
+Port Harcourt,Abuja,602.3629549999999,High,67.9,532.3,Foggy,0,3.18
+Kano,Ibadan,865.3527290000001,Low,88.78,584.82,Clear,2,3.04
+Enugu,Ibadan,531.74483,Low,78.51,406.38,Foggy,0,4.58
+Port Harcourt,Lagos,602.375745,Low,72.79,496.52,Rainy,3,5.89
+Ibadan,Jos,830.8385579999999,Low,82.39,605.03,Foggy,2,5.39
+Abuja,Benin City,466.008375,Medium,80.1,349.05,Rainy,1,8.2
+Benin City,Lagos,316.02466100000004,Low,85.94,220.63,Cloudy,3,7.21
+Enugu,Port Harcourt,236.16038,Low,74.19,190.99,Rainy,0,6.11
+Enugu,Jos,515.719762,High,70.61,438.21,Clear,3,3.22
+Benin City,Enugu,247.974675,Low,75.47,197.15,Rainy,1,1.15
+Ibadan,Benin City,288.971264,High,76.78,225.81,Cloudy,0,8.14
+Lagos,Kaduna,772.2622439999999,Low,92.37,501.65,Foggy,1,2.07
+Jos,Lagos,958.265783,High,85.11,675.52,Rainy,1,9.81
+Lagos,Jos,957.130399,Low,84.88,676.55,Cloudy,3,8.83
+Benin City,Port Harcourt,285.48321799999997,Low,62.39,274.55,Rainy,1,1.77
+Benin City,Lagos,316.02466100000004,Low,85.94,220.63,Clear,1,9.36
+Lagos,Kaduna,772.2622439999999,Medium,92.37,501.65,Clear,1,8.87
+Port Harcourt,Kaduna,803.024251,Medium,75.33,639.59,Foggy,2,1.41
+Jos,Benin City,694.3199649999999,High,74.94,555.87,Cloudy,3,3.18
+Port Harcourt,Abuja,602.3629549999999,Low,67.9,532.3,Cloudy,0,5.75
+Port Harcourt,Kano,1035.643893,Low,76.82,808.93,Cloudy,3,3.37
+Ibadan,Port Harcourt,573.254762,Low,69.16,497.31,Clear,3,9.92
+Port Harcourt,Jos,749.665038,Medium,72.01,624.64,Rainy,0,4.95
+Enugu,Port Harcourt,236.16038,High,74.19,190.99,Cloudy,3,7.47
+Ibadan,Jos,830.8385579999999,Low,82.39,605.03,Cloudy,0,4.16
+Jos,Lagos,958.265783,Low,85.11,675.52,Rainy,3,7.15
+Port Harcourt,Kano,1035.643893,Low,76.82,808.93,Clear,1,7.25
+Jos,Ibadan,831.543971,Medium,82.63,603.83,Clear,3,1.68
+Enugu,Abuja,368.41768,Medium,63.91,345.87,Clear,3,9.3
+Kaduna,Lagos,776.5137,High,92.64,502.93,Clear,0,9.07
+Lagos,Abuja,743.5049889999999,Medium,91.03,490.07,Foggy,1,7.77
+Kaduna,Benin City,604.258093,Low,80.69,449.32,Cloudy,3,9.85
+Ibadan,Jos,830.8385579999999,Low,82.39,605.03,Foggy,2,5.96
+Benin City,Jos,694.722628,Low,75.52,551.95,Clear,3,9.0
+Lagos,Jos,957.130399,Medium,84.88,676.55,Foggy,0,3.1
+Enugu,Kaduna,567.6790520000001,Low,74.09,459.74,Rainy,2,4.22
+Abuja,Jos,233.943249,Low,64.72,216.89,Foggy,0,6.95
+Enugu,Port Harcourt,236.16038,Medium,74.19,190.99,Cloudy,3,8.92
+Ibadan,Abuja,617.213147,Medium,88.48,418.55,Rainy,1,1.35
+Port Harcourt,Abuja,602.3629549999999,Low,67.9,532.3,Foggy,3,3.12
+Enugu,Benin City,248.853819,Low,74.33,200.88,Rainy,3,2.7
+Benin City,Jos,694.722628,High,75.52,551.95,Foggy,0,2.54
+Benin City,Jos,694.722628,Low,75.52,551.95,Cloudy,0,5.92
+Port Harcourt,Kaduna,803.024251,Low,75.33,639.59,Clear,2,7.82
+Kaduna,Ibadan,649.7918880000001,High,90.41,431.24,Rainy,1,7.55
+Enugu,Ibadan,531.74483,High,78.51,406.38,Clear,2,6.96
+Abuja,Lagos,748.175259,High,91.99,487.99,Foggy,3,1.0
+Port Harcourt,Jos,749.665038,Low,72.01,624.64,Cloudy,0,4.07
+Lagos,Enugu,558.684404,Low,82.89,404.41,Foggy,2,2.65
+Jos,Port Harcourt,756.550337,Medium,72.67,624.63,Cloudy,0,1.19
+Enugu,Kaduna,567.6790520000001,High,74.09,459.74,Clear,0,4.4
+Jos,Benin City,694.3199649999999,High,74.94,555.87,Cloudy,3,4.51
+Ibadan,Lagos,130.81879700000002,Medium,97.79,80.27,Rainy,3,6.36
+Enugu,Jos,515.719762,High,70.61,438.21,Cloudy,3,7.85
+Enugu,Kano,800.2986940000001,Low,76.33,629.07,Foggy,2,3.67
+Port Harcourt,Kano,1035.643893,Low,76.82,808.93,Cloudy,2,7.21
+Enugu,Ibadan,531.74483,Low,78.51,406.38,Cloudy,2,2.02
+Enugu,Jos,515.719762,High,70.61,438.21,Rainy,2,5.87
+Enugu,Kaduna,567.6790520000001,Low,74.09,459.74,Rainy,2,7.4
+Ibadan,Benin City,288.971264,High,76.78,225.81,Clear,3,9.67
+Kano,Kaduna,236.466712,Medium,78.23,181.36,Foggy,1,2.15
+Jos,Port Harcourt,756.550337,Low,72.67,624.63,Foggy,2,6.18
+Jos,Kano,297.056731,Medium,65.73,271.15,Rainy,0,3.17
+Lagos,Benin City,314.372988,High,85.49,220.65,Rainy,3,2.7
+Ibadan,Benin City,288.971264,High,76.78,225.81,Foggy,1,6.37
+Jos,Ibadan,831.543971,High,82.63,603.83,Foggy,3,4.05
+Benin City,Enugu,247.974675,High,75.47,197.15,Rainy,3,8.07
+Port Harcourt,Ibadan,574.574945,Medium,68.97,499.88,Rainy,2,6.4
+Benin City,Kano,837.1603240000001,Low,81.72,614.67,Rainy,0,4.99
+Enugu,Lagos,559.54563,High,83.3,403.02,Clear,2,3.78
+Abuja,Kaduna,190.113738,Low,74.52,153.07,Clear,1,1.2
+Lagos,Ibadan,129.681812,Medium,98.72,78.82,Foggy,1,6.81
+Ibadan,Jos,830.8385579999999,High,82.39,605.03,Clear,3,3.38
+Kaduna,Benin City,604.258093,Medium,80.69,449.32,Cloudy,0,7.44
+Port Harcourt,Enugu,234.03965599999998,High,75.18,186.79,Foggy,2,7.94
+Kano,Port Harcourt,1040.284478,Medium,77.05,810.08,Rainy,1,7.32
+Kaduna,Ibadan,649.7918880000001,High,90.41,431.24,Clear,2,7.51
+Lagos,Kano,989.642155,Low,90.9,653.26,Rainy,1,8.02
+Abuja,Ibadan,621.453446,Medium,89.57,416.3,Clear,1,2.14
+Abuja,Enugu,365.950705,Medium,64.12,342.42,Rainy,0,1.16
+Lagos,Benin City,314.372988,High,85.49,220.65,Cloudy,2,3.48
+Abuja,Jos,233.943249,Low,64.72,216.89,Foggy,1,2.74
+Jos,Abuja,232.62361199999998,Medium,64.08,217.8,Foggy,1,1.44
+Lagos,Enugu,558.684404,Low,82.89,404.41,Clear,3,4.05
+Kaduna,Lagos,776.5137,Low,92.64,502.93,Rainy,3,7.0
+Lagos,Jos,957.130399,Low,84.88,676.55,Rainy,1,5.0
+Port Harcourt,Kaduna,803.024251,Low,75.33,639.59,Foggy,1,6.91
+Abuja,Kaduna,190.113738,Low,74.52,153.07,Clear,0,1.59
+Abuja,Enugu,365.950705,Medium,64.12,342.42,Cloudy,1,8.95
+Ibadan,Jos,830.8385579999999,Low,82.39,605.03,Cloudy,1,9.05
+Kano,Benin City,837.512468,Low,80.9,621.12,Clear,3,9.67
+Kano,Enugu,801.3729229999999,Medium,76.41,629.28,Foggy,2,9.77
+Ibadan,Enugu,533.282679,Low,78.12,409.57,Foggy,1,9.56
+Jos,Abuja,232.62361199999998,High,64.08,217.8,Clear,2,4.59
+Enugu,Jos,515.719762,High,70.61,438.21,Clear,2,6.31
+Kaduna,Benin City,604.258093,Medium,80.69,449.32,Cloudy,2,8.56
+Kano,Kaduna,236.466712,Medium,78.23,181.36,Cloudy,2,2.3
+Jos,Abuja,232.62361199999998,Low,64.08,217.8,Cloudy,2,6.23
+Kaduna,Kano,235.727685,Medium,79.12,178.76,Foggy,0,3.83
+Abuja,Kano,422.73338,High,78.67,322.4,Cloudy,2,3.56
+Kaduna,Lagos,776.5137,Medium,92.64,502.93,Foggy,1,6.78
+Ibadan,Lagos,130.81879700000002,Medium,97.79,80.27,Rainy,2,7.83
+Lagos,Port Harcourt,598.656487,Low,72.99,492.15,Cloudy,2,2.97
+Jos,Enugu,515.518293,Low,70.6,438.09,Foggy,3,7.96
+Lagos,Jos,957.130399,Medium,84.88,676.55,Cloudy,0,5.65
+Lagos,Enugu,558.684404,Low,82.89,404.41,Clear,3,3.82
+Lagos,Port Harcourt,598.656487,High,72.99,492.15,Cloudy,3,8.76
+Port Harcourt,Jos,749.665038,Low,72.01,624.64,Cloudy,0,6.26
+Port Harcourt,Jos,749.665038,Low,72.01,624.64,Clear,0,8.16
+Abuja,Benin City,466.008375,Low,80.1,349.05,Rainy,3,4.38
+Kano,Enugu,801.3729229999999,Low,76.41,629.28,Rainy,0,1.33
+Kano,Lagos,992.0745420000001,Medium,90.67,656.51,Rainy,1,3.08
+Enugu,Jos,515.719762,Low,70.61,438.21,Rainy,1,3.39
+Abuja,Jos,233.943249,Low,64.72,216.89,Rainy,0,2.04
+Ibadan,Benin City,288.971264,Medium,76.78,225.81,Foggy,3,4.82
+Ibadan,Kaduna,645.970403,Low,90.11,430.13,Foggy,0,7.98
+Port Harcourt,Enugu,234.03965599999998,Low,75.18,186.79,Foggy,1,8.74
+Ibadan,Kano,863.3503129999999,High,89.04,581.74,Foggy,3,8.3
+Enugu,Port Harcourt,236.16038,High,74.19,190.99,Rainy,2,1.46
+Lagos,Enugu,558.684404,Medium,82.89,404.41,Clear,3,2.64
+Abuja,Jos,233.943249,High,64.72,216.89,Rainy,1,7.51
+Kaduna,Abuja,195.514772,Low,73.89,158.76,Clear,2,7.73
+Kano,Lagos,992.0745420000001,High,90.67,656.51,Foggy,1,3.78
+Benin City,Kaduna,604.540681,Medium,81.45,445.34,Clear,3,6.91
+Benin City,Lagos,316.02466100000004,High,85.94,220.63,Rainy,3,1.72
+Kaduna,Ibadan,649.7918880000001,Medium,90.41,431.24,Cloudy,0,4.66
+Benin City,Kano,837.1603240000001,High,81.72,614.67,Clear,1,3.54
+Ibadan,Lagos,130.81879700000002,Low,97.79,80.27,Clear,2,4.19
+Abuja,Kaduna,190.113738,High,74.52,153.07,Cloudy,3,2.5
+Abuja,Jos,233.943249,Medium,64.72,216.89,Foggy,1,5.51
+Lagos,Kaduna,772.2622439999999,High,92.37,501.65,Clear,1,7.61
+Kano,Ibadan,865.3527290000001,High,88.78,584.82,Cloudy,2,6.03
+Enugu,Benin City,248.853819,High,74.33,200.88,Cloudy,3,2.13
+Jos,Kano,297.056731,High,65.73,271.15,Foggy,1,3.87
+Enugu,Benin City,248.853819,Low,74.33,200.88,Clear,0,6.63
+Abuja,Enugu,365.950705,Low,64.12,342.42,Foggy,0,7.26
+Lagos,Kaduna,772.2622439999999,High,92.37,501.65,Clear,3,6.1
+Kano,Abuja,428.76914600000003,Low,77.83,330.56,Cloudy,0,2.0
+Lagos,Jos,957.130399,Low,84.88,676.55,Cloudy,2,5.21
+Benin City,Enugu,247.974675,Medium,75.47,197.15,Cloudy,3,8.53
+Lagos,Kano,989.642155,High,90.9,653.26,Rainy,3,7.8
+Enugu,Benin City,248.853819,Low,74.33,200.88,Cloudy,0,5.21
+Ibadan,Enugu,533.282679,High,78.12,409.57,Cloudy,2,7.24
+Lagos,Kaduna,772.2622439999999,Medium,92.37,501.65,Rainy,2,7.56
+Abuja,Port Harcourt,606.982748,Low,68.85,528.96,Foggy,2,7.7
+Port Harcourt,Enugu,234.03965599999998,High,75.18,186.79,Rainy,3,1.21
+Ibadan,Lagos,130.81879700000002,Medium,97.79,80.27,Rainy,2,2.04
+Abuja,Ibadan,621.453446,Medium,89.57,416.3,Foggy,1,1.77
+Abuja,Jos,233.943249,High,64.72,216.89,Cloudy,1,2.99
+Kano,Abuja,428.76914600000003,High,77.83,330.56,Clear,3,8.59
+Enugu,Ibadan,531.74483,Low,78.51,406.38,Rainy,2,10.0
+Lagos,Enugu,558.684404,High,82.89,404.41,Clear,3,2.61
+Lagos,Benin City,314.372988,Low,85.49,220.65,Clear,3,7.54
+Kaduna,Benin City,604.258093,Medium,80.69,449.32,Clear,1,7.2
+Abuja,Ibadan,621.453446,High,89.57,416.3,Cloudy,2,2.84
+Enugu,Ibadan,531.74483,Low,78.51,406.38,Foggy,0,4.22
+Port Harcourt,Kano,1035.643893,High,76.82,808.93,Clear,2,6.66
+Kano,Lagos,992.0745420000001,Medium,90.67,656.51,Foggy,0,9.35
+Jos,Lagos,958.265783,Medium,85.11,675.52,Clear,1,6.07
+Ibadan,Abuja,617.213147,High,88.48,418.55,Foggy,3,4.2
+Lagos,Kaduna,772.2622439999999,Medium,92.37,501.65,Foggy,0,7.5
+Lagos,Kano,989.642155,Low,90.9,653.26,Foggy,2,6.59
+Enugu,Jos,515.719762,High,70.61,438.21,Clear,3,4.28
+Ibadan,Jos,830.8385579999999,Medium,82.39,605.03,Cloudy,1,4.02
+Benin City,Abuja,460.432114,Medium,79.74,346.47,Clear,0,7.9
+Port Harcourt,Enugu,234.03965599999998,Low,75.18,186.79,Cloudy,1,5.66
+Benin City,Jos,694.722628,High,75.52,551.95,Cloudy,0,8.9
+Kaduna,Enugu,568.118549,Low,74.51,457.49,Rainy,3,7.55
+Kano,Jos,297.862866,High,65.51,272.81,Cloudy,1,9.05
+Port Harcourt,Benin City,286.647561,High,61.95,277.63,Foggy,1,6.83
+Port Harcourt,Benin City,286.647561,Low,61.95,277.63,Rainy,3,4.55
+Kaduna,Jos,279.96749200000005,Low,81.62,205.82,Rainy,1,1.27
+Kaduna,Enugu,568.118549,Medium,74.51,457.49,Rainy,3,1.23
+Jos,Abuja,232.62361199999998,Low,64.08,217.8,Clear,1,4.31
+Kaduna,Abuja,195.514772,High,73.89,158.76,Clear,2,9.4
+Kaduna,Kano,235.727685,High,79.12,178.76,Foggy,1,2.26
+Kano,Enugu,801.3729229999999,High,76.41,629.28,Foggy,0,2.71
+Lagos,Ibadan,129.681812,Low,98.72,78.82,Clear,2,3.19
+Kano,Port Harcourt,1040.284478,Low,77.05,810.08,Rainy,2,6.24
+Enugu,Abuja,368.41768,High,63.91,345.87,Clear,1,1.81
+Benin City,Port Harcourt,285.48321799999997,Low,62.39,274.55,Clear,2,7.87
+Enugu,Kaduna,567.6790520000001,Medium,74.09,459.74,Clear,3,6.8
+Kano,Ibadan,865.3527290000001,High,88.78,584.82,Foggy,2,8.06
+Abuja,Lagos,748.175259,Low,91.99,487.99,Clear,2,6.42
+Ibadan,Kano,863.3503129999999,High,89.04,581.74,Clear,0,7.13
+Abuja,Port Harcourt,606.982748,Low,68.85,528.96,Clear,0,4.25
+Ibadan,Enugu,533.282679,High,78.12,409.57,Cloudy,2,7.44
+Jos,Benin City,694.3199649999999,Low,74.94,555.87,Foggy,3,8.01
+Enugu,Kano,800.2986940000001,Medium,76.33,629.07,Foggy,0,9.01
+Jos,Kaduna,280.593707,Medium,81.45,206.7,Clear,3,6.4
+Enugu,Jos,515.719762,Low,70.61,438.21,Rainy,2,1.12
+Abuja,Enugu,365.950705,High,64.12,342.42,Clear,0,5.68
+Ibadan,Jos,830.8385579999999,Low,82.39,605.03,Cloudy,3,2.03
+Ibadan,Benin City,288.971264,High,76.78,225.81,Foggy,1,7.17
+Enugu,Lagos,559.54563,Medium,83.3,403.02,Rainy,3,1.06
+Ibadan,Lagos,130.81879700000002,High,97.79,80.27,Rainy,0,4.75
+Lagos,Abuja,743.5049889999999,High,91.03,490.07,Rainy,1,3.86
+Lagos,Enugu,558.684404,Low,82.89,404.41,Cloudy,1,4.42
+Benin City,Jos,694.722628,Low,75.52,551.95,Rainy,1,2.79
+Benin City,Port Harcourt,285.48321799999997,Medium,62.39,274.55,Clear,3,4.96
+Abuja,Ibadan,621.453446,Medium,89.57,416.3,Clear,2,3.24
+Kano,Kaduna,236.466712,Low,78.23,181.36,Foggy,0,5.62
+Kano,Ibadan,865.3527290000001,Low,88.78,584.82,Clear,3,9.55
+Abuja,Ibadan,621.453446,High,89.57,416.3,Clear,0,4.98
+Ibadan,Kano,863.3503129999999,High,89.04,581.74,Rainy,0,4.92
+Kano,Abuja,428.76914600000003,Medium,77.83,330.56,Cloudy,0,7.49
+Benin City,Lagos,316.02466100000004,High,85.94,220.63,Cloudy,3,1.31
+Abuja,Kaduna,190.113738,Medium,74.52,153.07,Clear,0,4.75
+Benin City,Lagos,316.02466100000004,Low,85.94,220.63,Cloudy,0,6.18
+Port Harcourt,Jos,749.665038,Medium,72.01,624.64,Foggy,2,1.23
+Jos,Ibadan,831.543971,Low,82.63,603.83,Clear,0,8.22
+Ibadan,Kano,863.3503129999999,Low,89.04,581.74,Rainy,0,6.1
+Ibadan,Abuja,617.213147,High,88.48,418.55,Cloudy,1,3.73
+Port Harcourt,Enugu,234.03965599999998,Low,75.18,186.79,Foggy,3,9.56
+Enugu,Lagos,559.54563,Medium,83.3,403.02,Clear,2,8.13
+Enugu,Ibadan,531.74483,Low,78.51,406.38,Foggy,0,8.79
+Enugu,Kaduna,567.6790520000001,High,74.09,459.74,Cloudy,0,4.04
+Benin City,Enugu,247.974675,Medium,75.47,197.15,Clear,2,5.98
+Kaduna,Abuja,195.514772,High,73.89,158.76,Rainy,3,3.95
+Kano,Enugu,801.3729229999999,High,76.41,629.28,Cloudy,0,4.42
+Ibadan,Lagos,130.81879700000002,Low,97.79,80.27,Foggy,2,8.43
+Kano,Enugu,801.3729229999999,Low,76.41,629.28,Rainy,2,9.48
+Kano,Benin City,837.512468,Low,80.9,621.12,Rainy,1,8.37
+Ibadan,Kaduna,645.970403,Medium,90.11,430.13,Clear,0,6.93
+Abuja,Port Harcourt,606.982748,High,68.85,528.96,Foggy,0,8.71
+Jos,Abuja,232.62361199999998,High,64.08,217.8,Clear,2,2.47
+Ibadan,Abuja,617.213147,High,88.48,418.55,Foggy,0,4.96
+Enugu,Benin City,248.853819,Low,74.33,200.88,Rainy,0,4.78
+Benin City,Abuja,460.432114,Low,79.74,346.47,Clear,0,5.85
+Kaduna,Port Harcourt,807.030104,High,75.86,638.29,Clear,0,5.44
+Jos,Abuja,232.62361199999998,Medium,64.08,217.8,Clear,1,1.44
+Jos,Ibadan,831.543971,Low,82.63,603.83,Clear,0,9.48
+Abuja,Benin City,466.008375,Low,80.1,349.05,Cloudy,0,3.68
+Kaduna,Abuja,195.514772,Low,73.89,158.76,Clear,0,6.62
+Jos,Lagos,958.265783,Low,85.11,675.52,Cloudy,2,3.55
+Port Harcourt,Jos,749.665038,Medium,72.01,624.64,Cloudy,2,9.11
+Ibadan,Port Harcourt,573.254762,High,69.16,497.31,Clear,0,9.98
+Lagos,Abuja,743.5049889999999,Low,91.03,490.07,Rainy,1,3.85
+Lagos,Jos,957.130399,Low,84.88,676.55,Cloudy,0,1.44
+Kano,Benin City,837.512468,Medium,80.9,621.12,Cloudy,1,3.08
+Abuja,Ibadan,621.453446,Medium,89.57,416.3,Rainy,0,9.33
+Port Harcourt,Kano,1035.643893,Medium,76.82,808.93,Foggy,3,2.44
+Abuja,Benin City,466.008375,Low,80.1,349.05,Rainy,0,9.26
+Ibadan,Port Harcourt,573.254762,Low,69.16,497.31,Clear,2,9.82
+Abuja,Jos,233.943249,Medium,64.72,216.89,Cloudy,1,6.92
+Kaduna,Abuja,195.514772,Low,73.89,158.76,Cloudy,0,8.06
+Benin City,Kano,837.1603240000001,Medium,81.72,614.67,Foggy,0,3.35
+Kano,Port Harcourt,1040.284478,High,77.05,810.08,Foggy,3,1.46
+Kaduna,Lagos,776.5137,High,92.64,502.93,Rainy,2,1.5
+Jos,Kaduna,280.593707,High,81.45,206.7,Rainy,0,9.67
+Ibadan,Benin City,288.971264,Medium,76.78,225.81,Cloudy,1,4.72
+Lagos,Kano,989.642155,High,90.9,653.26,Foggy,0,1.54
+Benin City,Ibadan,288.223862,Medium,77.21,223.98,Clear,0,7.23
+Enugu,Kaduna,567.6790520000001,High,74.09,459.74,Clear,1,9.82
+Abuja,Kano,422.73338,Low,78.67,322.4,Foggy,3,1.02
+Lagos,Benin City,314.372988,High,85.49,220.65,Rainy,1,5.13
+Ibadan,Port Harcourt,573.254762,Low,69.16,497.31,Cloudy,3,8.47
+Port Harcourt,Kaduna,803.024251,Low,75.33,639.59,Foggy,2,9.86
+Abuja,Port Harcourt,606.982748,Medium,68.85,528.96,Foggy,3,8.71
+Benin City,Lagos,316.02466100000004,Medium,85.94,220.63,Cloudy,0,5.08
+Kaduna,Lagos,776.5137,High,92.64,502.93,Cloudy,2,2.7
+Jos,Lagos,958.265783,High,85.11,675.52,Rainy,0,7.14
+Port Harcourt,Jos,749.665038,Low,72.01,624.64,Cloudy,2,3.06
+Enugu,Kaduna,567.6790520000001,High,74.09,459.74,Rainy,3,3.44
+Abuja,Enugu,365.950705,Medium,64.12,342.42,Foggy,3,3.63
+Kano,Lagos,992.0745420000001,High,90.67,656.51,Cloudy,1,1.2
+Ibadan,Jos,830.8385579999999,High,82.39,605.03,Clear,1,4.32
+Ibadan,Benin City,288.971264,High,76.78,225.81,Clear,1,3.79
+Kano,Benin City,837.512468,Medium,80.9,621.12,Rainy,2,8.09
+Ibadan,Port Harcourt,573.254762,Low,69.16,497.31,Clear,0,9.75
+Jos,Abuja,232.62361199999998,High,64.08,217.8,Foggy,2,8.97
+Kaduna,Abuja,195.514772,High,73.89,158.76,Foggy,2,5.93
+Benin City,Kano,837.1603240000001,High,81.72,614.67,Rainy,1,6.67
+Kaduna,Abuja,195.514772,Medium,73.89,158.76,Foggy,0,8.91
+Lagos,Kano,989.642155,Medium,90.9,653.26,Cloudy,3,2.77
+Abuja,Port Harcourt,606.982748,High,68.85,528.96,Clear,3,2.46
+Port Harcourt,Enugu,234.03965599999998,High,75.18,186.79,Clear,3,4.31
+Jos,Ibadan,831.543971,Low,82.63,603.83,Foggy,0,6.01
+Jos,Benin City,694.3199649999999,Medium,74.94,555.87,Foggy,0,7.57
+Enugu,Ibadan,531.74483,High,78.51,406.38,Rainy,2,1.06
+Kano,Benin City,837.512468,High,80.9,621.12,Rainy,0,5.16
+Kaduna,Benin City,604.258093,Medium,80.69,449.32,Rainy,1,2.31
+Lagos,Kaduna,772.2622439999999,Medium,92.37,501.65,Foggy,0,9.47
+Lagos,Port Harcourt,598.656487,Low,72.99,492.15,Foggy,3,2.33
+Kaduna,Port Harcourt,807.030104,Low,75.86,638.29,Foggy,1,4.95
+Port Harcourt,Kaduna,803.024251,Low,75.33,639.59,Foggy,2,1.23
+Enugu,Kano,800.2986940000001,Low,76.33,629.07,Rainy,0,4.98
+Ibadan,Kaduna,645.970403,Medium,90.11,430.13,Rainy,0,4.26
+Abuja,Kano,422.73338,Low,78.67,322.4,Clear,3,5.68
+Abuja,Lagos,748.175259,Medium,91.99,487.99,Clear,2,1.99
+Kaduna,Jos,279.96749200000005,High,81.62,205.82,Rainy,1,6.42
+Abuja,Enugu,365.950705,Medium,64.12,342.42,Clear,0,8.06
+Enugu,Kaduna,567.6790520000001,Low,74.09,459.74,Cloudy,0,7.28
+Jos,Benin City,694.3199649999999,Medium,74.94,555.87,Clear,2,9.07
+Port Harcourt,Kaduna,803.024251,Medium,75.33,639.59,Cloudy,0,7.8
+Lagos,Kano,989.642155,Low,90.9,653.26,Cloudy,2,9.59
+Port Harcourt,Kano,1035.643893,High,76.82,808.93,Cloudy,0,6.88
+Jos,Benin City,694.3199649999999,High,74.94,555.87,Rainy,1,3.36
+Kano,Ibadan,865.3527290000001,High,88.78,584.82,Rainy,3,2.8
+Enugu,Kaduna,567.6790520000001,Low,74.09,459.74,Cloudy,3,1.52
+Jos,Port Harcourt,756.550337,Medium,72.67,624.63,Cloudy,0,1.19
+Kano,Jos,297.862866,Medium,65.51,272.81,Foggy,0,4.66
+Port Harcourt,Enugu,234.03965599999998,Medium,75.18,186.79,Foggy,0,1.88
+Abuja,Enugu,365.950705,Low,64.12,342.42,Clear,3,4.8
+Ibadan,Jos,830.8385579999999,Medium,82.39,605.03,Cloudy,0,1.16
+Kaduna,Port Harcourt,807.030104,Medium,75.86,638.29,Cloudy,3,1.04
+Port Harcourt,Kaduna,803.024251,Low,75.33,639.59,Rainy,3,4.47
+Jos,Port Harcourt,756.550337,Medium,72.67,624.63,Rainy,3,5.95
+Benin City,Ibadan,288.223862,Medium,77.21,223.98,Foggy,3,3.97
+Ibadan,Kano,863.3503129999999,Medium,89.04,581.74,Clear,2,5.63
+Jos,Enugu,515.518293,High,70.6,438.09,Rainy,3,1.1
+Benin City,Lagos,316.02466100000004,Medium,85.94,220.63,Clear,0,9.94
+Jos,Benin City,694.3199649999999,Medium,74.94,555.87,Cloudy,3,1.32
+Enugu,Port Harcourt,236.16038,High,74.19,190.99,Cloudy,1,2.53
+Port Harcourt,Jos,749.665038,Medium,72.01,624.64,Foggy,0,3.59
+Abuja,Kaduna,190.113738,High,74.52,153.07,Foggy,2,7.46
+Kano,Lagos,992.0745420000001,Low,90.67,656.51,Foggy,0,4.21
+Kano,Jos,297.862866,High,65.51,272.81,Cloudy,3,1.48
+Jos,Abuja,232.62361199999998,High,64.08,217.8,Foggy,0,7.36
+Enugu,Kano,800.2986940000001,Low,76.33,629.07,Foggy,1,9.39
+Jos,Kano,297.056731,High,65.73,271.15,Cloudy,1,8.41
+Enugu,Kaduna,567.6790520000001,High,74.09,459.74,Foggy,1,8.94
+Kaduna,Jos,279.96749200000005,Medium,81.62,205.82,Clear,3,9.08
+Lagos,Benin City,314.372988,Medium,85.49,220.65,Clear,2,3.05
+Abuja,Benin City,466.008375,High,80.1,349.05,Foggy,1,8.39
+Jos,Abuja,232.62361199999998,High,64.08,217.8,Foggy,0,7.06
+Ibadan,Abuja,617.213147,Low,88.48,418.55,Cloudy,3,1.01
+Kaduna,Kano,235.727685,Low,79.12,178.76,Cloudy,1,1.31
+Kaduna,Benin City,604.258093,High,80.69,449.32,Foggy,1,5.5
+Enugu,Kano,800.2986940000001,Medium,76.33,629.07,Cloudy,0,7.1
+Kaduna,Abuja,195.514772,Medium,73.89,158.76,Clear,3,8.65
+Enugu,Lagos,559.54563,Medium,83.3,403.02,Clear,2,2.16
+Kaduna,Port Harcourt,807.030104,High,75.86,638.29,Clear,3,2.51
+Kaduna,Port Harcourt,807.030104,High,75.86,638.29,Clear,1,5.38
+Port Harcourt,Enugu,234.03965599999998,Medium,75.18,186.79,Cloudy,0,7.35
+Kano,Abuja,428.76914600000003,Low,77.83,330.56,Cloudy,1,3.57
+Kano,Ibadan,865.3527290000001,High,88.78,584.82,Clear,3,7.85
+Ibadan,Jos,830.8385579999999,High,82.39,605.03,Clear,0,9.54
+Abuja,Ibadan,621.453446,Medium,89.57,416.3,Clear,1,4.71
+Lagos,Abuja,743.5049889999999,Low,91.03,490.07,Rainy,3,6.26
+Ibadan,Abuja,617.213147,High,88.48,418.55,Clear,2,9.54
+Lagos,Jos,957.130399,Low,84.88,676.55,Foggy,3,6.6
+Abuja,Kaduna,190.113738,Medium,74.52,153.07,Clear,2,3.03
+Kaduna,Enugu,568.118549,Low,74.51,457.49,Cloudy,1,4.89
+Lagos,Ibadan,129.681812,High,98.72,78.82,Clear,1,8.09
+Lagos,Kaduna,772.2622439999999,High,92.37,501.65,Foggy,2,9.99
+Port Harcourt,Abuja,602.3629549999999,Medium,67.9,532.3,Clear,1,3.36
+Lagos,Jos,957.130399,Medium,84.88,676.55,Clear,2,3.22
+Jos,Port Harcourt,756.550337,Low,72.67,624.63,Rainy,3,9.62
+Jos,Ibadan,831.543971,High,82.63,603.83,Rainy,2,9.81
+Lagos,Kaduna,772.2622439999999,Low,92.37,501.65,Rainy,0,4.89
+Kaduna,Abuja,195.514772,Medium,73.89,158.76,Foggy,3,7.41
+Kano,Jos,297.862866,Low,65.51,272.81,Cloudy,0,2.38
+Ibadan,Kaduna,645.970403,Medium,90.11,430.13,Rainy,0,7.41
+Kaduna,Enugu,568.118549,High,74.51,457.49,Rainy,1,3.55
+Enugu,Benin City,248.853819,High,74.33,200.88,Clear,2,1.9
+Kaduna,Jos,279.96749200000005,Medium,81.62,205.82,Clear,3,9.96
+Benin City,Port Harcourt,285.48321799999997,Low,62.39,274.55,Rainy,1,9.21
+Enugu,Lagos,559.54563,Medium,83.3,403.02,Clear,1,1.38
+Lagos,Kaduna,772.2622439999999,High,92.37,501.65,Clear,2,7.2
+Benin City,Abuja,460.432114,Low,79.74,346.47,Rainy,2,4.45
+Kaduna,Benin City,604.258093,Medium,80.69,449.32,Rainy,0,4.94
+Lagos,Benin City,314.372988,High,85.49,220.65,Rainy,0,2.07
+Benin City,Kano,837.1603240000001,High,81.72,614.67,Rainy,1,9.62
+Kaduna,Ibadan,649.7918880000001,Medium,90.41,431.24,Rainy,2,8.11
+Kano,Enugu,801.3729229999999,High,76.41,629.28,Cloudy,1,8.85
+Ibadan,Abuja,617.213147,Medium,88.48,418.55,Cloudy,3,3.44
+Lagos,Enugu,558.684404,Low,82.89,404.41,Clear,3,3.06
+Kano,Enugu,801.3729229999999,Medium,76.41,629.28,Clear,0,3.06
+Benin City,Enugu,247.974675,Low,75.47,197.15,Rainy,2,3.37
+Benin City,Ibadan,288.223862,Low,77.21,223.98,Rainy,0,5.77
+Jos,Ibadan,831.543971,Low,82.63,603.83,Clear,2,3.95
+Port Harcourt,Jos,749.665038,Low,72.01,624.64,Foggy,1,9.7
+Abuja,Kaduna,190.113738,Medium,74.52,153.07,Clear,0,5.23
+Port Harcourt,Abuja,602.3629549999999,High,67.9,532.3,Foggy,3,1.71
+Abuja,Jos,233.943249,Medium,64.72,216.89,Clear,1,7.17
+Enugu,Benin City,248.853819,High,74.33,200.88,Rainy,0,9.48
+Jos,Benin City,694.3199649999999,Low,74.94,555.87,Rainy,0,2.44
+Jos,Abuja,232.62361199999998,High,64.08,217.8,Cloudy,1,2.05
+Kano,Jos,297.862866,High,65.51,272.81,Cloudy,3,7.02
+Benin City,Ibadan,288.223862,Medium,77.21,223.98,Clear,0,6.33
+Benin City,Kano,837.1603240000001,High,81.72,614.67,Rainy,3,6.72
+Jos,Ibadan,831.543971,High,82.63,603.83,Clear,1,9.93
+Abuja,Port Harcourt,606.982748,Low,68.85,528.96,Foggy,1,1.94
+Port Harcourt,Benin City,286.647561,High,61.95,277.63,Rainy,0,5.43
+Benin City,Kano,837.1603240000001,Low,81.72,614.67,Clear,1,3.24
+Jos,Enugu,515.518293,Medium,70.6,438.09,Cloudy,0,5.04
+Ibadan,Port Harcourt,573.254762,Medium,69.16,497.31,Cloudy,0,1.3
+Kano,Lagos,992.0745420000001,High,90.67,656.51,Clear,0,3.28
+Ibadan,Enugu,533.282679,Low,78.12,409.57,Foggy,1,2.27
+Enugu,Benin City,248.853819,Medium,74.33,200.88,Clear,1,4.37
+Kano,Enugu,801.3729229999999,High,76.41,629.28,Foggy,2,1.7
+Kano,Benin City,837.512468,Medium,80.9,621.12,Cloudy,2,2.03
+Kano,Ibadan,865.3527290000001,Medium,88.78,584.82,Foggy,1,4.69
+Ibadan,Port Harcourt,573.254762,Medium,69.16,497.31,Rainy,0,9.13
+Abuja,Benin City,466.008375,Low,80.1,349.05,Cloudy,2,6.0
+Port Harcourt,Enugu,234.03965599999998,Low,75.18,186.79,Rainy,2,6.24
+Ibadan,Port Harcourt,573.254762,High,69.16,497.31,Clear,3,4.85
+Ibadan,Kaduna,645.970403,Medium,90.11,430.13,Foggy,2,4.93
+Lagos,Kano,989.642155,Low,90.9,653.26,Clear,0,4.76
+Enugu,Ibadan,531.74483,High,78.51,406.38,Rainy,2,9.12
+Enugu,Abuja,368.41768,Medium,63.91,345.87,Rainy,1,4.31
+Lagos,Port Harcourt,598.656487,Low,72.99,492.15,Cloudy,0,1.82
+Lagos,Benin City,314.372988,High,85.49,220.65,Foggy,2,8.79
+Kano,Lagos,992.0745420000001,High,90.67,656.51,Foggy,2,1.14
+Kaduna,Ibadan,649.7918880000001,Low,90.41,431.24,Foggy,0,5.16
+Benin City,Kano,837.1603240000001,High,81.72,614.67,Clear,2,4.04
+Lagos,Jos,957.130399,Low,84.88,676.55,Cloudy,0,3.05
+Kano,Port Harcourt,1040.284478,Low,77.05,810.08,Foggy,3,1.68
+Jos,Enugu,515.518293,Medium,70.6,438.09,Clear,2,6.07
+Ibadan,Enugu,533.282679,Medium,78.12,409.57,Clear,2,8.71
+Abuja,Ibadan,621.453446,Low,89.57,416.3,Clear,2,9.44
+Port Harcourt,Benin City,286.647561,Low,61.95,277.63,Cloudy,1,8.59
+Lagos,Kaduna,772.2622439999999,High,92.37,501.65,Cloudy,1,4.35
+Kano,Abuja,428.76914600000003,Medium,77.83,330.56,Foggy,1,1.14
+Lagos,Benin City,314.372988,Low,85.49,220.65,Clear,0,2.6
+Abuja,Enugu,365.950705,Low,64.12,342.42,Foggy,2,5.55
+Abuja,Port Harcourt,606.982748,Low,68.85,528.96,Cloudy,2,2.95
+Abuja,Kano,422.73338,High,78.67,322.4,Rainy,0,1.67
+Ibadan,Abuja,617.213147,Medium,88.48,418.55,Foggy,2,9.92
+Kano,Enugu,801.3729229999999,Medium,76.41,629.28,Cloudy,0,1.86
+Port Harcourt,Enugu,234.03965599999998,Low,75.18,186.79,Clear,2,5.54
+Lagos,Ibadan,129.681812,Medium,98.72,78.82,Rainy,1,9.58
+Lagos,Kaduna,772.2622439999999,High,92.37,501.65,Rainy,1,5.39
+Benin City,Kano,837.1603240000001,High,81.72,614.67,Rainy,1,5.61
+Lagos,Enugu,558.684404,High,82.89,404.41,Clear,0,1.3
+Abuja,Benin City,466.008375,High,80.1,349.05,Rainy,2,4.82
