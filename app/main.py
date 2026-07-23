@@ -1,5 +1,5 @@
 """
-CommuteIQ — FastAPI Backend (v2)
+SmartCommute AI — FastAPI Backend (v2)
 main.py — Complete implementation with:
   - Mode-aware travel time prediction (Nigeria + Kenya transport modes)
   - Road quality integration
@@ -22,6 +22,11 @@ Endpoints:
 import os
 import time
 import joblib
+from datetime import datetime
+from weather_intelligence import (
+    get_weather_trend, get_flood_risk,
+    get_day_pattern, DAY_CONGESTION_MULT
+)
 import httpx
 from pathlib import Path
 from typing import Optional, List
@@ -38,7 +43,7 @@ from storage import save_report, list_reports
 # ── App ──────────────────────────────────────────────────────
 
 app = FastAPI(
-    title="CommuteIQ",
+    title="SmartCommute AI",
     description="Community-powered AI mobility assistant for African cities",
     version="2.0.0",
 )
@@ -458,11 +463,24 @@ class ModesResponse(BaseModel):
 
 # ── Endpoints ─────────────────────────────────────────────────
 
+# Model versioning metadata
+MODEL_VERSION   = "v2.1"
+MODEL_TRAINED   = "2026-07-23"
+TRAINING_ROWS   = 32749
+DATASET_SOURCES = ["Nigeria Traffic (895 rows)", "Nairobi Driving OD (17,930)", "Nairobi Matatu OD (13,924)"]
+
 @app.get("/health")
 async def health():
     return {
-        "status": "ok",
-        "version": "2.0.0",
+        "status":           "ok",
+        "version":          "2.0.0",
+        "model_version":    MODEL_VERSION,
+        "model_trained":    MODEL_TRAINED,
+        "training_rows":    TRAINING_ROWS,
+        "dataset_sources":  DATASET_SOURCES,
+        "cities_covered":   len(CITY_COORDS),
+        "transport_modes":  15,
+        "named_roads":      20880,
         "models": {
             "travel_time":       travel_model is not None,
             "commute_quality":   quality_model is not None,
@@ -470,7 +488,12 @@ async def health():
             "road_quality":      road_quality is not None,
             "transport_modes":   transport_modes is not None,
         },
-        "supported_cities": list(CITY_COORDS.keys()),
+        "supported_cities":  list(CITY_COORDS.keys()),
+        "ethical_design": {
+            "blocked_reports":   ["police_checkpoint", "speed_trap"],
+            "privacy":           "Coordinates anonymized to 1.1km grid",
+            "data_retention":    "Reports expire automatically by type",
+        },
     }
 
 
@@ -665,6 +688,7 @@ async def get_reports(city: Optional[str] = None):
     cutoff  = time.time() - (6 * 3600)
     recent  = [r for r in reports if r.get("created_at", 0) > cutoff]
     return {"reports": recent, "count": len(recent)}
+
 
 # ═══════════════════════════════════════════════════════════════
 # REPORT EXPIRATION — type-specific lifetimes
@@ -916,6 +940,9 @@ class PredictResponseV2(PredictResponse):
     route_confidence:    Optional[dict] = None
     staggered_departure: Optional[dict] = None
     active_reports:      Optional[int]  = None
+    weather_trend:       Optional[dict] = None
+    flood_risk:          Optional[dict] = None
+    day_pattern:         Optional[dict] = None
     privacy_note:        str = "CommuteIQ stores only anonymized trip data. No personally identifiable travel history is collected or required."
     ethical_note:        str = "CommuteIQ does not allow police checkpoint or individual tracking reports."
 
@@ -994,6 +1021,21 @@ async def predict_v2(req: PredictRequest, user_id: Optional[str] = None):
     # Alternative suggestion
     alt_suggestion = suggest_alternative_mode(mode, city, congestion, weather, distance_km)
 
+    # Weather intelligence — trend + flood risk + day pattern
+    weather_trend = await get_weather_trend(coords["lat"], coords["lng"])
+    flood_risk    = get_flood_risk(
+        city,
+        origin_coords if 'origin_coords' in dir() else coords,
+        dest_coords   if 'dest_coords'   in dir() else coords,
+        weather
+    )
+    day_pattern   = get_day_pattern(city, req.time)
+
+    # Apply day-of-week multiplier to travel time
+    day_mult     = day_pattern["congestion_mult"]
+    if congestion == "High":
+        travel_time = round(travel_time * day_mult, 1)
+
     # AI explanation
     ai_explanation = generate_ai_explanation(
         origin=req.origin, destination=req.destination,
@@ -1005,8 +1047,14 @@ async def predict_v2(req: PredictRequest, user_id: Optional[str] = None):
         rq_score=rq_score, alt_suggestion=alt_suggestion,
     )
 
-    # Append confidence to explanation
+    # Append intelligence layers to explanation
     ai_explanation += f" {confidence['summary']}."
+    if weather_trend["trend_type"] in ["rain_incoming", "clearing"]:
+        ai_explanation += f" {weather_trend['trend_message']}"
+    if flood_risk["warning"]:
+        ai_explanation += f" {flood_risk['warning']}"
+    if day_pattern["severity"] in ["High", "Low"]:
+        ai_explanation += f" {day_pattern['pattern_message']}"
 
     return PredictResponseV2(
         travel_time_min=travel_time,
@@ -1028,6 +1076,9 @@ async def predict_v2(req: PredictRequest, user_id: Optional[str] = None):
         route_confidence=route_conf,
         staggered_departure=staggered if staggered["staggered"] else None,
         active_reports=community_count,
+        weather_trend=weather_trend,
+        flood_risk=flood_risk if flood_risk["risk"] != "Low" else None,
+        day_pattern=day_pattern,
         privacy_note="CommuteIQ stores only anonymized trip data. No personally identifiable travel history is collected or required.",
         ethical_note="CommuteIQ does not allow police checkpoint or individual tracking reports.",
     )
