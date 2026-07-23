@@ -1,0 +1,896 @@
+Source,Destination,Road Length (km),Congestion Level,Travel Time (min),Weather,Alternative Routes,Suitability Score,route_type,data_note,congestion_enc,weather_enc,is_peak,quality_label
+Lagos,Kaduna,772.26224,Low,501.65,Cloudy,2,5.76,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Lagos,Kano,989.64216,Medium,653.26,Rainy,2,4.79,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Port Harcourt,Jos,749.66504,Medium,624.64,Foggy,0,3.21,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Jos,Benin City,694.31996,Medium,555.87,Cloudy,2,8.48,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Lagos,Enugu,558.6844,Low,404.41,Clear,1,3.93,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Benin City,Port Harcourt,285.48322,Medium,274.55,Cloudy,0,8.87,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Port Harcourt,Kano,1035.64389,Medium,808.93,Cloudy,3,8.2,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Jos,Abuja,232.62361,High,217.8,Rainy,1,8.5,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Benin City,Jos,694.72263,High,551.95,Foggy,0,4.64,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Jos,Ibadan,831.54397,High,603.83,Foggy,2,3.82,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Abuja,Ibadan,621.45345,High,416.3,Foggy,2,5.51,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Ibadan,Kano,863.35031,Medium,581.74,Clear,1,9.27,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Abuja,Kano,422.73338,Medium,322.4,Foggy,1,5.8,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Kano,Kaduna,236.46671,Medium,181.36,Cloudy,0,3.48,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Jos,Benin City,694.31996,Low,555.87,Foggy,2,8.72,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Jos,Port Harcourt,756.55034,High,624.63,Rainy,1,4.3,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Ibadan,Kano,863.35031,High,581.74,Foggy,2,9.05,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Abuja,Enugu,365.9507,Low,342.42,Foggy,1,4.1,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Benin City,Ibadan,288.22386,Low,223.98,Foggy,1,4.75,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Benin City,Ibadan,288.22386,High,223.98,Cloudy,2,5.51,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Kano,Kaduna,236.46671,Low,181.36,Rainy,1,1.01,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Port Harcourt,Enugu,234.03966,Low,186.79,Cloudy,3,8.06,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Enugu,Ibadan,531.74483,Low,406.38,Cloudy,3,1.22,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Kaduna,Ibadan,649.79189,Low,431.24,Foggy,1,5.04,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Kano,Kaduna,236.46671,Low,181.36,Cloudy,1,6.48,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Kano,Benin City,837.51247,High,621.12,Rainy,3,7.0,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Port Harcourt,Lagos,602.37575,Low,496.52,Clear,0,2.61,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Enugu,Kano,800.29869,Medium,629.07,Cloudy,2,5.83,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Benin City,Abuja,460.43211,High,346.47,Foggy,3,4.08,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Port Harcourt,Enugu,234.03966,High,186.79,Cloudy,2,8.84,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Port Harcourt,Kano,1035.64389,Low,808.93,Rainy,1,7.85,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Benin City,Jos,694.72263,Medium,551.95,Clear,3,7.4,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Jos,Port Harcourt,756.55034,Medium,624.63,Clear,3,6.46,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Jos,Benin City,694.31996,Low,555.87,Cloudy,3,3.71,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Ibadan,Port Harcourt,573.25476,High,497.31,Rainy,1,3.2,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Lagos,Jos,957.1304,Medium,676.55,Clear,1,6.1,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Benin City,Ibadan,288.22386,High,223.98,Cloudy,1,7.39,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Ibadan,Kano,863.35031,Medium,581.74,Foggy,0,1.35,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Lagos,Abuja,743.50499,Low,490.07,Rainy,3,4.57,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Port Harcourt,Lagos,602.37575,Low,496.52,Foggy,3,4.09,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Benin City,Port Harcourt,285.48322,High,274.55,Clear,2,4.38,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Abuja,Benin City,466.00838,High,349.05,Rainy,2,5.69,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Kaduna,Jos,279.96749,Low,205.82,Clear,2,8.44,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Port Harcourt,Benin City,286.64756,Medium,277.63,Foggy,0,2.46,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Abuja,Jos,233.94325,High,216.89,Cloudy,1,7.64,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Kano,Enugu,801.37292,Low,629.28,Clear,3,1.79,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Kaduna,Abuja,195.51477,Medium,158.76,Rainy,1,8.47,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Enugu,Kano,800.29869,Low,629.07,Foggy,2,2.52,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Abuja,Kano,422.73338,High,322.4,Cloudy,2,9.1,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Kaduna,Kano,235.72768,Medium,178.76,Rainy,1,7.96,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Ibadan,Port Harcourt,573.25476,Medium,497.31,Cloudy,2,3.46,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Abuja,Enugu,365.9507,Low,342.42,Rainy,3,5.91,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Enugu,Port Harcourt,236.16038,Low,190.99,Rainy,0,6.44,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Port Harcourt,Lagos,602.37575,Low,496.52,Rainy,0,8.4,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Kano,Ibadan,865.35273,Low,584.82,Rainy,2,8.17,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Kano,Lagos,992.07454,High,656.51,Cloudy,2,1.81,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Enugu,Lagos,559.54563,Low,403.02,Rainy,2,1.79,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Kaduna,Lagos,776.5137,High,502.93,Cloudy,2,2.21,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Benin City,Abuja,460.43211,High,346.47,Foggy,3,5.28,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Kano,Enugu,801.37292,High,629.28,Clear,1,5.46,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Lagos,Abuja,743.50499,High,490.07,Foggy,0,2.99,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Enugu,Lagos,559.54563,Low,403.02,Cloudy,2,1.46,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Port Harcourt,Benin City,286.64756,High,277.63,Cloudy,2,9.82,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Abuja,Kano,422.73338,Medium,322.4,Rainy,3,2.12,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Benin City,Ibadan,288.22386,Low,223.98,Clear,1,3.21,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Ibadan,Benin City,288.97126,High,225.81,Rainy,3,5.32,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Jos,Benin City,694.31996,Low,555.87,Foggy,2,5.39,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Benin City,Port Harcourt,285.48322,High,274.55,Clear,2,2.24,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Enugu,Kaduna,567.67905,Low,459.74,Rainy,3,4.48,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Lagos,Jos,957.1304,Medium,676.55,Clear,1,3.75,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Benin City,Abuja,460.43211,High,346.47,Foggy,3,7.95,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Lagos,Ibadan,129.68181,Medium,78.82,Cloudy,1,7.21,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Abuja,Enugu,365.9507,Low,342.42,Clear,1,2.27,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Enugu,Ibadan,531.74483,Low,406.38,Foggy,3,9.04,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Jos,Lagos,958.26578,High,675.52,Foggy,1,1.13,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Ibadan,Enugu,533.28268,Low,409.57,Clear,0,2.85,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Kano,Port Harcourt,1040.28448,Low,810.08,Clear,2,1.37,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Abuja,Lagos,748.17526,Medium,487.99,Foggy,2,5.5,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Ibadan,Abuja,617.21315,Low,418.55,Clear,0,9.97,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Kaduna,Benin City,604.25809,Medium,449.32,Cloudy,0,3.03,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Kaduna,Jos,279.96749,High,205.82,Rainy,3,1.69,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Abuja,Kano,422.73338,Medium,322.4,Cloudy,3,5.51,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Enugu,Benin City,248.85382,High,200.88,Cloudy,3,3.67,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Abuja,Jos,233.94325,Medium,216.89,Cloudy,3,3.46,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Ibadan,Benin City,288.97126,High,225.81,Foggy,0,5.15,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Enugu,Abuja,368.41768,Low,345.87,Clear,0,4.11,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Ibadan,Lagos,130.8188,Low,80.27,Cloudy,0,3.56,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Lagos,Benin City,314.37299,Low,220.65,Rainy,3,8.36,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Ibadan,Abuja,617.21315,Medium,418.55,Rainy,1,9.79,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Lagos,Benin City,314.37299,Medium,220.65,Cloudy,1,7.67,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Benin City,Kaduna,604.54068,Medium,445.34,Clear,3,2.35,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Kaduna,Enugu,568.11855,Medium,457.49,Cloudy,0,9.6,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Lagos,Port Harcourt,598.65649,High,492.15,Rainy,2,5.72,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Kano,Lagos,992.07454,Medium,656.51,Rainy,3,6.11,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Abuja,Benin City,466.00838,High,349.05,Foggy,1,2.19,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Lagos,Benin City,314.37299,Medium,220.65,Clear,3,7.68,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Port Harcourt,Benin City,286.64756,High,277.63,Cloudy,0,1.19,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Benin City,Abuja,460.43211,Low,346.47,Clear,0,2.66,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Benin City,Ibadan,288.22386,Medium,223.98,Cloudy,3,8.35,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Kaduna,Lagos,776.5137,High,502.93,Clear,0,4.2,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Benin City,Kaduna,604.54068,High,445.34,Clear,0,1.08,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Kano,Kaduna,236.46671,High,181.36,Rainy,3,4.16,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Jos,Port Harcourt,756.55034,Medium,624.63,Rainy,1,9.77,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Enugu,Jos,515.71976,Low,438.21,Cloudy,1,1.82,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Jos,Kano,297.05673,Medium,271.15,Cloudy,3,2.16,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Benin City,Abuja,460.43211,Low,346.47,Rainy,0,8.67,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Abuja,Port Harcourt,606.98275,Low,528.96,Rainy,3,3.3,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Abuja,Kano,422.73338,Low,322.4,Foggy,2,5.22,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Benin City,Lagos,316.02466,Low,220.63,Clear,0,4.54,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Abuja,Lagos,748.17526,Medium,487.99,Rainy,1,3.91,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Abuja,Enugu,365.9507,Low,342.42,Clear,1,8.66,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Port Harcourt,Benin City,286.64756,Medium,277.63,Foggy,3,8.85,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Lagos,Port Harcourt,598.65649,Low,492.15,Foggy,3,6.26,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Lagos,Jos,957.1304,Medium,676.55,Cloudy,0,2.44,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Port Harcourt,Benin City,286.64756,Medium,277.63,Rainy,0,4.77,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Kaduna,Abuja,195.51477,High,158.76,Clear,0,8.96,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Enugu,Jos,515.71976,Low,438.21,Foggy,1,3.18,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Port Harcourt,Lagos,602.37575,High,496.52,Rainy,1,6.27,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Abuja,Kano,422.73338,High,322.4,Foggy,1,1.35,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Kano,Ibadan,865.35273,High,584.82,Cloudy,3,6.46,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Benin City,Kaduna,604.54068,Medium,445.34,Clear,2,2.02,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Kano,Lagos,992.07454,High,656.51,Rainy,0,7.42,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Jos,Port Harcourt,756.55034,Medium,624.63,Foggy,0,2.45,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Lagos,Jos,957.1304,Medium,676.55,Cloudy,1,8.23,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Benin City,Lagos,316.02466,High,220.63,Cloudy,0,1.71,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Kano,Jos,297.86287,Low,272.81,Rainy,1,3.27,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Kano,Benin City,837.51247,Low,621.12,Rainy,0,1.96,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Abuja,Lagos,748.17526,Medium,487.99,Cloudy,1,7.54,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Enugu,Kaduna,567.67905,Low,459.74,Clear,0,6.36,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Jos,Ibadan,831.54397,Medium,603.83,Rainy,3,3.79,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Lagos,Ibadan,129.68181,High,78.82,Clear,1,7.24,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Ibadan,Benin City,288.97126,Low,225.81,Foggy,3,5.4,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Benin City,Enugu,247.97468,Low,197.15,Clear,2,9.76,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Kano,Port Harcourt,1040.28448,Medium,810.08,Rainy,1,9.62,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Jos,Kaduna,280.59371,Low,206.7,Foggy,2,1.67,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Port Harcourt,Enugu,234.03966,Medium,186.79,Rainy,3,7.78,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Lagos,Jos,957.1304,Low,676.55,Foggy,3,1.78,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Benin City,Enugu,247.97468,High,197.15,Foggy,2,6.25,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Kano,Enugu,801.37292,Low,629.28,Cloudy,3,4.08,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Benin City,Kano,837.16032,Low,614.67,Cloudy,2,5.04,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Kano,Jos,297.86287,Low,272.81,Rainy,2,3.14,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Port Harcourt,Abuja,602.36295,Low,532.3,Clear,2,1.32,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Kano,Jos,297.86287,Low,272.81,Rainy,2,6.5,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Kano,Jos,297.86287,Low,272.81,Cloudy,2,1.05,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Enugu,Ibadan,531.74483,Medium,406.38,Foggy,2,3.01,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Benin City,Kaduna,604.54068,Low,445.34,Clear,3,9.36,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Kaduna,Ibadan,649.79189,Medium,431.24,Clear,3,8.2,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Lagos,Benin City,314.37299,High,220.65,Rainy,2,6.64,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Kano,Lagos,992.07454,Medium,656.51,Cloudy,2,4.03,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Ibadan,Lagos,130.8188,Medium,80.27,Rainy,2,6.83,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Jos,Kano,297.05673,Medium,271.15,Foggy,1,2.37,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Lagos,Enugu,558.6844,Low,404.41,Cloudy,2,6.94,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Lagos,Benin City,314.37299,Medium,220.65,Cloudy,1,8.53,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Port Harcourt,Enugu,234.03966,High,186.79,Cloudy,1,2.93,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Abuja,Ibadan,621.45345,Low,416.3,Rainy,2,2.69,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Port Harcourt,Ibadan,574.57494,High,499.88,Cloudy,2,3.3,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Lagos,Benin City,314.37299,High,220.65,Foggy,3,3.37,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Jos,Enugu,515.51829,High,438.09,Foggy,2,1.31,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Jos,Abuja,232.62361,Low,217.8,Clear,3,5.03,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Enugu,Port Harcourt,236.16038,Medium,190.99,Cloudy,0,6.19,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Jos,Kano,297.05673,Low,271.15,Rainy,3,4.81,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Abuja,Ibadan,621.45345,Low,416.3,Foggy,0,7.94,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Port Harcourt,Lagos,602.37575,High,496.52,Rainy,2,6.48,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Kaduna,Ibadan,649.79189,High,431.24,Cloudy,0,2.63,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Port Harcourt,Jos,749.66504,Low,624.64,Clear,3,5.98,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Benin City,Port Harcourt,285.48322,High,274.55,Clear,1,9.76,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Jos,Abuja,232.62361,Medium,217.8,Rainy,3,9.65,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Enugu,Lagos,559.54563,High,403.02,Foggy,1,9.23,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Lagos,Abuja,743.50499,Low,490.07,Clear,1,2.17,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Kano,Kaduna,236.46671,Low,181.36,Foggy,0,2.42,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Abuja,Kaduna,190.11374,Medium,153.07,Cloudy,1,5.8,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Abuja,Kaduna,190.11374,Medium,153.07,Cloudy,0,7.17,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Abuja,Lagos,748.17526,High,487.99,Clear,0,5.5,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Ibadan,Lagos,130.8188,Low,80.27,Cloudy,0,6.49,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Port Harcourt,Enugu,234.03966,Low,186.79,Foggy,3,5.57,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Enugu,Kaduna,567.67905,Medium,459.74,Foggy,1,8.86,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Port Harcourt,Kaduna,803.02425,High,639.59,Cloudy,1,6.03,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Kaduna,Enugu,568.11855,Low,457.49,Clear,2,1.33,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Abuja,Enugu,365.9507,Medium,342.42,Clear,0,9.73,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Port Harcourt,Jos,749.66504,High,624.64,Cloudy,1,5.66,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Lagos,Enugu,558.6844,Medium,404.41,Cloudy,0,5.23,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Jos,Lagos,958.26578,Medium,675.52,Clear,2,9.11,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Jos,Abuja,232.62361,High,217.8,Clear,3,5.42,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Ibadan,Benin City,288.97126,Low,225.81,Clear,2,8.74,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Enugu,Benin City,248.85382,High,200.88,Cloudy,0,3.67,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Jos,Ibadan,831.54397,Low,603.83,Clear,0,7.37,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Benin City,Kano,837.16032,High,614.67,Clear,0,8.45,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Kaduna,Enugu,568.11855,Low,457.49,Rainy,2,3.62,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Jos,Lagos,958.26578,Low,675.52,Cloudy,3,3.88,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Port Harcourt,Abuja,602.36295,High,532.3,Cloudy,1,4.28,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Lagos,Kaduna,772.26224,High,501.65,Foggy,2,5.83,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Lagos,Kaduna,772.26224,Medium,501.65,Clear,3,8.41,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Jos,Kano,297.05673,High,271.15,Cloudy,0,2.45,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Port Harcourt,Ibadan,574.57494,Low,499.88,Foggy,0,1.7,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Enugu,Kaduna,567.67905,High,459.74,Foggy,2,8.97,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Lagos,Ibadan,129.68181,Medium,78.82,Rainy,1,4.32,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Kaduna,Jos,279.96749,Medium,205.82,Foggy,0,3.56,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Port Harcourt,Enugu,234.03966,Low,186.79,Rainy,2,3.31,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Lagos,Abuja,743.50499,Low,490.07,Foggy,0,3.74,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Kano,Benin City,837.51247,Medium,621.12,Cloudy,0,6.14,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Benin City,Enugu,247.97468,High,197.15,Clear,3,4.06,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Kano,Jos,297.86287,Medium,272.81,Rainy,3,3.24,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Jos,Kaduna,280.59371,High,206.7,Clear,3,3.98,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Jos,Lagos,958.26578,Medium,675.52,Rainy,2,9.85,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Port Harcourt,Kaduna,803.02425,High,639.59,Clear,2,2.91,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Kano,Benin City,837.51247,High,621.12,Foggy,3,7.71,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Port Harcourt,Benin City,286.64756,Medium,277.63,Rainy,3,8.23,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Abuja,Port Harcourt,606.98275,Medium,528.96,Foggy,3,2.87,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Enugu,Ibadan,531.74483,High,406.38,Foggy,2,5.31,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Ibadan,Port Harcourt,573.25476,Medium,497.31,Rainy,1,2.26,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Enugu,Lagos,559.54563,Medium,403.02,Foggy,1,7.21,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Lagos,Port Harcourt,598.65649,Medium,492.15,Clear,3,4.97,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Kaduna,Ibadan,649.79189,Low,431.24,Rainy,3,9.1,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Port Harcourt,Enugu,234.03966,Low,186.79,Clear,3,1.25,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Jos,Kaduna,280.59371,Medium,206.7,Foggy,2,2.77,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Enugu,Kaduna,567.67905,Medium,459.74,Rainy,2,7.08,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Benin City,Abuja,460.43211,Low,346.47,Cloudy,2,4.91,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Abuja,Port Harcourt,606.98275,Low,528.96,Clear,0,3.94,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Benin City,Enugu,247.97468,Low,197.15,Cloudy,1,6.92,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Jos,Enugu,515.51829,High,438.09,Clear,3,3.91,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Jos,Enugu,515.51829,High,438.09,Clear,0,9.06,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Jos,Enugu,515.51829,Low,438.09,Clear,3,3.46,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Kano,Jos,297.86287,High,272.81,Cloudy,0,9.55,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Port Harcourt,Enugu,234.03966,High,186.79,Rainy,2,1.01,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Jos,Enugu,515.51829,Medium,438.09,Rainy,0,4.03,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Ibadan,Benin City,288.97126,Medium,225.81,Rainy,2,3.63,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Enugu,Jos,515.71976,High,438.21,Cloudy,2,9.37,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Abuja,Port Harcourt,606.98275,Low,528.96,Cloudy,0,3.36,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Kaduna,Benin City,604.25809,Low,449.32,Cloudy,0,9.6,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Ibadan,Benin City,288.97126,High,225.81,Foggy,1,9.48,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Port Harcourt,Kaduna,803.02425,Low,639.59,Cloudy,3,1.88,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Port Harcourt,Jos,749.66504,Low,624.64,Clear,1,5.76,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Abuja,Lagos,748.17526,Low,487.99,Clear,1,6.05,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Enugu,Ibadan,531.74483,Low,406.38,Rainy,2,9.35,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Kaduna,Jos,279.96749,High,205.82,Cloudy,1,5.82,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Ibadan,Kaduna,645.9704,Low,430.13,Rainy,2,3.85,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Port Harcourt,Lagos,602.37575,Low,496.52,Cloudy,3,5.94,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Port Harcourt,Enugu,234.03966,Low,186.79,Cloudy,2,1.52,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Lagos,Enugu,558.6844,High,404.41,Foggy,0,5.01,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Lagos,Kaduna,772.26224,Medium,501.65,Cloudy,0,2.89,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Ibadan,Benin City,288.97126,Medium,225.81,Rainy,1,3.1,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Jos,Ibadan,831.54397,High,603.83,Rainy,1,8.94,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Port Harcourt,Kaduna,803.02425,Medium,639.59,Foggy,3,2.95,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Abuja,Enugu,365.9507,High,342.42,Foggy,2,5.69,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Jos,Kano,297.05673,Medium,271.15,Clear,2,7.13,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Kano,Kaduna,236.46671,Medium,181.36,Rainy,0,7.04,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Jos,Enugu,515.51829,Low,438.09,Cloudy,0,7.91,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Kano,Enugu,801.37292,Medium,629.28,Rainy,2,2.15,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Enugu,Port Harcourt,236.16038,Low,190.99,Rainy,3,4.3,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Kaduna,Benin City,604.25809,High,449.32,Clear,3,8.52,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Port Harcourt,Jos,749.66504,Low,624.64,Cloudy,0,1.05,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Jos,Benin City,694.31996,High,555.87,Clear,3,4.92,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Kano,Port Harcourt,1040.28448,Low,810.08,Rainy,1,8.36,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Jos,Port Harcourt,756.55034,Medium,624.63,Cloudy,0,8.04,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Kaduna,Port Harcourt,807.0301,Low,638.29,Clear,1,2.6,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Kano,Jos,297.86287,Medium,272.81,Cloudy,0,5.46,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Enugu,Ibadan,531.74483,High,406.38,Rainy,1,6.91,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Benin City,Port Harcourt,285.48322,High,274.55,Foggy,3,5.1,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Abuja,Jos,233.94325,Medium,216.89,Foggy,3,2.26,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Enugu,Port Harcourt,236.16038,Low,190.99,Cloudy,2,7.2,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Benin City,Kaduna,604.54068,High,445.34,Rainy,3,7.46,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Kano,Kaduna,236.46671,High,181.36,Clear,2,3.29,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Enugu,Ibadan,531.74483,Low,406.38,Foggy,2,2.69,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Jos,Lagos,958.26578,Medium,675.52,Clear,3,9.62,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Kano,Benin City,837.51247,High,621.12,Rainy,3,1.31,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Enugu,Kano,800.29869,Low,629.07,Clear,2,6.69,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Kano,Abuja,428.76915,Low,330.56,Foggy,0,5.64,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Kaduna,Port Harcourt,807.0301,Low,638.29,Rainy,0,7.91,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Ibadan,Abuja,617.21315,High,418.55,Rainy,0,7.91,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Jos,Benin City,694.31996,High,555.87,Clear,1,9.78,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Ibadan,Port Harcourt,573.25476,Low,497.31,Clear,0,9.5,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Kaduna,Ibadan,649.79189,High,431.24,Clear,3,6.16,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Jos,Benin City,694.31996,Medium,555.87,Rainy,3,2.17,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Kano,Benin City,837.51247,Medium,621.12,Clear,3,3.95,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Ibadan,Port Harcourt,573.25476,Low,497.31,Foggy,0,7.52,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Lagos,Kano,989.64216,Medium,653.26,Clear,3,9.23,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Kano,Jos,297.86287,Medium,272.81,Clear,2,5.36,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Enugu,Kano,800.29869,Medium,629.07,Clear,2,6.49,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Kaduna,Abuja,195.51477,High,158.76,Cloudy,0,6.68,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Abuja,Jos,233.94325,Medium,216.89,Cloudy,3,8.79,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Port Harcourt,Benin City,286.64756,Low,277.63,Foggy,2,7.06,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Kaduna,Enugu,568.11855,Low,457.49,Cloudy,1,3.26,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Abuja,Kaduna,190.11374,High,153.07,Foggy,1,5.43,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Benin City,Jos,694.72263,High,551.95,Cloudy,3,4.9,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Port Harcourt,Kaduna,803.02425,Medium,639.59,Foggy,2,7.13,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Lagos,Enugu,558.6844,Low,404.41,Cloudy,3,7.8,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Abuja,Ibadan,621.45345,Medium,416.3,Foggy,2,1.59,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Kano,Lagos,992.07454,Low,656.51,Rainy,2,3.31,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Abuja,Lagos,748.17526,Medium,487.99,Foggy,0,4.61,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Lagos,Jos,957.1304,Low,676.55,Foggy,3,6.73,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Ibadan,Kano,863.35031,Medium,581.74,Clear,2,1.35,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Kano,Port Harcourt,1040.28448,Low,810.08,Foggy,3,9.64,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Kaduna,Kano,235.72768,High,178.76,Foggy,1,7.82,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Abuja,Port Harcourt,606.98275,High,528.96,Foggy,3,8.79,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Abuja,Ibadan,621.45345,Medium,416.3,Cloudy,1,8.95,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Ibadan,Kano,863.35031,Medium,581.74,Clear,1,9.74,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Benin City,Kano,837.16032,High,614.67,Rainy,2,3.86,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Lagos,Ibadan,129.68181,Low,78.82,Clear,3,3.89,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Enugu,Benin City,248.85382,Low,200.88,Foggy,1,1.74,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Ibadan,Enugu,533.28268,High,409.57,Rainy,3,3.88,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Kano,Enugu,801.37292,High,629.28,Cloudy,1,5.53,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Kano,Enugu,801.37292,High,629.28,Foggy,3,5.63,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Benin City,Port Harcourt,285.48322,High,274.55,Rainy,2,5.38,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Lagos,Ibadan,129.68181,Low,78.82,Clear,1,2.48,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Port Harcourt,Jos,749.66504,High,624.64,Cloudy,2,9.26,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Lagos,Kano,989.64216,Low,653.26,Rainy,0,1.59,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Enugu,Benin City,248.85382,High,200.88,Rainy,2,6.93,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Kaduna,Lagos,776.5137,High,502.93,Cloudy,1,6.74,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Benin City,Lagos,316.02466,Medium,220.63,Rainy,1,1.39,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Kano,Enugu,801.37292,High,629.28,Rainy,1,5.86,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Lagos,Ibadan,129.68181,Medium,78.82,Clear,3,9.38,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Kaduna,Port Harcourt,807.0301,High,638.29,Cloudy,1,5.62,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Jos,Kaduna,280.59371,High,206.7,Foggy,3,9.67,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Kaduna,Ibadan,649.79189,Medium,431.24,Cloudy,1,1.63,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Enugu,Kaduna,567.67905,Low,459.74,Cloudy,3,8.41,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Kano,Benin City,837.51247,Medium,621.12,Rainy,1,2.96,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Ibadan,Lagos,130.8188,High,80.27,Clear,2,3.82,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Abuja,Lagos,748.17526,High,487.99,Foggy,2,1.46,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Abuja,Ibadan,621.45345,Low,416.3,Foggy,0,4.31,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Lagos,Enugu,558.6844,Low,404.41,Foggy,0,9.61,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Port Harcourt,Abuja,602.36295,High,532.3,Cloudy,2,8.26,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Benin City,Enugu,247.97468,High,197.15,Clear,3,1.47,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Lagos,Jos,957.1304,High,676.55,Cloudy,2,9.77,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Lagos,Port Harcourt,598.65649,High,492.15,Foggy,1,2.84,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Ibadan,Abuja,617.21315,Low,418.55,Clear,1,7.07,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Port Harcourt,Ibadan,574.57494,Medium,499.88,Clear,3,6.24,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Kaduna,Kano,235.72768,High,178.76,Cloudy,2,7.37,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Abuja,Benin City,466.00838,Medium,349.05,Clear,1,3.57,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Kano,Ibadan,865.35273,High,584.82,Rainy,1,3.49,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Kano,Lagos,992.07454,Low,656.51,Foggy,3,5.75,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Kano,Enugu,801.37292,Medium,629.28,Rainy,0,2.05,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Kano,Abuja,428.76915,High,330.56,Foggy,1,3.53,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Kano,Kaduna,236.46671,Medium,181.36,Rainy,1,1.2,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Jos,Ibadan,831.54397,High,603.83,Rainy,3,4.69,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Abuja,Enugu,365.9507,Medium,342.42,Clear,0,3.43,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Abuja,Ibadan,621.45345,Low,416.3,Rainy,1,8.46,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Enugu,Port Harcourt,236.16038,Low,190.99,Rainy,3,8.49,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Port Harcourt,Kano,1035.64389,Low,808.93,Rainy,1,5.03,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Kano,Enugu,801.37292,Medium,629.28,Cloudy,0,1.98,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Kaduna,Jos,279.96749,Low,205.82,Clear,0,3.94,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Ibadan,Kano,863.35031,Medium,581.74,Cloudy,3,9.26,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Ibadan,Kaduna,645.9704,Low,430.13,Rainy,2,2.81,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Kano,Jos,297.86287,High,272.81,Rainy,3,7.68,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Kaduna,Kano,235.72768,Low,178.76,Rainy,0,8.71,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Jos,Kano,297.05673,Medium,271.15,Foggy,3,1.36,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Jos,Enugu,515.51829,Medium,438.09,Clear,3,5.04,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Kaduna,Abuja,195.51477,Low,158.76,Foggy,0,4.35,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Kaduna,Port Harcourt,807.0301,Low,638.29,Rainy,1,6.48,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Benin City,Ibadan,288.22386,High,223.98,Foggy,0,7.1,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Ibadan,Abuja,617.21315,Low,418.55,Cloudy,3,3.57,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Abuja,Kaduna,190.11374,Low,153.07,Clear,0,6.48,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Enugu,Abuja,368.41768,Low,345.87,Rainy,1,1.8,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Jos,Lagos,958.26578,Medium,675.52,Rainy,0,1.93,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Ibadan,Enugu,533.28268,Medium,409.57,Foggy,2,4.91,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Benin City,Kaduna,604.54068,High,445.34,Rainy,1,3.57,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Lagos,Kano,989.64216,High,653.26,Cloudy,3,2.71,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Benin City,Ibadan,288.22386,Medium,223.98,Cloudy,1,7.6,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Abuja,Enugu,365.9507,Low,342.42,Foggy,0,7.33,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Lagos,Kaduna,772.26224,High,501.65,Foggy,2,9.27,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Lagos,Port Harcourt,598.65649,Medium,492.15,Rainy,2,9.23,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Ibadan,Enugu,533.28268,High,409.57,Foggy,2,3.81,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Ibadan,Kano,863.35031,High,581.74,Foggy,0,6.38,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Kaduna,Benin City,604.25809,Low,449.32,Rainy,2,7.96,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Port Harcourt,Jos,749.66504,High,624.64,Rainy,3,6.62,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Benin City,Abuja,460.43211,Low,346.47,Foggy,1,8.71,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Benin City,Port Harcourt,285.48322,Low,274.55,Clear,1,7.22,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Port Harcourt,Enugu,234.03966,Low,186.79,Rainy,1,6.83,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Lagos,Benin City,314.37299,Medium,220.65,Clear,1,3.73,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Kaduna,Port Harcourt,807.0301,High,638.29,Rainy,3,2.19,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Abuja,Benin City,466.00838,Low,349.05,Rainy,2,6.94,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Kaduna,Benin City,604.25809,Low,449.32,Rainy,2,6.67,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Port Harcourt,Ibadan,574.57494,Medium,499.88,Cloudy,3,4.98,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Enugu,Lagos,559.54563,High,403.02,Cloudy,2,9.72,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Benin City,Jos,694.72263,Low,551.95,Clear,2,7.44,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Ibadan,Kaduna,645.9704,Low,430.13,Foggy,1,8.11,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Enugu,Abuja,368.41768,Low,345.87,Foggy,2,2.22,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Abuja,Enugu,365.9507,High,342.42,Foggy,1,9.49,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Kaduna,Enugu,568.11855,High,457.49,Cloudy,1,1.28,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Kaduna,Kano,235.72768,High,178.76,Rainy,1,5.02,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Port Harcourt,Kaduna,803.02425,Medium,639.59,Cloudy,2,4.67,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Lagos,Kano,989.64216,High,653.26,Clear,1,4.63,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Benin City,Ibadan,288.22386,Medium,223.98,Clear,3,8.74,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Kano,Port Harcourt,1040.28448,High,810.08,Clear,0,5.39,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Ibadan,Port Harcourt,573.25476,High,497.31,Cloudy,1,7.0,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Enugu,Kano,800.29869,Low,629.07,Cloudy,3,4.5,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Kano,Kaduna,236.46671,High,181.36,Rainy,1,6.38,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Kaduna,Ibadan,649.79189,High,431.24,Cloudy,3,2.02,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Lagos,Kaduna,772.26224,Medium,501.65,Clear,1,8.2,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Kaduna,Lagos,776.5137,Medium,502.93,Clear,1,3.95,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Kaduna,Kano,235.72768,High,178.76,Clear,0,6.49,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Kano,Ibadan,865.35273,Medium,584.82,Cloudy,0,3.19,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Port Harcourt,Lagos,602.37575,High,496.52,Rainy,3,2.77,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Kaduna,Enugu,568.11855,Medium,457.49,Clear,2,4.69,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Jos,Abuja,232.62361,Low,217.8,Foggy,3,9.49,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Ibadan,Benin City,288.97126,Medium,225.81,Clear,0,9.02,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Lagos,Kano,989.64216,High,653.26,Foggy,1,1.02,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Kano,Enugu,801.37292,High,629.28,Cloudy,2,5.07,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Kano,Lagos,992.07454,Low,656.51,Clear,3,8.6,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Kaduna,Enugu,568.11855,Medium,457.49,Foggy,3,7.72,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Lagos,Port Harcourt,598.65649,High,492.15,Foggy,2,9.21,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Abuja,Kaduna,190.11374,Medium,153.07,Foggy,3,2.78,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Ibadan,Lagos,130.8188,High,80.27,Clear,1,9.88,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Ibadan,Kaduna,645.9704,High,430.13,Foggy,1,4.66,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Kano,Port Harcourt,1040.28448,Low,810.08,Clear,3,6.35,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Ibadan,Jos,830.83856,Low,605.03,Clear,1,1.16,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Kano,Jos,297.86287,Medium,272.81,Cloudy,2,9.47,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Lagos,Jos,957.1304,High,676.55,Clear,3,4.42,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Lagos,Kano,989.64216,Low,653.26,Cloudy,0,2.1,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Port Harcourt,Enugu,234.03966,Medium,186.79,Clear,0,7.38,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Jos,Kaduna,280.59371,High,206.7,Rainy,3,4.42,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Jos,Benin City,694.31996,Medium,555.87,Foggy,1,7.39,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Ibadan,Kaduna,645.9704,Medium,430.13,Cloudy,1,4.13,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Jos,Kano,297.05673,Medium,271.15,Foggy,0,3.41,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Lagos,Abuja,743.50499,High,490.07,Clear,3,1.9,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Benin City,Lagos,316.02466,Low,220.63,Foggy,0,4.39,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Port Harcourt,Kaduna,803.02425,Low,639.59,Rainy,0,5.03,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Port Harcourt,Lagos,602.37575,Medium,496.52,Foggy,2,9.97,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Jos,Enugu,515.51829,Medium,438.09,Rainy,0,8.2,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Port Harcourt,Lagos,602.37575,High,496.52,Clear,3,4.34,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Kaduna,Kano,235.72768,High,178.76,Rainy,2,1.25,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Kano,Port Harcourt,1040.28448,Medium,810.08,Cloudy,0,3.64,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Benin City,Lagos,316.02466,Low,220.63,Clear,0,1.8,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Lagos,Port Harcourt,598.65649,Low,492.15,Foggy,3,9.96,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Abuja,Port Harcourt,606.98275,High,528.96,Rainy,0,8.42,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Ibadan,Enugu,533.28268,High,409.57,Foggy,3,8.22,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Enugu,Port Harcourt,236.16038,Medium,190.99,Clear,3,5.1,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Abuja,Benin City,466.00838,Low,349.05,Clear,0,8.0,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Jos,Enugu,515.51829,High,438.09,Cloudy,3,5.8,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Benin City,Enugu,247.97468,High,197.15,Clear,1,6.29,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Enugu,Port Harcourt,236.16038,Low,190.99,Cloudy,0,1.13,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Port Harcourt,Abuja,602.36295,Medium,532.3,Clear,0,5.8,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Abuja,Port Harcourt,606.98275,Low,528.96,Foggy,1,3.34,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Enugu,Port Harcourt,236.16038,High,190.99,Clear,3,3.88,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Port Harcourt,Jos,749.66504,Medium,624.64,Rainy,2,8.56,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Ibadan,Enugu,533.28268,High,409.57,Rainy,1,6.99,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Jos,Port Harcourt,756.55034,Low,624.63,Clear,2,6.92,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Abuja,Jos,233.94325,Medium,216.89,Foggy,1,2.15,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Kano,Lagos,992.07454,Medium,656.51,Foggy,3,4.37,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Port Harcourt,Benin City,286.64756,Medium,277.63,Clear,0,8.16,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Port Harcourt,Jos,749.66504,Medium,624.64,Cloudy,2,7.2,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Lagos,Ibadan,129.68181,Low,78.82,Cloudy,1,5.3,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Port Harcourt,Benin City,286.64756,Low,277.63,Clear,2,1.84,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Port Harcourt,Abuja,602.36295,Low,532.3,Clear,0,3.92,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Jos,Kano,297.05673,High,271.15,Cloudy,0,2.94,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Benin City,Abuja,460.43211,Low,346.47,Foggy,3,7.32,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Abuja,Jos,233.94325,Medium,216.89,Clear,1,6.97,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Jos,Lagos,958.26578,High,675.52,Foggy,1,2.14,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Jos,Ibadan,831.54397,Medium,603.83,Clear,3,6.24,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Kano,Ibadan,865.35273,Medium,584.82,Foggy,0,2.61,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Kaduna,Port Harcourt,807.0301,Low,638.29,Foggy,1,1.75,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Ibadan,Enugu,533.28268,Low,409.57,Foggy,2,5.94,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Kaduna,Abuja,195.51477,Low,158.76,Cloudy,3,5.91,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Abuja,Jos,233.94325,High,216.89,Cloudy,3,9.29,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Enugu,Port Harcourt,236.16038,Medium,190.99,Clear,2,6.86,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Lagos,Kano,989.64216,Low,653.26,Rainy,1,1.34,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Port Harcourt,Benin City,286.64756,Low,277.63,Rainy,0,2.89,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Benin City,Abuja,460.43211,High,346.47,Clear,1,9.83,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Ibadan,Lagos,130.8188,High,80.27,Cloudy,2,8.83,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Abuja,Benin City,466.00838,High,349.05,Clear,2,9.32,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Abuja,Lagos,748.17526,Low,487.99,Clear,0,2.54,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Enugu,Kaduna,567.67905,Medium,459.74,Cloudy,1,4.42,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Lagos,Enugu,558.6844,Medium,404.41,Foggy,3,5.18,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Port Harcourt,Kano,1035.64389,Medium,808.93,Foggy,1,4.85,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Benin City,Ibadan,288.22386,High,223.98,Foggy,0,5.07,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Lagos,Abuja,743.50499,Low,490.07,Rainy,3,1.8,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Enugu,Abuja,368.41768,High,345.87,Rainy,0,4.08,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Ibadan,Benin City,288.97126,Low,225.81,Foggy,3,7.56,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Benin City,Enugu,247.97468,Medium,197.15,Cloudy,1,6.59,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Kano,Abuja,428.76915,Low,330.56,Foggy,1,9.41,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Port Harcourt,Abuja,602.36295,High,532.3,Foggy,0,3.18,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Kano,Ibadan,865.35273,Low,584.82,Clear,2,3.04,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Enugu,Ibadan,531.74483,Low,406.38,Foggy,0,4.58,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Port Harcourt,Lagos,602.37575,Low,496.52,Rainy,3,5.89,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Ibadan,Jos,830.83856,Low,605.03,Foggy,2,5.39,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Abuja,Benin City,466.00838,Medium,349.05,Rainy,1,8.2,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Benin City,Lagos,316.02466,Low,220.63,Cloudy,3,7.21,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Enugu,Port Harcourt,236.16038,Low,190.99,Rainy,0,6.11,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Enugu,Jos,515.71976,High,438.21,Clear,3,3.22,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Benin City,Enugu,247.97468,Low,197.15,Rainy,1,1.15,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Ibadan,Benin City,288.97126,High,225.81,Cloudy,0,8.14,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Lagos,Kaduna,772.26224,Low,501.65,Foggy,1,2.07,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Jos,Lagos,958.26578,High,675.52,Rainy,1,9.81,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Lagos,Jos,957.1304,Low,676.55,Cloudy,3,8.83,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Benin City,Port Harcourt,285.48322,Low,274.55,Rainy,1,1.77,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Benin City,Lagos,316.02466,Low,220.63,Clear,1,9.36,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Lagos,Kaduna,772.26224,Medium,501.65,Clear,1,8.87,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Port Harcourt,Kaduna,803.02425,Medium,639.59,Foggy,2,1.41,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Jos,Benin City,694.31996,High,555.87,Cloudy,3,3.18,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Port Harcourt,Abuja,602.36295,Low,532.3,Cloudy,0,5.75,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Port Harcourt,Kano,1035.64389,Low,808.93,Cloudy,3,3.37,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Ibadan,Port Harcourt,573.25476,Low,497.31,Clear,3,9.92,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Port Harcourt,Jos,749.66504,Medium,624.64,Rainy,0,4.95,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Enugu,Port Harcourt,236.16038,High,190.99,Cloudy,3,7.47,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Ibadan,Jos,830.83856,Low,605.03,Cloudy,0,4.16,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Jos,Lagos,958.26578,Low,675.52,Rainy,3,7.15,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Port Harcourt,Kano,1035.64389,Low,808.93,Clear,1,7.25,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Jos,Ibadan,831.54397,Medium,603.83,Clear,3,1.68,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Enugu,Abuja,368.41768,Medium,345.87,Clear,3,9.3,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Kaduna,Lagos,776.5137,High,502.93,Clear,0,9.07,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Lagos,Abuja,743.50499,Medium,490.07,Foggy,1,7.77,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Kaduna,Benin City,604.25809,Low,449.32,Cloudy,3,9.85,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Ibadan,Jos,830.83856,Low,605.03,Foggy,2,5.96,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Benin City,Jos,694.72263,Low,551.95,Clear,3,9.0,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Lagos,Jos,957.1304,Medium,676.55,Foggy,0,3.1,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Enugu,Kaduna,567.67905,Low,459.74,Rainy,2,4.22,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Abuja,Jos,233.94325,Low,216.89,Foggy,0,6.95,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Enugu,Port Harcourt,236.16038,Medium,190.99,Cloudy,3,8.92,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Ibadan,Abuja,617.21315,Medium,418.55,Rainy,1,1.35,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Port Harcourt,Abuja,602.36295,Low,532.3,Foggy,3,3.12,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Enugu,Benin City,248.85382,Low,200.88,Rainy,3,2.7,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Benin City,Jos,694.72263,High,551.95,Foggy,0,2.54,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Benin City,Jos,694.72263,Low,551.95,Cloudy,0,5.92,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Port Harcourt,Kaduna,803.02425,Low,639.59,Clear,2,7.82,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Kaduna,Ibadan,649.79189,High,431.24,Rainy,1,7.55,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Enugu,Ibadan,531.74483,High,406.38,Clear,2,6.96,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Abuja,Lagos,748.17526,High,487.99,Foggy,3,1.0,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Port Harcourt,Jos,749.66504,Low,624.64,Cloudy,0,4.07,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Lagos,Enugu,558.6844,Low,404.41,Foggy,2,2.65,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Jos,Port Harcourt,756.55034,Medium,624.63,Cloudy,0,1.19,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Enugu,Kaduna,567.67905,High,459.74,Clear,0,4.4,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Jos,Benin City,694.31996,High,555.87,Cloudy,3,4.51,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Ibadan,Lagos,130.8188,Medium,80.27,Rainy,3,6.36,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Enugu,Jos,515.71976,High,438.21,Cloudy,3,7.85,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Enugu,Kano,800.29869,Low,629.07,Foggy,2,3.67,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Port Harcourt,Kano,1035.64389,Low,808.93,Cloudy,2,7.21,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Enugu,Ibadan,531.74483,Low,406.38,Cloudy,2,2.02,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Enugu,Jos,515.71976,High,438.21,Rainy,2,5.87,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Enugu,Kaduna,567.67905,Low,459.74,Rainy,2,7.4,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Ibadan,Benin City,288.97126,High,225.81,Clear,3,9.67,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Kano,Kaduna,236.46671,Medium,181.36,Foggy,1,2.15,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Jos,Port Harcourt,756.55034,Low,624.63,Foggy,2,6.18,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Jos,Kano,297.05673,Medium,271.15,Rainy,0,3.17,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Lagos,Benin City,314.37299,High,220.65,Rainy,3,2.7,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Ibadan,Benin City,288.97126,High,225.81,Foggy,1,6.37,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Jos,Ibadan,831.54397,High,603.83,Foggy,3,4.05,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Benin City,Enugu,247.97468,High,197.15,Rainy,3,8.07,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Port Harcourt,Ibadan,574.57494,Medium,499.88,Rainy,2,6.4,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Benin City,Kano,837.16032,Low,614.67,Rainy,0,4.99,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Enugu,Lagos,559.54563,High,403.02,Clear,2,3.78,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Abuja,Kaduna,190.11374,Low,153.07,Clear,1,1.2,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Lagos,Ibadan,129.68181,Medium,78.82,Foggy,1,6.81,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Ibadan,Jos,830.83856,High,605.03,Clear,3,3.38,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Kaduna,Benin City,604.25809,Medium,449.32,Cloudy,0,7.44,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Port Harcourt,Enugu,234.03966,High,186.79,Foggy,2,7.94,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Kano,Port Harcourt,1040.28448,Medium,810.08,Rainy,1,7.32,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Kaduna,Ibadan,649.79189,High,431.24,Clear,2,7.51,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Lagos,Kano,989.64216,Low,653.26,Rainy,1,8.02,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Abuja,Ibadan,621.45345,Medium,416.3,Clear,1,2.14,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Abuja,Enugu,365.9507,Medium,342.42,Rainy,0,1.16,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Lagos,Benin City,314.37299,High,220.65,Cloudy,2,3.48,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Abuja,Jos,233.94325,Low,216.89,Foggy,1,2.74,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Jos,Abuja,232.62361,Medium,217.8,Foggy,1,1.44,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Lagos,Enugu,558.6844,Low,404.41,Clear,3,4.05,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Kaduna,Lagos,776.5137,Low,502.93,Rainy,3,7.0,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Lagos,Jos,957.1304,Low,676.55,Rainy,1,5.0,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Port Harcourt,Kaduna,803.02425,Low,639.59,Foggy,1,6.91,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Abuja,Kaduna,190.11374,Low,153.07,Clear,0,1.59,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Abuja,Enugu,365.9507,Medium,342.42,Cloudy,1,8.95,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Ibadan,Jos,830.83856,Low,605.03,Cloudy,1,9.05,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Kano,Benin City,837.51247,Low,621.12,Clear,3,9.67,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Kano,Enugu,801.37292,Medium,629.28,Foggy,2,9.77,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Ibadan,Enugu,533.28268,Low,409.57,Foggy,1,9.56,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Jos,Abuja,232.62361,High,217.8,Clear,2,4.59,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Enugu,Jos,515.71976,High,438.21,Clear,2,6.31,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Kaduna,Benin City,604.25809,Medium,449.32,Cloudy,2,8.56,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Kano,Kaduna,236.46671,Medium,181.36,Cloudy,2,2.3,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Jos,Abuja,232.62361,Low,217.8,Cloudy,2,6.23,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Kaduna,Kano,235.72768,Medium,178.76,Foggy,0,3.83,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Abuja,Kano,422.73338,High,322.4,Cloudy,2,3.56,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Kaduna,Lagos,776.5137,Medium,502.93,Foggy,1,6.78,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Ibadan,Lagos,130.8188,Medium,80.27,Rainy,2,7.83,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Lagos,Port Harcourt,598.65649,Low,492.15,Cloudy,2,2.97,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Jos,Enugu,515.51829,Low,438.09,Foggy,3,7.96,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Lagos,Jos,957.1304,Medium,676.55,Cloudy,0,5.65,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Lagos,Enugu,558.6844,Low,404.41,Clear,3,3.82,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Lagos,Port Harcourt,598.65649,High,492.15,Cloudy,3,8.76,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Port Harcourt,Jos,749.66504,Low,624.64,Cloudy,0,6.26,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Port Harcourt,Jos,749.66504,Low,624.64,Clear,0,8.16,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Abuja,Benin City,466.00838,Low,349.05,Rainy,3,4.38,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Kano,Enugu,801.37292,Low,629.28,Rainy,0,1.33,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Kano,Lagos,992.07454,Medium,656.51,Rainy,1,3.08,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Enugu,Jos,515.71976,Low,438.21,Rainy,1,3.39,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Abuja,Jos,233.94325,Low,216.89,Rainy,0,2.04,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Ibadan,Benin City,288.97126,Medium,225.81,Foggy,3,4.82,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Ibadan,Kaduna,645.9704,Low,430.13,Foggy,0,7.98,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Port Harcourt,Enugu,234.03966,Low,186.79,Foggy,1,8.74,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Ibadan,Kano,863.35031,High,581.74,Foggy,3,8.3,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Enugu,Port Harcourt,236.16038,High,190.99,Rainy,2,1.46,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Lagos,Enugu,558.6844,Medium,404.41,Clear,3,2.64,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Abuja,Jos,233.94325,High,216.89,Rainy,1,7.51,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Kaduna,Abuja,195.51477,Low,158.76,Clear,2,7.73,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Kano,Lagos,992.07454,High,656.51,Foggy,1,3.78,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Benin City,Kaduna,604.54068,Medium,445.34,Clear,3,6.91,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Benin City,Lagos,316.02466,High,220.63,Rainy,3,1.72,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Kaduna,Ibadan,649.79189,Medium,431.24,Cloudy,0,4.66,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Benin City,Kano,837.16032,High,614.67,Clear,1,3.54,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Ibadan,Lagos,130.8188,Low,80.27,Clear,2,4.19,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Abuja,Kaduna,190.11374,High,153.07,Cloudy,3,2.5,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Abuja,Jos,233.94325,Medium,216.89,Foggy,1,5.51,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Lagos,Kaduna,772.26224,High,501.65,Clear,1,7.61,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Kano,Ibadan,865.35273,High,584.82,Cloudy,2,6.03,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Enugu,Benin City,248.85382,High,200.88,Cloudy,3,2.13,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Jos,Kano,297.05673,High,271.15,Foggy,1,3.87,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Enugu,Benin City,248.85382,Low,200.88,Clear,0,6.63,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Abuja,Enugu,365.9507,Low,342.42,Foggy,0,7.26,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Lagos,Kaduna,772.26224,High,501.65,Clear,3,6.1,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Kano,Abuja,428.76915,Low,330.56,Cloudy,0,2.0,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Lagos,Jos,957.1304,Low,676.55,Cloudy,2,5.21,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Benin City,Enugu,247.97468,Medium,197.15,Cloudy,3,8.53,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Lagos,Kano,989.64216,High,653.26,Rainy,3,7.8,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Enugu,Benin City,248.85382,Low,200.88,Cloudy,0,5.21,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Ibadan,Enugu,533.28268,High,409.57,Cloudy,2,7.24,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Lagos,Kaduna,772.26224,Medium,501.65,Rainy,2,7.56,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Abuja,Port Harcourt,606.98275,Low,528.96,Foggy,2,7.7,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Port Harcourt,Enugu,234.03966,High,186.79,Rainy,3,1.21,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Ibadan,Lagos,130.8188,Medium,80.27,Rainy,2,2.04,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Abuja,Ibadan,621.45345,Medium,416.3,Foggy,1,1.77,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Abuja,Jos,233.94325,High,216.89,Cloudy,1,2.99,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Kano,Abuja,428.76915,High,330.56,Clear,3,8.59,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Enugu,Ibadan,531.74483,Low,406.38,Rainy,2,10.0,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Lagos,Enugu,558.6844,High,404.41,Clear,3,2.61,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Lagos,Benin City,314.37299,Low,220.65,Clear,3,7.54,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Kaduna,Benin City,604.25809,Medium,449.32,Clear,1,7.2,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Abuja,Ibadan,621.45345,High,416.3,Cloudy,2,2.84,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Enugu,Ibadan,531.74483,Low,406.38,Foggy,0,4.22,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Port Harcourt,Kano,1035.64389,High,808.93,Clear,2,6.66,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Kano,Lagos,992.07454,Medium,656.51,Foggy,0,9.35,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Jos,Lagos,958.26578,Medium,675.52,Clear,1,6.07,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Ibadan,Abuja,617.21315,High,418.55,Foggy,3,4.2,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Lagos,Kaduna,772.26224,Medium,501.65,Foggy,0,7.5,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Lagos,Kano,989.64216,Low,653.26,Foggy,2,6.59,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Enugu,Jos,515.71976,High,438.21,Clear,3,4.28,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Ibadan,Jos,830.83856,Medium,605.03,Cloudy,1,4.02,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Benin City,Abuja,460.43211,Medium,346.47,Clear,0,7.9,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Port Harcourt,Enugu,234.03966,Low,186.79,Cloudy,1,5.66,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Benin City,Jos,694.72263,High,551.95,Cloudy,0,8.9,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Kaduna,Enugu,568.11855,Low,457.49,Rainy,3,7.55,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Kano,Jos,297.86287,High,272.81,Cloudy,1,9.05,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Port Harcourt,Benin City,286.64756,High,277.63,Foggy,1,6.83,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Port Harcourt,Benin City,286.64756,Low,277.63,Rainy,3,4.55,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Kaduna,Jos,279.96749,Low,205.82,Rainy,1,1.27,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Kaduna,Enugu,568.11855,Medium,457.49,Rainy,3,1.23,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Jos,Abuja,232.62361,Low,217.8,Clear,1,4.31,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Kaduna,Abuja,195.51477,High,158.76,Clear,2,9.4,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Kaduna,Kano,235.72768,High,178.76,Foggy,1,2.26,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Kano,Enugu,801.37292,High,629.28,Foggy,0,2.71,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Lagos,Ibadan,129.68181,Low,78.82,Clear,2,3.19,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Kano,Port Harcourt,1040.28448,Low,810.08,Rainy,2,6.24,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Enugu,Abuja,368.41768,High,345.87,Clear,1,1.81,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Benin City,Port Harcourt,285.48322,Low,274.55,Clear,2,7.87,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Enugu,Kaduna,567.67905,Medium,459.74,Clear,3,6.8,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Kano,Ibadan,865.35273,High,584.82,Foggy,2,8.06,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Abuja,Lagos,748.17526,Low,487.99,Clear,2,6.42,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Ibadan,Kano,863.35031,High,581.74,Clear,0,7.13,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Abuja,Port Harcourt,606.98275,Low,528.96,Clear,0,4.25,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Ibadan,Enugu,533.28268,High,409.57,Cloudy,2,7.44,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Jos,Benin City,694.31996,Low,555.87,Foggy,3,8.01,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Enugu,Kano,800.29869,Medium,629.07,Foggy,0,9.01,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Jos,Kaduna,280.59371,Medium,206.7,Clear,3,6.4,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Enugu,Jos,515.71976,Low,438.21,Rainy,2,1.12,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Abuja,Enugu,365.9507,High,342.42,Clear,0,5.68,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Ibadan,Jos,830.83856,Low,605.03,Cloudy,3,2.03,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Ibadan,Benin City,288.97126,High,225.81,Foggy,1,7.17,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Enugu,Lagos,559.54563,Medium,403.02,Rainy,3,1.06,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Ibadan,Lagos,130.8188,High,80.27,Rainy,0,4.75,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Lagos,Abuja,743.50499,High,490.07,Rainy,1,3.86,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Lagos,Enugu,558.6844,Low,404.41,Cloudy,1,4.42,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Benin City,Jos,694.72263,Low,551.95,Rainy,1,2.79,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Benin City,Port Harcourt,285.48322,Medium,274.55,Clear,3,4.96,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Abuja,Ibadan,621.45345,Medium,416.3,Clear,2,3.24,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Kano,Kaduna,236.46671,Low,181.36,Foggy,0,5.62,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Kano,Ibadan,865.35273,Low,584.82,Clear,3,9.55,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Abuja,Ibadan,621.45345,High,416.3,Clear,0,4.98,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Ibadan,Kano,863.35031,High,581.74,Rainy,0,4.92,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Kano,Abuja,428.76915,Medium,330.56,Cloudy,0,7.49,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Benin City,Lagos,316.02466,High,220.63,Cloudy,3,1.31,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Abuja,Kaduna,190.11374,Medium,153.07,Clear,0,4.75,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Benin City,Lagos,316.02466,Low,220.63,Cloudy,0,6.18,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Port Harcourt,Jos,749.66504,Medium,624.64,Foggy,2,1.23,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Jos,Ibadan,831.54397,Low,603.83,Clear,0,8.22,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Ibadan,Kano,863.35031,Low,581.74,Rainy,0,6.1,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Ibadan,Abuja,617.21315,High,418.55,Cloudy,1,3.73,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Port Harcourt,Enugu,234.03966,Low,186.79,Foggy,3,9.56,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Enugu,Lagos,559.54563,Medium,403.02,Clear,2,8.13,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Enugu,Ibadan,531.74483,Low,406.38,Foggy,0,8.79,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Enugu,Kaduna,567.67905,High,459.74,Cloudy,0,4.04,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Benin City,Enugu,247.97468,Medium,197.15,Clear,2,5.98,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Kaduna,Abuja,195.51477,High,158.76,Rainy,3,3.95,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Kano,Enugu,801.37292,High,629.28,Cloudy,0,4.42,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Ibadan,Lagos,130.8188,Low,80.27,Foggy,2,8.43,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Kano,Enugu,801.37292,Low,629.28,Rainy,2,9.48,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Kano,Benin City,837.51247,Low,621.12,Rainy,1,8.37,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Ibadan,Kaduna,645.9704,Medium,430.13,Clear,0,6.93,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Abuja,Port Harcourt,606.98275,High,528.96,Foggy,0,8.71,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Jos,Abuja,232.62361,High,217.8,Clear,2,2.47,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Ibadan,Abuja,617.21315,High,418.55,Foggy,0,4.96,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Enugu,Benin City,248.85382,Low,200.88,Rainy,0,4.78,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Benin City,Abuja,460.43211,Low,346.47,Clear,0,5.85,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Kaduna,Port Harcourt,807.0301,High,638.29,Clear,0,5.44,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Jos,Abuja,232.62361,Medium,217.8,Clear,1,1.44,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Jos,Ibadan,831.54397,Low,603.83,Clear,0,9.48,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Abuja,Benin City,466.00838,Low,349.05,Cloudy,0,3.68,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Kaduna,Abuja,195.51477,Low,158.76,Clear,0,6.62,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Jos,Lagos,958.26578,Low,675.52,Cloudy,2,3.55,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Port Harcourt,Jos,749.66504,Medium,624.64,Cloudy,2,9.11,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Ibadan,Port Harcourt,573.25476,High,497.31,Clear,0,9.98,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Lagos,Abuja,743.50499,Low,490.07,Rainy,1,3.85,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Lagos,Jos,957.1304,Low,676.55,Cloudy,0,1.44,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Kano,Benin City,837.51247,Medium,621.12,Cloudy,1,3.08,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Abuja,Ibadan,621.45345,Medium,416.3,Rainy,0,9.33,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Port Harcourt,Kano,1035.64389,Medium,808.93,Foggy,3,2.44,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Abuja,Benin City,466.00838,Low,349.05,Rainy,0,9.26,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Ibadan,Port Harcourt,573.25476,Low,497.31,Clear,2,9.82,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Abuja,Jos,233.94325,Medium,216.89,Cloudy,1,6.92,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Kaduna,Abuja,195.51477,Low,158.76,Cloudy,0,8.06,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Benin City,Kano,837.16032,Medium,614.67,Foggy,0,3.35,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Kano,Port Harcourt,1040.28448,High,810.08,Foggy,3,1.46,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Kaduna,Lagos,776.5137,High,502.93,Rainy,2,1.5,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Jos,Kaduna,280.59371,High,206.7,Rainy,0,9.67,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Ibadan,Benin City,288.97126,Medium,225.81,Cloudy,1,4.72,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Lagos,Kano,989.64216,High,653.26,Foggy,0,1.54,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Benin City,Ibadan,288.22386,Medium,223.98,Clear,0,7.23,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Enugu,Kaduna,567.67905,High,459.74,Clear,1,9.82,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Abuja,Kano,422.73338,Low,322.4,Foggy,3,1.02,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Lagos,Benin City,314.37299,High,220.65,Rainy,1,5.13,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Ibadan,Port Harcourt,573.25476,Low,497.31,Cloudy,3,8.47,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Port Harcourt,Kaduna,803.02425,Low,639.59,Foggy,2,9.86,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Abuja,Port Harcourt,606.98275,Medium,528.96,Foggy,3,8.71,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Benin City,Lagos,316.02466,Medium,220.63,Cloudy,0,5.08,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Kaduna,Lagos,776.5137,High,502.93,Cloudy,2,2.7,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Jos,Lagos,958.26578,High,675.52,Rainy,0,7.14,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Port Harcourt,Jos,749.66504,Low,624.64,Cloudy,2,3.06,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Enugu,Kaduna,567.67905,High,459.74,Rainy,3,3.44,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Abuja,Enugu,365.9507,Medium,342.42,Foggy,3,3.63,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Kano,Lagos,992.07454,High,656.51,Cloudy,1,1.2,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Ibadan,Jos,830.83856,High,605.03,Clear,1,4.32,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Ibadan,Benin City,288.97126,High,225.81,Clear,1,3.79,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Kano,Benin City,837.51247,Medium,621.12,Rainy,2,8.09,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Ibadan,Port Harcourt,573.25476,Low,497.31,Clear,0,9.75,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Jos,Abuja,232.62361,High,217.8,Foggy,2,8.97,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Kaduna,Abuja,195.51477,High,158.76,Foggy,2,5.93,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Benin City,Kano,837.16032,High,614.67,Rainy,1,6.67,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Kaduna,Abuja,195.51477,Medium,158.76,Foggy,0,8.91,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Lagos,Kano,989.64216,Medium,653.26,Cloudy,3,2.77,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Abuja,Port Harcourt,606.98275,High,528.96,Clear,3,2.46,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Port Harcourt,Enugu,234.03966,High,186.79,Clear,3,4.31,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Jos,Ibadan,831.54397,Low,603.83,Foggy,0,6.01,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Jos,Benin City,694.31996,Medium,555.87,Foggy,0,7.57,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Enugu,Ibadan,531.74483,High,406.38,Rainy,2,1.06,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Kano,Benin City,837.51247,High,621.12,Rainy,0,5.16,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Kaduna,Benin City,604.25809,Medium,449.32,Rainy,1,2.31,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Poor
+Lagos,Kaduna,772.26224,Medium,501.65,Foggy,0,9.47,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Lagos,Port Harcourt,598.65649,Low,492.15,Foggy,3,2.33,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Kaduna,Port Harcourt,807.0301,Low,638.29,Foggy,1,4.95,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Port Harcourt,Kaduna,803.02425,Low,639.59,Foggy,2,1.23,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Enugu,Kano,800.29869,Low,629.07,Rainy,0,4.98,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Ibadan,Kaduna,645.9704,Medium,430.13,Rainy,0,4.26,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Abuja,Kano,422.73338,Low,322.4,Clear,3,5.68,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Abuja,Lagos,748.17526,Medium,487.99,Clear,2,1.99,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Kaduna,Jos,279.96749,High,205.82,Rainy,1,6.42,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Abuja,Enugu,365.9507,Medium,342.42,Clear,0,8.06,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Enugu,Kaduna,567.67905,Low,459.74,Cloudy,0,7.28,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Jos,Benin City,694.31996,Medium,555.87,Clear,2,9.07,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Port Harcourt,Kaduna,803.02425,Medium,639.59,Cloudy,0,7.8,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Lagos,Kano,989.64216,Low,653.26,Cloudy,2,9.59,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Port Harcourt,Kano,1035.64389,High,808.93,Cloudy,0,6.88,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Jos,Benin City,694.31996,High,555.87,Rainy,1,3.36,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Kano,Ibadan,865.35273,High,584.82,Rainy,3,2.8,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Enugu,Kaduna,567.67905,Low,459.74,Cloudy,3,1.52,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Kano,Jos,297.86287,Medium,272.81,Foggy,0,4.66,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Port Harcourt,Enugu,234.03966,Medium,186.79,Foggy,0,1.88,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Abuja,Enugu,365.9507,Low,342.42,Clear,3,4.8,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Ibadan,Jos,830.83856,Medium,605.03,Cloudy,0,1.16,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Kaduna,Port Harcourt,807.0301,Medium,638.29,Cloudy,3,1.04,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Port Harcourt,Kaduna,803.02425,Low,639.59,Rainy,3,4.47,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Jos,Port Harcourt,756.55034,Medium,624.63,Rainy,3,5.95,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Benin City,Ibadan,288.22386,Medium,223.98,Foggy,3,3.97,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Ibadan,Kano,863.35031,Medium,581.74,Clear,2,5.63,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Jos,Enugu,515.51829,High,438.09,Rainy,3,1.1,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Benin City,Lagos,316.02466,Medium,220.63,Clear,0,9.94,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Jos,Benin City,694.31996,Medium,555.87,Cloudy,3,1.32,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Enugu,Port Harcourt,236.16038,High,190.99,Cloudy,1,2.53,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Port Harcourt,Jos,749.66504,Medium,624.64,Foggy,0,3.59,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Abuja,Kaduna,190.11374,High,153.07,Foggy,2,7.46,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Kano,Lagos,992.07454,Low,656.51,Foggy,0,4.21,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Kano,Jos,297.86287,High,272.81,Cloudy,3,1.48,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Jos,Abuja,232.62361,High,217.8,Foggy,0,7.36,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Enugu,Kano,800.29869,Low,629.07,Foggy,1,9.39,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Jos,Kano,297.05673,High,271.15,Cloudy,1,8.41,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Enugu,Kaduna,567.67905,High,459.74,Foggy,1,8.94,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Kaduna,Jos,279.96749,Medium,205.82,Clear,3,9.08,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Lagos,Benin City,314.37299,Medium,220.65,Clear,2,3.05,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Abuja,Benin City,466.00838,High,349.05,Foggy,1,8.39,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Jos,Abuja,232.62361,High,217.8,Foggy,0,7.06,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Ibadan,Abuja,617.21315,Low,418.55,Cloudy,3,1.01,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Kaduna,Kano,235.72768,Low,178.76,Cloudy,1,1.31,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Kaduna,Benin City,604.25809,High,449.32,Foggy,1,5.5,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Moderate
+Enugu,Kano,800.29869,Medium,629.07,Cloudy,0,7.1,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Kaduna,Abuja,195.51477,Medium,158.76,Clear,3,8.65,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Enugu,Lagos,559.54563,Medium,403.02,Clear,2,2.16,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Kaduna,Port Harcourt,807.0301,High,638.29,Clear,3,2.51,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Kaduna,Port Harcourt,807.0301,High,638.29,Clear,1,5.38,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Port Harcourt,Enugu,234.03966,Medium,186.79,Cloudy,0,7.35,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Good
+Kano,Abuja,428.76915,Low,330.56,Cloudy,1,3.57,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Kano,Ibadan,865.35273,High,584.82,Clear,3,7.85,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Ibadan,Jos,830.83856,High,605.03,Clear,0,9.54,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Abuja,Ibadan,621.45345,Medium,416.3,Clear,1,4.71,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Lagos,Abuja,743.50499,Low,490.07,Rainy,3,6.26,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Ibadan,Abuja,617.21315,High,418.55,Clear,2,9.54,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Lagos,Jos,957.1304,Low,676.55,Foggy,3,6.6,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Abuja,Kaduna,190.11374,Medium,153.07,Clear,2,3.03,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Kaduna,Enugu,568.11855,Low,457.49,Cloudy,1,4.89,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Lagos,Ibadan,129.68181,High,78.82,Clear,1,8.09,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Lagos,Kaduna,772.26224,High,501.65,Foggy,2,9.99,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Port Harcourt,Abuja,602.36295,Medium,532.3,Clear,1,3.36,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Lagos,Jos,957.1304,Medium,676.55,Clear,2,3.22,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Jos,Port Harcourt,756.55034,Low,624.63,Rainy,3,9.62,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Jos,Ibadan,831.54397,High,603.83,Rainy,2,9.81,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Lagos,Kaduna,772.26224,Low,501.65,Rainy,0,4.89,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Kaduna,Abuja,195.51477,Medium,158.76,Foggy,3,7.41,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Kano,Jos,297.86287,Low,272.81,Cloudy,0,2.38,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Ibadan,Kaduna,645.9704,Medium,430.13,Rainy,0,7.41,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Kaduna,Enugu,568.11855,High,457.49,Rainy,1,3.55,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Enugu,Benin City,248.85382,High,200.88,Clear,2,1.9,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Kaduna,Jos,279.96749,Medium,205.82,Clear,3,9.96,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Benin City,Port Harcourt,285.48322,Low,274.55,Rainy,1,9.21,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Good
+Enugu,Lagos,559.54563,Medium,403.02,Clear,1,1.38,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Lagos,Kaduna,772.26224,High,501.65,Clear,2,7.2,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Benin City,Abuja,460.43211,Low,346.47,Rainy,2,4.45,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Kaduna,Benin City,604.25809,Medium,449.32,Rainy,0,4.94,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Lagos,Benin City,314.37299,High,220.65,Rainy,0,2.07,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Benin City,Kano,837.16032,High,614.67,Rainy,1,9.62,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Kaduna,Ibadan,649.79189,Medium,431.24,Rainy,2,8.11,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Kano,Enugu,801.37292,High,629.28,Cloudy,1,8.85,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Ibadan,Abuja,617.21315,Medium,418.55,Cloudy,3,3.44,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Lagos,Enugu,558.6844,Low,404.41,Clear,3,3.06,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Kano,Enugu,801.37292,Medium,629.28,Clear,0,3.06,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Poor
+Benin City,Enugu,247.97468,Low,197.15,Rainy,2,3.37,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Benin City,Ibadan,288.22386,Low,223.98,Rainy,0,5.77,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Jos,Ibadan,831.54397,Low,603.83,Clear,2,3.95,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Port Harcourt,Jos,749.66504,Low,624.64,Foggy,1,9.7,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Good
+Abuja,Kaduna,190.11374,Medium,153.07,Clear,0,5.23,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Port Harcourt,Abuja,602.36295,High,532.3,Foggy,3,1.71,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Abuja,Jos,233.94325,Medium,216.89,Clear,1,7.17,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Enugu,Benin City,248.85382,High,200.88,Rainy,0,9.48,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Jos,Benin City,694.31996,Low,555.87,Rainy,0,2.44,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Poor
+Jos,Abuja,232.62361,High,217.8,Cloudy,1,2.05,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Poor
+Kano,Jos,297.86287,High,272.81,Cloudy,3,7.02,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Good
+Benin City,Ibadan,288.22386,Medium,223.98,Clear,0,6.33,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Benin City,Kano,837.16032,High,614.67,Rainy,3,6.72,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Jos,Ibadan,831.54397,High,603.83,Clear,1,9.93,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Good
+Abuja,Port Harcourt,606.98275,Low,528.96,Foggy,1,1.94,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Port Harcourt,Benin City,286.64756,High,277.63,Rainy,0,5.43,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Benin City,Kano,837.16032,Low,614.67,Clear,1,3.24,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Jos,Enugu,515.51829,Medium,438.09,Cloudy,0,5.04,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Moderate
+Ibadan,Port Harcourt,573.25476,Medium,497.31,Cloudy,0,1.3,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Kano,Lagos,992.07454,High,656.51,Clear,0,3.28,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Ibadan,Enugu,533.28268,Low,409.57,Foggy,1,2.27,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Enugu,Benin City,248.85382,Medium,200.88,Clear,1,4.37,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Kano,Enugu,801.37292,High,629.28,Foggy,2,1.7,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Kano,Benin City,837.51247,Medium,621.12,Cloudy,2,2.03,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Kano,Ibadan,865.35273,Medium,584.82,Foggy,1,4.69,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Ibadan,Port Harcourt,573.25476,Medium,497.31,Rainy,0,9.13,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Abuja,Benin City,466.00838,Low,349.05,Cloudy,2,6.0,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Moderate
+Port Harcourt,Enugu,234.03966,Low,186.79,Rainy,2,6.24,intercity,Intercity highway data — travel times 79-810 min,0,3,0,Moderate
+Ibadan,Port Harcourt,573.25476,High,497.31,Clear,3,4.85,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Ibadan,Kaduna,645.9704,Medium,430.13,Foggy,2,4.93,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Moderate
+Lagos,Kano,989.64216,Low,653.26,Clear,0,4.76,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Enugu,Ibadan,531.74483,High,406.38,Rainy,2,9.12,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Good
+Enugu,Abuja,368.41768,Medium,345.87,Rainy,1,4.31,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Moderate
+Lagos,Port Harcourt,598.65649,Low,492.15,Cloudy,0,1.82,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Lagos,Benin City,314.37299,High,220.65,Foggy,2,8.79,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Good
+Kano,Lagos,992.07454,High,656.51,Foggy,2,1.14,intercity,Intercity highway data — travel times 79-810 min,2,2,1,Poor
+Kaduna,Ibadan,649.79189,Low,431.24,Foggy,0,5.16,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Benin City,Kano,837.16032,High,614.67,Clear,2,4.04,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Moderate
+Lagos,Jos,957.1304,Low,676.55,Cloudy,0,3.05,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Kano,Port Harcourt,1040.28448,Low,810.08,Foggy,3,1.68,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Poor
+Jos,Enugu,515.51829,Medium,438.09,Clear,2,6.07,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Moderate
+Ibadan,Enugu,533.28268,Medium,409.57,Clear,2,8.71,intercity,Intercity highway data — travel times 79-810 min,1,0,0,Good
+Abuja,Ibadan,621.45345,Low,416.3,Clear,2,9.44,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Good
+Port Harcourt,Benin City,286.64756,Low,277.63,Cloudy,1,8.59,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Good
+Lagos,Kaduna,772.26224,High,501.65,Cloudy,1,4.35,intercity,Intercity highway data — travel times 79-810 min,2,1,1,Moderate
+Kano,Abuja,428.76915,Medium,330.56,Foggy,1,1.14,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Poor
+Lagos,Benin City,314.37299,Low,220.65,Clear,0,2.6,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Poor
+Abuja,Enugu,365.9507,Low,342.42,Foggy,2,5.55,intercity,Intercity highway data — travel times 79-810 min,0,2,0,Moderate
+Abuja,Port Harcourt,606.98275,Low,528.96,Cloudy,2,2.95,intercity,Intercity highway data — travel times 79-810 min,0,1,0,Poor
+Abuja,Kano,422.73338,High,322.4,Rainy,0,1.67,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Poor
+Ibadan,Abuja,617.21315,Medium,418.55,Foggy,2,9.92,intercity,Intercity highway data — travel times 79-810 min,1,2,1,Good
+Kano,Enugu,801.37292,Medium,629.28,Cloudy,0,1.86,intercity,Intercity highway data — travel times 79-810 min,1,1,1,Poor
+Port Harcourt,Enugu,234.03966,Low,186.79,Clear,2,5.54,intercity,Intercity highway data — travel times 79-810 min,0,0,0,Moderate
+Lagos,Ibadan,129.68181,Medium,78.82,Rainy,1,9.58,intercity,Intercity highway data — travel times 79-810 min,1,3,1,Good
+Lagos,Kaduna,772.26224,High,501.65,Rainy,1,5.39,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Benin City,Kano,837.16032,High,614.67,Rainy,1,5.61,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
+Lagos,Enugu,558.6844,High,404.41,Clear,0,1.3,intercity,Intercity highway data — travel times 79-810 min,2,0,0,Poor
+Abuja,Benin City,466.00838,High,349.05,Rainy,2,4.82,intercity,Intercity highway data — travel times 79-810 min,2,3,1,Moderate
