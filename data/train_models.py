@@ -1,5 +1,5 @@
 """
-SmartCommute AI — Flexible Multi-Dataset Model Training Script
+CommuteIQ — Flexible Multi-Dataset Model Training Script
 ==============================================================
 
 Supports any combination of these dataset types:
@@ -21,11 +21,11 @@ Usage examples:
 
   # All sources together
   python train_models.py \\
-    --nigeria  data/nigeria_traffic_data.csv \\
-    --crashes  data/Nigerian_Road_Traffic_Crashes_2020_2024.csv \\
+    --nigeria  cleaned_data/nigeria_traffic_clean.csv \\
+    --crashes  cleaned_data/nigeria_crashes_clean.csv \\
     --nairobi-driving data/nairobi-driving/ \\
     --nairobi-matatu  data/nairobi-matatus-extended/ \\
-    --generic  data/my_extra_data.csv --schema generic_schema.json
+    --generic  cleaned_data/my_extra_data.csv --schema generic_schema.json
 
   # Multiple generic CSVs
   python train_models.py --generic data/file1.csv data/file2.csv
@@ -403,11 +403,11 @@ def train_and_save(combined: pd.DataFrame, safety_scores: dict, encoders: dict):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="SmartCommute AI — flexible multi-dataset model trainer"
+        description="CommuteIQ — flexible multi-dataset model trainer"
     )
-    parser.add_argument("--nigeria",         type=str, default="data/nigeria_traffic_data.csv",
+    parser.add_argument("--nigeria",         type=str, default="cleaned_data/nigeria_traffic_clean.csv",
                         help="Path to Nigeria traffic CSV")
-    parser.add_argument("--crashes",         type=str, default="data/Nigerian_Road_Traffic_Crashes_2020_2024.csv",
+    parser.add_argument("--crashes",         type=str, default="cleaned_data/nigeria_crashes_clean.csv",
                         help="Path to crash CSV for safety scores")
     parser.add_argument("--nairobi-driving", type=str, default=None,
                         help="Path to folder of Nairobi driving OD CSVs")
