@@ -2,8 +2,8 @@
 models/*.pkl
 
 # Data files
-data/*.csv
-data/*.zip
+data/
+cleaned_data/
 
 # Environment
 .env
