@@ -334,13 +334,38 @@ def suggest_alternative_mode(
 def get_departure_advice(
     congestion: str, weather: str, travel_time: float, mode: str
 ) -> str:
-    if congestion == "High" and weather in ["Rainy","Foggy"]:
+    bad_weather  = weather in ["Rainy", "Foggy"]
+    high_traffic = congestion == "High"
+
+    # BRT has dedicated lanes — traffic jams don't affect it the same way
+    if mode.lower() == "brt":
+        if bad_weather:
+            return "Leave now — BRT dedicated lanes bypass traffic, but allow extra time for weather."
+        return "Leave now — BRT dedicated lanes bypass peak traffic."
+
+    # Okada / boda boda in rain is a safety issue, not just a timing issue
+    if mode.lower() in ["okada", "boda_boda", "boda"] and bad_weather:
+        return (
+            "⚠️ High crash risk — riding in rain/fog significantly increases danger. "
+            "Wait for conditions to improve or consider a safer mode."
+        )
+
+    # Walking in heavy rain — discourage, suggest mode switch
+    if mode.lower() == "walking" and bad_weather:
+        return "⚠️ Walking in current weather conditions is unsafe. Consider keke or a ride share."
+
+    # Keke / tuk-tuk in rain — caution
+    if mode.lower() in ["keke", "tuk_tuk"] and bad_weather:
+        return "Leave now but drive cautiously — open vehicles are exposed to rain."
+
+    # Standard logic for all other modes
+    if high_traffic and bad_weather:
         saved = round(travel_time * 0.30)
         return f"Wait 20 min — leaving later could save ~{saved} min on this route."
-    elif congestion == "High":
+    elif high_traffic:
         saved = round(travel_time * 0.20)
         return f"Wait 15 min — conditions may ease and save ~{saved} min."
-    elif weather in ["Rainy","Foggy"]:
+    elif bad_weather:
         return "Leave now but allow extra time — weather is reducing speeds."
     else:
         return "Leave now — conditions are good."
@@ -426,6 +451,26 @@ def generate_ai_explanation(
 
 # ── Response models ───────────────────────────────────────────
 
+def calculate_arrival_time(time_str: Optional[str], travel_time_min: float) -> Optional[str]:
+    """Calculate arrival time from departure time + travel duration.
+    Falls back to current time if no departure time is given, so the
+    frontend always has a meaningful arrival time to display."""
+    import datetime
+    try:
+        if time_str:
+            hour, minute = map(int, time_str.split(":"))
+        else:
+            now    = datetime.datetime.now()
+            hour   = now.hour
+            minute = now.minute
+        total      = hour * 60 + minute + int(travel_time_min)
+        arr_hour   = (total // 60) % 24
+        arr_min    = total % 60
+        return f"{arr_hour:02d}:{arr_min:02d}"
+    except Exception:
+        return None
+
+
 class PredictResponse(BaseModel):
     travel_time_min:    float
     commute_quality:    str
@@ -442,6 +487,7 @@ class PredictResponse(BaseModel):
     mode_label:         Optional[str] = None
     mode_emoji:         Optional[str] = None
     alt_suggestion:     Optional[str] = None
+    arrival_time:       Optional[str] = None
 
 class RecommendRequest(BaseModel):
     origin:      str
@@ -612,6 +658,7 @@ async def predict(req: PredictRequest):
         mode_label=mode_label,
         mode_emoji=mode_emoji,
         alt_suggestion=alt_suggestion,
+        arrival_time=calculate_arrival_time(req.time, travel_time),
     )
 
 
@@ -943,6 +990,7 @@ class PredictResponseV2(PredictResponse):
     weather_trend:       Optional[dict] = None
     flood_risk:          Optional[dict] = None
     day_pattern:         Optional[dict] = None
+    # arrival_time is inherited from PredictResponse — already included
     privacy_note:        str = "CommuteIQ stores only anonymized trip data. No personally identifiable travel history is collected or required."
     ethical_note:        str = "CommuteIQ does not allow police checkpoint or individual tracking reports."
 
@@ -1072,6 +1120,7 @@ async def predict_v2(req: PredictRequest, user_id: Optional[str] = None):
         mode_label=mode_label,
         mode_emoji=mode_emoji,
         alt_suggestion=alt_suggestion,
+        arrival_time=calculate_arrival_time(req.time, travel_time),
         confidence=confidence,
         route_confidence=route_conf,
         staggered_departure=staggered if staggered["staggered"] else None,
@@ -1136,3 +1185,4 @@ async def submit_report_v2(req: ReportRequest):
         "privacy_note": "Your exact location was not stored. Only an anonymized area reference is used.",
         "storage":      result.get("storage"),
     }
+    
