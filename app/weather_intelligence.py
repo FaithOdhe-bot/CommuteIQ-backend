@@ -5,15 +5,14 @@ weather_intelligence.py
 Features:
   1. Weather trend prediction — is rain coming in the next 30-60 min?
   2. Flood risk zones — Lagos and Nairobi known flood-prone areas
-  3. Weather-aware departure window
+  3. Day-of-week congestion patterns from Nairobi OD matrix data
 """
 
-import time
 from typing import Optional
 from datetime import datetime, timezone
 
 
-# ── WMO weather code → label ──────────────────────────────────
+# ── WMO weather code → label ──────────────────────────────────────────────
 def wmo_to_label(code: int) -> str:
     if code in [51,53,55,61,63,65,80,81,82]: return "Rainy"
     elif code in [71,73,75,77,85,86]:         return "Snowy"
@@ -25,54 +24,42 @@ def is_bad_weather(label: str) -> bool:
     return label in ["Rainy", "Foggy", "Snowy"]
 
 
-# ── Flood risk zones ──────────────────────────────────────────
-# Known flood-prone areas based on local knowledge + OSM data
-# Stored as (lat_min, lat_max, lng_min, lng_max, name, risk_level)
-
+# ── Flood risk zones ──────────────────────────────────────────────────────
+# Known flood-prone areas from local knowledge + OSM data.
+# Format: (lat_min, lat_max, lng_min, lng_max, name, risk_level)
 FLOOD_ZONES = {
     "lagos": [
-        # Lekki-Ajah corridor — low-lying, frequently floods
-        (6.43, 6.47, 3.48, 3.60, "Lekki-Ajah Expressway", "High"),
-        # Mile 2 / Orile area
-        (6.45, 6.48, 3.31, 3.35, "Mile 2 / Orile", "High"),
-        # Oshodi underpass area
-        (6.54, 6.56, 3.34, 3.36, "Oshodi Underpass", "High"),
-        # Festac — drainage issues
-        (6.45, 6.48, 3.27, 3.30, "Festac Town", "Medium"),
-        # Marina / Lagos Island waterfront
-        (6.44, 6.46, 3.38, 3.42, "Lagos Island Marina", "Medium"),
-        # Ikorodu Road — floods at underpasses
-        (6.56, 6.60, 3.36, 3.40, "Ikorodu Road", "Medium"),
-        # Ojota / Ketu area
-        (6.58, 6.62, 3.37, 3.41, "Ojota-Ketu", "Medium"),
+        (6.43, 6.47, 3.48, 3.60, "Lekki-Ajah Expressway",  "High"),
+        (6.45, 6.48, 3.31, 3.35, "Mile 2 / Orile",          "High"),
+        (6.54, 6.56, 3.34, 3.36, "Oshodi Underpass",        "High"),
+        (6.45, 6.48, 3.27, 3.30, "Festac Town",             "Medium"),
+        (6.44, 6.46, 3.38, 3.42, "Lagos Island Marina",     "Medium"),
+        (6.56, 6.60, 3.36, 3.40, "Ikorodu Road",            "Medium"),
+        (6.58, 6.62, 3.37, 3.41, "Ojota-Ketu",              "Medium"),
     ],
     "nairobi": [
-        # Mathare Valley — alongside Mathare River
-        (-1.255, -1.245, 36.845, 36.865, "Mathare Valley", "High"),
-        # Nairobi River basin — CBD area
-        (-1.295, -1.280, 36.815, 36.835, "Nairobi River CBD", "High"),
-        # Kibera — low-lying informal settlement
-        (-1.318, -1.305, 36.778, 36.795, "Kibera", "High"),
-        # Westlands along Nairobi River
-        (-1.272, -1.260, 36.800, 36.815, "Westlands Riverside", "Medium"),
-        # South B / South C drainage
-        (-1.310, -1.295, 36.830, 36.850, "South B / South C", "Medium"),
-        # Ngong Road dips
-        (-1.308, -1.295, 36.760, 36.785, "Ngong Road Lowlands", "Medium"),
+        (-1.255, -1.245, 36.845, 36.865, "Mathare Valley",       "High"),
+        (-1.295, -1.280, 36.815, 36.835, "Nairobi River CBD",    "High"),
+        (-1.318, -1.305, 36.778, 36.795, "Kibera",               "High"),
+        (-1.272, -1.260, 36.800, 36.815, "Westlands Riverside",  "Medium"),
+        (-1.310, -1.295, 36.830, 36.850, "South B / South C",    "Medium"),
+        (-1.308, -1.295, 36.760, 36.785, "Ngong Road Lowlands",  "Medium"),
     ],
     "abuja": [
         (-8.90, -8.85, 7.35, 7.45, "Wuse Drainage Areas", "Medium"),
-        (-9.05, -9.00, 7.40, 7.50, "Garki Lowlands", "Low"),
+        (-9.05, -9.00, 7.40, 7.50, "Garki Lowlands",      "Low"),
     ],
     "kano": [
         (11.99, 12.03, 8.49, 8.55, "Kano City Drainage", "Medium"),
     ],
 }
 
-# Day-of-week congestion multipliers
-# Based on Nairobi OD data time slot patterns + Lagos research
+# ── Day-of-week congestion multipliers ───────────────────────────────────
+# Derived from Nairobi OD matrix time-slot patterns + Lagos commute research.
+# Used for AI explanation context ONLY — NOT applied to travel_time to avoid
+# double-counting congestion that the formula already accounts for.
 DAY_CONGESTION_MULT = {
-    0: 1.20,  # Monday — worst (everyone back from weekend)
+    0: 1.20,  # Monday — worst
     1: 1.10,  # Tuesday
     2: 1.00,  # Wednesday — baseline
     3: 1.05,  # Thursday
@@ -82,25 +69,32 @@ DAY_CONGESTION_MULT = {
 }
 
 DAY_NAMES = {
-    0: "Monday", 1: "Tuesday", 2: "Wednesday",
-    3: "Thursday", 4: "Friday", 5: "Saturday", 6: "Sunday"
+    0: "Monday", 1: "Tuesday",  2: "Wednesday",
+    3: "Thursday", 4: "Friday", 5: "Saturday",  6: "Sunday",
 }
 
 
-def get_flood_risk(city: str, origin_coords: dict, dest_coords: dict, weather: str) -> dict:
-    """
-    Check if a route passes through known flood-prone areas.
-    Cross-references weather with flood zone geography.
-    Returns risk assessment and affected zones.
-    """
+def get_flood_risk(
+    city: str,
+    origin_coords: dict,
+    dest_coords: dict,
+    weather: str,
+) -> dict:
+    """Check if route passes through known flood-prone zones."""
     city_zones = FLOOD_ZONES.get(city.lower(), [])
     if not city_zones or not is_bad_weather(weather):
         return {"risk": "Low", "zones": [], "warning": None}
 
     affected = []
-
-    # Check if origin or destination is in a flood zone
     all_coords = [origin_coords, dest_coords]
+
+    # Check origin, destination, and midpoint
+    if origin_coords and dest_coords:
+        all_coords.append({
+            "lat": (origin_coords.get("lat", 0) + dest_coords.get("lat", 0)) / 2,
+            "lng": (origin_coords.get("lng", 0) + dest_coords.get("lng", 0)) / 2,
+        })
+
     for coords in all_coords:
         lat = coords.get("lat", 0)
         lng = coords.get("lng", 0)
@@ -109,17 +103,7 @@ def get_flood_risk(city: str, origin_coords: dict, dest_coords: dict, weather: s
                 if name not in [z["name"] for z in affected]:
                     affected.append({"name": name, "risk": risk})
 
-    # Also check route corridor (simplified — midpoint check)
-    if origin_coords and dest_coords:
-        mid_lat = (origin_coords.get("lat",0) + dest_coords.get("lat",0)) / 2
-        mid_lng = (origin_coords.get("lng",0) + dest_coords.get("lng",0)) / 2
-        for (lat_min, lat_max, lng_min, lng_max, name, risk) in city_zones:
-            if lat_min <= mid_lat <= lat_max and lng_min <= mid_lng <= lng_max:
-                if name not in [z["name"] for z in affected]:
-                    affected.append({"name": name, "risk": risk})
-
     if not affected:
-        # Even without direct zone hit, warn about city-wide flood risk in rain
         if weather == "Rainy" and city.lower() in ["lagos", "nairobi"]:
             return {
                 "risk":    "Medium",
@@ -128,9 +112,8 @@ def get_flood_risk(city: str, origin_coords: dict, dest_coords: dict, weather: s
             }
         return {"risk": "Low", "zones": [], "warning": None}
 
-    # Determine overall risk
-    has_high = any(z["risk"] == "High" for z in affected)
-    overall  = "High" if has_high else "Medium"
+    has_high   = any(z["risk"] == "High" for z in affected)
+    overall    = "High" if has_high else "Medium"
     zone_names = ", ".join(z["name"] for z in affected)
 
     return {
@@ -145,16 +128,11 @@ def get_flood_risk(city: str, origin_coords: dict, dest_coords: dict, weather: s
 
 
 async def get_weather_trend(lat: float, lng: float, httpx_client=None) -> dict:
-    """
-    Fetch hourly weather forecast and detect if rain is coming.
-    Returns current weather + trend for next 1-3 hours.
-
-    Uses Open-Meteo free API — no key required.
-    """
-    import httpx
+    """Fetch 3-hour weather forecast from Open-Meteo (free, no API key)."""
+    import httpx as _httpx
 
     try:
-        async with httpx.AsyncClient(timeout=6) as client:
+        async with _httpx.AsyncClient(timeout=6) as client:
             r = await client.get(
                 "https://api.open-meteo.com/v1/forecast",
                 params={
@@ -168,48 +146,44 @@ async def get_weather_trend(lat: float, lng: float, httpx_client=None) -> dict:
             )
             data = r.json()
 
-        current     = data.get("current_weather", {})
-        hourly      = data.get("hourly", {})
-        times       = hourly.get("time", [])
-        precip      = hourly.get("precipitation", [])
-        codes       = hourly.get("weathercode", [])
+        current = data.get("current_weather", {})
+        hourly  = data.get("hourly", {})
+        times   = hourly.get("time", [])
+        precip  = hourly.get("precipitation", [])
+        codes   = hourly.get("weathercode", [])
 
-        # Find current hour index
-        now_str  = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:00")
+        now_str = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:00")
         try:
             curr_idx = times.index(now_str)
         except ValueError:
             curr_idx = 0
 
-        # Get next 3 hours
         next_hours = []
         for i in range(1, 4):
             idx = curr_idx + i
             if idx < len(times):
                 next_hours.append({
-                    "time":        times[idx],
-                    "hour_offset": i,
-                    "label":       wmo_to_label(codes[idx]) if idx < len(codes) else "Clear",
+                    "time":          times[idx],
+                    "hour_offset":   i,
+                    "label":         wmo_to_label(codes[idx]) if idx < len(codes) else "Clear",
                     "precipitation": precip[idx] if idx < len(precip) else 0,
-                    "weathercode": codes[idx] if idx < len(codes) else 0,
+                    "weathercode":   codes[idx] if idx < len(codes) else 0,
                 })
 
-        # Current
         curr_code  = current.get("weathercode", 0)
         curr_label = wmo_to_label(curr_code)
         curr_wind  = current.get("windspeed", 0)
 
-        # Trend analysis
         rain_coming   = any(is_bad_weather(h["label"]) for h in next_hours[:2])
-        clearing_soon = curr_label in ["Rainy","Foggy"] and all(
-            not is_bad_weather(h["label"]) for h in next_hours[1:]
+        clearing_soon = (
+            curr_label in ["Rainy", "Foggy"]
+            and all(not is_bad_weather(h["label"]) for h in next_hours[1:])
         )
         rain_in_hours = next(
             (h["hour_offset"] for h in next_hours if is_bad_weather(h["label"])),
-            None
+            None,
         )
 
-        # Generate trend message
         if rain_coming and curr_label == "Clear":
             trend_msg  = f"⚠️ Rain expected in ~{rain_in_hours} hour{'s' if rain_in_hours > 1 else ''} — leave now or wait it out."
             trend_type = "rain_incoming"
@@ -233,8 +207,7 @@ async def get_weather_trend(lat: float, lng: float, httpx_client=None) -> dict:
             "source":        "Open-Meteo live forecast",
         }
 
-    except Exception as e:
-        # Graceful fallback
+    except Exception:
         return {
             "current":       {"label": "Clear", "code": 0, "wind_kmh": 0},
             "next_3_hours":  [],
@@ -247,33 +220,28 @@ async def get_weather_trend(lat: float, lng: float, httpx_client=None) -> dict:
 
 
 def get_day_pattern(city: str, time_str: Optional[str] = None) -> dict:
-    """
-    Return day-of-week congestion pattern.
-    Monday is always worse. Sunday is always better.
-    Based on historical OD matrix patterns.
-    """
+    """Return day-of-week congestion context (used in AI explanation only)."""
     day_num  = datetime.now().weekday()
     day_name = DAY_NAMES[day_num]
     mult     = DAY_CONGESTION_MULT[day_num]
 
-    # Context message
     if mult >= 1.15:
-        pattern_msg = f"📅 {day_name} is historically one of the busiest commute days — allow extra time."
-        severity    = "High"
+        msg      = f"📅 {day_name} is historically one of the busiest commute days — allow extra time."
+        severity = "High"
     elif mult >= 1.05:
-        pattern_msg = f"📅 {day_name} is slightly busier than average."
-        severity    = "Medium"
+        msg      = f"📅 {day_name} is slightly busier than average."
+        severity = "Medium"
     elif mult <= 0.60:
-        pattern_msg = f"📅 {day_name} — light traffic expected. Great day to commute."
-        severity    = "Low"
+        msg      = f"📅 {day_name} — light traffic expected. Great day to commute."
+        severity = "Low"
     else:
-        pattern_msg = f"📅 {day_name} — typical traffic patterns expected."
-        severity    = "Normal"
+        msg      = f"📅 {day_name} — typical traffic patterns expected."
+        severity = "Normal"
 
     return {
-        "day":              day_name,
-        "day_num":          day_num,
-        "congestion_mult":  mult,
-        "severity":         severity,
-        "pattern_message":  pattern_msg,
+        "day":             day_name,
+        "day_num":         day_num,
+        "congestion_mult": mult,
+        "severity":        severity,
+        "pattern_message": msg,
     }
