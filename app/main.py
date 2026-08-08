@@ -295,20 +295,64 @@ def get_safety_score(city: str, mode: str) -> float:
     return round(min(100, max(0, base * mult)), 1)
 
 
+
+# ── Mode restrictions (real-world policy) ────────────────────
+# Okadas (commercial motorcycles) are BANNED on major Lagos highways
+# including Ikorodu Road, Third Mainland Bridge, Carter Bridge, and
+# restricted zones in Ikeja, Lagos Island, Apapa, and Victoria Island.
+# Source: Lagos State Government ban effective February 2020, extended.
+# A 23km Ikeja→Ikorodu direct okada ride is legally impossible on a
+# single mode — commuters use okada for short legs + BRT for the highway.
+
+OKADA_RESTRICTED_CITIES = {
+    "lagos": {
+        "max_direct_km":  5.0,
+        "legal_alt":      "brt",
+        "message": (
+            "⚠️ Okadas are banned on major Lagos highways (Ikorodu Road, "
+            "Third Mainland Bridge, Lagos Island, Apapa). "
+            "For a {dist:.0f}km trip the legal route is: "
+            "🛵 Okada for short inner-street connections → "
+            "🚍 BRT or 🚌 Danfo for the main highway leg. "
+            "Estimated combined fare: ₦500–₦1,600."
+        ),
+    },
+}
+
+KEKE_RESTRICTED_CITIES = {
+    "lagos": {
+        "max_direct_km": 8.0,
+        "message": (
+            "⚠️ Tricycles (keke napep) are restricted on major Lagos roads. "
+            "For this distance consider 🚌 Danfo or 🚍 BRT instead."
+        ),
+    },
+}
+
 # ── Alternative mode suggestion ───────────────────────────────
 
 def suggest_alternative_mode(
     mode: str, city: str, congestion: str,
     weather: str, distance_km: float
 ) -> Optional[str]:
-    """Suggest a better mode given current conditions."""
+    """Suggest a better mode given current conditions and legal restrictions."""
     if not transport_modes:
         return None
     country      = get_country(city)
     country_modes= transport_modes.get(country, {})
-    current_mult = transport_modes.get("speed_multipliers", {}).get(mode.lower(), 1.0)
     rain         = weather in ["Rainy","Foggy"]
     high_traffic = congestion == "High"
+
+    # ── Legal restriction checks (highest priority) ───────────
+    if mode.lower() == "okada" and city.lower() in OKADA_RESTRICTED_CITIES:
+        r = OKADA_RESTRICTED_CITIES[city.lower()]
+        if distance_km > r["max_direct_km"]:
+            return r["message"].format(dist=distance_km)
+
+    if mode.lower() == "keke" and city.lower() in KEKE_RESTRICTED_CITIES:
+        r = KEKE_RESTRICTED_CITIES[city.lower()]
+        if distance_km > r["max_direct_km"]:
+            return r["message"]
 
     # Walking distance warning
     if mode.lower() == "walking":
