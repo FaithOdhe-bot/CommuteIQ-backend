@@ -23,6 +23,7 @@ import os
 import time
 import joblib
 from datetime import datetime
+from restriction_data import get_restriction, TRANSPORT_RESTRICTIONS
 from weather_intelligence import (
     get_weather_trend, get_flood_risk,
     get_day_pattern, DAY_CONGESTION_MULT
@@ -296,38 +297,8 @@ def get_safety_score(city: str, mode: str) -> float:
 
 
 
-# ── Mode restrictions (real-world policy) ────────────────────
-# Okadas (commercial motorcycles) are BANNED on major Lagos highways
-# including Ikorodu Road, Third Mainland Bridge, Carter Bridge, and
-# restricted zones in Ikeja, Lagos Island, Apapa, and Victoria Island.
-# Source: Lagos State Government ban effective February 2020, extended.
-# A 23km Ikeja→Ikorodu direct okada ride is legally impossible on a
-# single mode — commuters use okada for short legs + BRT for the highway.
-
-OKADA_RESTRICTED_CITIES = {
-    "lagos": {
-        "max_direct_km":  5.0,
-        "legal_alt":      "brt",
-        "message": (
-            "⚠️ Okadas are banned on major Lagos highways (Ikorodu Road, "
-            "Third Mainland Bridge, Lagos Island, Apapa). "
-            "For a {dist:.0f}km trip the legal route is: "
-            "🛵 Okada for short inner-street connections → "
-            "🚍 BRT or 🚌 Danfo for the main highway leg. "
-            "Estimated combined fare: ₦500–₦1,600."
-        ),
-    },
-}
-
-KEKE_RESTRICTED_CITIES = {
-    "lagos": {
-        "max_direct_km": 8.0,
-        "message": (
-            "⚠️ Tricycles (keke napep) are restricted on major Lagos roads. "
-            "For this distance consider 🚌 Danfo or 🚍 BRT instead."
-        ),
-    },
-}
+# Mode restrictions are loaded from restriction_data.py
+# which covers all cities in Nigeria and Kenya with sourced legal references.
 
 # ── Alternative mode suggestion ───────────────────────────────
 
@@ -344,15 +315,39 @@ def suggest_alternative_mode(
     high_traffic = congestion == "High"
 
     # ── Legal restriction checks (highest priority) ───────────
-    if mode.lower() == "okada" and city.lower() in OKADA_RESTRICTED_CITIES:
-        r = OKADA_RESTRICTED_CITIES[city.lower()]
-        if distance_km > r["max_direct_km"]:
-            return r["message"].format(dist=distance_km)
+    # Uses restriction_data.py — covers Lagos, Abuja, Kano, Port Harcourt,
+    # Enugu, Ibadan (Nigeria) and Nairobi (Kenya) with sourced legal references.
+    restriction = get_restriction(mode.lower(), city.lower(), country)
+    if restriction:
+        status = restriction.get("status", "")
+        msg    = restriction.get("message", "")
 
-    if mode.lower() == "keke" and city.lower() in KEKE_RESTRICTED_CITIES:
-        r = KEKE_RESTRICTED_CITIES[city.lower()]
-        if distance_km > r["max_direct_km"]:
-            return r["message"]
+        if status == "BANNED_STATEWIDE":
+            return msg.format(dist=distance_km) if "{dist" in msg else msg
+
+        if status in ("BANNED", "BANNED_CITY_CENTRE", "BANNED_MAJOR_ROADS"):
+            max_km = restriction.get("max_direct_km", 5.0)
+            if distance_km > max_km:
+                return msg.format(dist=distance_km) if "{dist" in msg else msg
+
+        if status == "PARTIAL_BAN":
+            max_km = restriction.get("max_direct_km", 10.0)
+            if distance_km > max_km:
+                return msg.format(dist=distance_km) if "{dist" in msg else msg
+
+        if status == "TERMINUS_RESTRICTION":
+            # Matatu CBD restriction — always show if destination is likely CBD
+            return msg if msg else None
+
+        if status == "NIGHT_CURFEW":
+            # Only warn at night — check time
+            import datetime
+            hour = datetime.datetime.now().hour
+            curfew_start = int(restriction.get("curfew_start","22:30").split(":")[0])
+            curfew_end   = int(restriction.get("curfew_end","05:30").split(":")[0])
+            is_night = hour >= curfew_start or hour < curfew_end
+            if is_night:
+                return msg.format(dist=distance_km) if "{dist" in msg else msg
 
     # Walking distance warning
     if mode.lower() == "walking":
