@@ -97,6 +97,33 @@ CITY_COORDS = {
     "eldoret":      {"lat": 0.5143,  "lng": 35.2698},
 }
 
+# Nairobi suburb coordinates — used as fallback when Nominatim returns a
+# location suspiciously close to CBD for an area known to be further away.
+NAIROBI_SUBURB_COORDS = {
+    "kingeero":    {"lat": -1.2676, "lng": 36.7342},
+    "king'eero":   {"lat": -1.2676, "lng": 36.7342},
+    "uthiru":      {"lat": -1.2650, "lng": 36.7300},
+    "westlands":   {"lat": -1.2631, "lng": 36.8072},
+    "karen":       {"lat": -1.3430, "lng": 36.7050},
+    "langata":     {"lat": -1.3200, "lng": 36.7400},
+    "lang'ata":    {"lat": -1.3200, "lng": 36.7400},
+    "kasarani":    {"lat": -1.2206, "lng": 36.8956},
+    "ruiru":       {"lat": -1.1466, "lng": 36.9608},
+    "thika":       {"lat": -1.0322, "lng": 37.0693},
+    "kikuyu":      {"lat": -1.2470, "lng": 36.6720},
+    "embakasi":    {"lat": -1.3200, "lng": 36.9000},
+    "donholm":     {"lat": -1.3006, "lng": 36.8906},
+    "south b":     {"lat": -1.3072, "lng": 36.8338},
+    "south c":     {"lat": -1.3200, "lng": 36.8200},
+    "eastleigh":   {"lat": -1.2750, "lng": 36.8530},
+    "ngong":       {"lat": -1.3580, "lng": 36.6600},
+    "kitengela":   {"lat": -1.4750, "lng": 36.9600},
+    "rongai":      {"lat": -1.3960, "lng": 36.7450},
+    "mathare":     {"lat": -1.2550, "lng": 36.8650},
+    "huruma":      {"lat": -1.2500, "lng": 36.8600},
+    "githurai":    {"lat": -1.1950, "lng": 36.9100},
+}
+
 def get_country(city: str) -> str:
     if encoders:
         return encoders.get("city_to_country", {}).get(city.lower(), "nigeria")
@@ -167,20 +194,49 @@ def estimate_congestion(time_str: Optional[str]) -> str:
 # ── Geocoding ─────────────────────────────────────────────────
 
 async def geocode_place(place: str, city: str) -> dict:
+    """Geocode a place name to lat/lng. For known Nairobi suburbs, validates
+    the result isn't suspiciously close to CBD when the area is known to be
+    further away — Nominatim sometimes resolves suburb names wrongly."""
+    import math
+
+    def dist_km(lat1, lng1, lat2, lng2):
+        dlat = (lat2-lat1)*math.pi/180; dlng = (lng2-lng1)*math.pi/180
+        a = math.sin(dlat/2)**2 + math.cos(lat1*math.pi/180)*math.cos(lat2*math.pi/180)*math.sin(dlng/2)**2
+        return 6371 * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+
+    place_lower = place.lower().strip().rstrip(",")
+    city_lower  = city.lower().strip()
+
     try:
         async with httpx.AsyncClient(
-            timeout=6, headers={"User-Agent": "SmartCommuteAI/2.0"}
+            timeout=6, headers={"User-Agent": "CommuteIQ/2.0"}
         ) as client:
             r = await client.get(
                 "https://nominatim.openstreetmap.org/search",
-                params={"q": f"{place}, {city}", "format": "json", "limit": 1},
+                params={"q": f"{place}, {city}", "format": "json", "limit": 1,
+                        "countrycodes": "ke" if city_lower in ["nairobi","mombasa","kisumu","nakuru","eldoret"] else "ng"},
             )
             results = r.json()
             if results:
-                return {"lat": float(results[0]["lat"]), "lng": float(results[0]["lon"])}
+                rlat = float(results[0]["lat"])
+                rlng = float(results[0]["lon"])
+                # Nairobi suburb validation: reject result if it lands < 1.5km
+                # from CBD but the area is known to be > 3km away
+                if city_lower == "nairobi" and place_lower in NAIROBI_SUBURB_COORDS:
+                    cbd    = CITY_COORDS["nairobi"]
+                    known  = NAIROBI_SUBURB_COORDS[place_lower]
+                    r_cbd  = dist_km(rlat, rlng, cbd["lat"], cbd["lng"])
+                    k_cbd  = dist_km(known["lat"], known["lng"], cbd["lat"], cbd["lng"])
+                    if r_cbd < 1.5 and k_cbd > 3.0:
+                        return known
+                return {"lat": rlat, "lng": rlng}
     except Exception:
         pass
-    return CITY_COORDS.get(city.lower(), {"lat": 6.5244, "lng": 3.3792})
+
+    # Known suburb fallback
+    if city_lower == "nairobi" and place_lower in NAIROBI_SUBURB_COORDS:
+        return NAIROBI_SUBURB_COORDS[place_lower]
+    return CITY_COORDS.get(city_lower, {"lat": 6.5244, "lng": 3.3792})
 
 
 # ── ML prediction ─────────────────────────────────────────────
@@ -230,7 +286,12 @@ def _formula_travel_time(distance_km, congestion, weather, mode, city):
         mode_data = transport_modes.get(country, {}).get(mode.lower(),
                     transport_modes.get(country, {}).get("driving", {}))
         speeds    = mode_data.get("avg_speed_kmh", {"urban": 30})
-        base_speed = list(speeds.values())[min(2, len(speeds)-1)]
+        # FIX: Use the slowest (most urban) speed for city predictions.
+        # list(values())[0] picked the highway/motorway speed (100 km/h for
+        # private car) giving absurd 3-min predictions for 2km urban trips.
+        # CommuteIQ serves city commutes, not highway drives — always use
+        # the residential/urban speed which is the smallest value in the dict.
+        base_speed = min(speeds.values()) if speeds else 30.0
 
         peak_m = mode_data.get("peak_multiplier", 0.6)
         rain_m = mode_data.get("rain_multiplier", 0.8)
@@ -381,11 +442,16 @@ def suggest_alternative_mode(
 def get_departure_advice(
     congestion: str, weather: str, travel_time: float, mode: str
 ) -> str:
+    MIN_SAVING = 4   # don't recommend waiting for less than 4 min saving
     if congestion == "High" and weather in ["Rainy","Foggy"]:
         saved = round(travel_time * 0.30)
+        if saved < MIN_SAVING:
+            return "Leave now — conditions are tough but the trip is short enough to go now."
         return f"Wait 20 min — leaving later could save ~{saved} min on this route."
     elif congestion == "High":
         saved = round(travel_time * 0.20)
+        if saved < MIN_SAVING:
+            return "Leave now — high congestion but the time saving from waiting is minimal."
         return f"Wait 15 min — conditions may ease and save ~{saved} min."
     elif weather in ["Rainy","Foggy"]:
         return "Leave now but allow extra time — weather is reducing speeds."
