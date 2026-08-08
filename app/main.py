@@ -123,6 +123,33 @@ NAIROBI_SUBURB_COORDS = {
     "huruma":      {"lat": -1.2500, "lng": 36.8600},
     "githurai":    {"lat": -1.1950, "lng": 36.9100},
 }
+# Lagos area coordinates — fallback when Nominatim geocodes wrongly
+LAGOS_AREA_COORDS = {
+    "lekki":         {"lat": 6.4698,  "lng": 3.5852},
+    "ajah":          {"lat": 6.4633,  "lng": 3.5893},
+    "victoria island":{"lat": 6.4281, "lng": 3.4219},
+    "vi":            {"lat": 6.4281,  "lng": 3.4219},
+    "ikoyi":         {"lat": 6.4474,  "lng": 3.4341},
+    "surulere":      {"lat": 6.5017,  "lng": 3.3537},
+    "yaba":          {"lat": 6.5143,  "lng": 3.3785},
+    "mushin":        {"lat": 6.5504,  "lng": 3.3577},
+    "oshodi":        {"lat": 6.5563,  "lng": 3.3397},
+    "agege":         {"lat": 6.6134,  "lng": 3.3240},
+    "ojota":         {"lat": 6.5896,  "lng": 3.3926},
+    "maryland":      {"lat": 6.5694,  "lng": 3.3585},
+    "ketu":          {"lat": 6.5954,  "lng": 3.3850},
+    "ikorodu":       {"lat": 6.6194,  "lng": 3.5058},
+    "festac":        {"lat": 6.4683,  "lng": 3.2861},
+    "isale eko":     {"lat": 6.4569,  "lng": 3.3919},
+    "apapa":         {"lat": 6.4483,  "lng": 3.3599},
+    "alimosho":      {"lat": 6.6167,  "lng": 3.2333},
+    "ikotun":        {"lat": 6.5306,  "lng": 3.2667},
+    "egbeda":        {"lat": 6.5717,  "lng": 3.2900},
+    "ipaja":         {"lat": 6.5894,  "lng": 3.2525},
+    "dopemu":        {"lat": 6.5833,  "lng": 3.2833},
+    "mile 2":        {"lat": 6.4750,  "lng": 3.3150},
+}
+
 
 def get_country(city: str) -> str:
     if encoders:
@@ -539,6 +566,23 @@ def generate_ai_explanation(
 
 # ── Response models ───────────────────────────────────────────
 
+def calculate_arrival_time(time_str: Optional[str], travel_time_min: float) -> Optional[str]:
+    """Calculate arrival time from departure + travel duration."""
+    import datetime as _dt
+    try:
+        if time_str:
+            hour, minute = map(int, time_str.split(":"))
+        else:
+            now = _dt.datetime.now()
+            hour, minute = now.hour, now.minute
+        total    = hour * 60 + minute + int(travel_time_min)
+        arr_hour = (total // 60) % 24
+        arr_min  = total % 60
+        return f"{arr_hour:02d}:{arr_min:02d}"
+    except Exception:
+        return None
+
+
 class PredictResponse(BaseModel):
     travel_time_min:    float
     commute_quality:    str
@@ -555,6 +599,7 @@ class PredictResponse(BaseModel):
     mode_label:         Optional[str] = None
     mode_emoji:         Optional[str] = None
     alt_suggestion:     Optional[str] = None
+    arrival_time:       Optional[str] = None
 
 class RecommendRequest(BaseModel):
     origin:      str
@@ -725,6 +770,7 @@ async def predict(req: PredictRequest):
         mode_label=mode_label,
         mode_emoji=mode_emoji,
         alt_suggestion=alt_suggestion,
+        arrival_time=calculate_arrival_time(req.time, travel_time),
     )
 
 
@@ -1068,6 +1114,7 @@ class PredictResponseV2(PredictResponse):
     weather_trend:       Optional[dict] = None
     flood_risk:          Optional[dict] = None
     day_pattern:         Optional[dict] = None
+    # arrival_time inherited from PredictResponse
     privacy_note:        str = "CommuteIQ stores only anonymized trip data. No personally identifiable travel history is collected or required."
     ethical_note:        str = "CommuteIQ does not allow police checkpoint or individual tracking reports."
 
@@ -1195,6 +1242,7 @@ async def predict_v2(req: PredictRequest, user_id: Optional[str] = None):
         mode_label=mode_label,
         mode_emoji=mode_emoji,
         alt_suggestion=alt_suggestion,
+        arrival_time=calculate_arrival_time(req.time, travel_time),
         confidence=confidence,
         route_confidence=route_conf,
         staggered_departure=staggered if staggered["staggered"] else None,
