@@ -220,11 +220,22 @@ def estimate_congestion(time_str: Optional[str]) -> str:
 
 # ── Geocoding ─────────────────────────────────────────────────
 
+# Cache geocoding results for the session — same origin/destination
+# queried by 8 modes shouldn't hit Nominatim 16 times.
+_geocode_cache: dict = {}
+
 async def geocode_place(place: str, city: str) -> dict:
     """Geocode a place name to lat/lng. For known Nairobi suburbs, validates
     the result isn't suspiciously close to CBD when the area is known to be
     further away — Nominatim sometimes resolves suburb names wrongly."""
-    import math
+    import math, asyncio
+
+    cache_key   = f"{place.lower().strip()}|{city.lower().strip()}"
+    if cache_key in _geocode_cache:
+        return _geocode_cache[cache_key]
+
+    # Respect Nominatim's 1 req/sec policy
+    await asyncio.sleep(0.25)
 
     def dist_km(lat1, lng1, lat2, lng2):
         dlat = (lat2-lat1)*math.pi/180; dlng = (lng2-lng1)*math.pi/180
@@ -256,14 +267,26 @@ async def geocode_place(place: str, city: str) -> dict:
                     k_cbd  = dist_km(known["lat"], known["lng"], cbd["lat"], cbd["lng"])
                     if r_cbd < 1.5 and k_cbd > 3.0:
                         return known
-                return {"lat": rlat, "lng": rlng}
+                result = {"lat": rlat, "lng": rlng}
+                _geocode_cache[cache_key] = result
+                return result
     except Exception:
         pass
 
     # Known suburb fallback
     if city_lower == "nairobi" and place_lower in NAIROBI_SUBURB_COORDS:
-        return NAIROBI_SUBURB_COORDS[place_lower]
-    return CITY_COORDS.get(city_lower, {"lat": 6.5244, "lng": 3.3792})
+        result = NAIROBI_SUBURB_COORDS[place_lower]
+        _geocode_cache[cache_key] = result
+        return result
+    if city_lower in ["lagos","abuja","kano","ibadan","port harcourt","enugu"]:
+        place_norm = place_lower.replace("'","")
+        if place_norm in LAGOS_AREA_COORDS:
+            result = LAGOS_AREA_COORDS[place_norm]
+            _geocode_cache[cache_key] = result
+            return result
+    result = CITY_COORDS.get(city_lower, {"lat": 6.5244, "lng": 3.3792})
+    _geocode_cache[cache_key] = result
+    return result
 
 
 # ── ML prediction ─────────────────────────────────────────────
