@@ -23,7 +23,8 @@ import os
 import time
 import joblib
 from datetime import datetime
-from restriction_data import get_restriction, TRANSPORT_RESTRICTIONS
+from restriction_data    import get_restriction, TRANSPORT_RESTRICTIONS
+from live_intelligence   import get_route_intelligence
 from weather_intelligence import (
     get_weather_trend, get_flood_risk,
     get_day_pattern, DAY_CONGESTION_MULT
@@ -675,6 +676,12 @@ async def health():
             "privacy":           "Coordinates anonymized to 1.1km grid",
             "data_retention":    "Reports expire automatically by type",
         },
+        "live_intelligence": {
+            "tomtom_active":  bool(os.getenv("TOMTOM_API_KEY")),
+            "rss_feeds":      8,
+            "google_news":    True,
+            "note":           "Set TOMTOM_API_KEY env var on Render to activate real traffic flow. RSS + Google News active always.",
+        },
     }
 
 
@@ -1137,6 +1144,7 @@ class PredictResponseV2(PredictResponse):
     weather_trend:       Optional[dict] = None
     flood_risk:          Optional[dict] = None
     day_pattern:         Optional[dict] = None
+    live_intelligence:   Optional[dict] = None   # TomTom + RSS + Google News data
     # arrival_time inherited from PredictResponse
     privacy_note:        str = "CommuteIQ stores only anonymized trip data. No personally identifiable travel history is collected or required."
     ethical_note:        str = "CommuteIQ does not allow police checkpoint or individual tracking reports."
@@ -1181,14 +1189,31 @@ async def predict_v2(req: PredictRequest, user_id: Optional[str] = None):
     weather_data = await get_weather(coords["lat"], coords["lng"])
     weather      = weather_data["label"]
 
-    # Congestion
-    congestion = estimate_congestion(req.time)
+    # ── Live Intelligence — TomTom + RSS News + Google News ──
+    # Runs all three sources concurrently. Falls back gracefully if any fail.
+    # If TOMTOM_API_KEY is not set, congestion falls back to time-of-day estimate.
+    try:
+        intel = await get_route_intelligence(
+            origin=req.origin,
+            destination=req.destination,
+            city=city,
+            lat=coords["lat"],
+            lng=coords["lng"],
+        )
+        congestion        = intel["congestion"]
+        live_intel_data   = intel
+    except Exception:
+        congestion        = estimate_congestion(req.time)
+        live_intel_data   = {"congestion": congestion, "incidents": [], "confidence_boost": 0, "data_sources": ["time_of_day_estimate"]}
 
-    # Community reports — with type-specific expiry
-    all_reports    = await list_reports(city)
-    active_reports = get_active_reports(all_reports, city)
-    incident_types = ["accident", "flood", "road_closure", "heavy_traffic"]
-    community_count= len([r for r in active_reports if r.get("type") in incident_types])
+    # Community reports — combine Supabase reports with live intelligence incidents
+    all_reports      = await list_reports(city)
+    active_reps      = get_active_reports(all_reports, city)
+    live_incidents   = live_intel_data.get("incidents", [])
+    incident_types   = ["accident", "flood", "road_closure", "heavy_traffic"]
+    # Merge: Supabase user reports + live intelligence incidents
+    all_incidents    = active_reps + live_incidents
+    community_count  = len([r for r in all_incidents if r.get("type") in incident_types])
 
     # Road quality
     rq_score = get_road_quality_score(city)
@@ -1198,8 +1223,21 @@ async def predict_v2(req: PredictRequest, user_id: Optional[str] = None):
     safety_score = get_safety_score(city, mode)
     quality      = get_commute_quality(congestion, weather, community_count, safety_score, mode, city, distance_km, rq_score)
 
-    # Confidence
-    confidence = calculate_confidence(community_count, weather, congestion, distance_km, rq_score, req.time)
+    # Confidence — boosted if live data sources are available
+    confidence       = calculate_confidence(community_count, weather, congestion, distance_km, rq_score, req.time)
+    conf_boost       = live_intel_data.get("confidence_boost", 0)
+    if conf_boost:
+        confidence["score"]    = min(98, confidence["score"] + conf_boost)
+        data_sources           = live_intel_data.get("data_sources", [])
+        if "TomTom live traffic" in data_sources:
+            confidence["contributors"].append("TomTom real-time traffic data")
+        if any("news" in s for s in data_sources):
+            confidence["contributors"].append("Live news intelligence")
+        confidence["summary"] = (
+            f"{confidence['emoji']} {confidence['label']} confidence "
+            f"({confidence['score']}%) — " +
+            ", ".join(confidence["contributors"][:3])
+        )
 
     # Route confidence
     route_conf = calculate_route_confidence(
@@ -1273,6 +1311,13 @@ async def predict_v2(req: PredictRequest, user_id: Optional[str] = None):
         weather_trend=weather_trend,
         flood_risk=flood_risk if flood_risk["risk"] != "Low" else None,
         day_pattern=day_pattern,
+        live_intelligence={
+            "sources":          live_intel_data.get("data_sources", ["time_of_day_estimate"]),
+            "is_live":          live_intel_data.get("incidents", []) != [] or live_intel_data.get("congestion_detail", {}).get("live", False),
+            "live_incidents":   len(live_intel_data.get("incidents", [])),
+            "tomtom_active":    live_intel_data.get("congestion_detail", {}).get("source") == "TomTom live traffic",
+            "flow_ratio":       live_intel_data.get("congestion_detail", {}).get("flow_ratio"),
+        },
         privacy_note="CommuteIQ stores only anonymized trip data. No personally identifiable travel history is collected or required.",
         ethical_note="CommuteIQ does not allow police checkpoint or individual tracking reports.",
     )
