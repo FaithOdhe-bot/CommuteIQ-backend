@@ -5,10 +5,11 @@ live_intelligence.py
 Replaces static dataset limitations with real-time internet data.
 All sources are FREE — no API keys required except TomTom (free signup).
 
-Three intelligence layers:
+Four intelligence layers:
   1. TomTom Traffic Flow — real measured road speeds (replaces time-of-day guess)
-  2. RSS News Scanner — scans Nigerian + Kenyan news for incidents automatically
+  2. RSS News Scanner — Nigerian + Kenyan news feeds including Lagos Traffic Radio (LASTMA)
   3. Google News Search — targeted search for floods, accidents, road closures
+  4. OSM Road Closures — community road closures + Overpass API construction zones
 
 How it integrates with main.py:
   - get_live_congestion() replaces estimate_congestion() when TomTom key is set
@@ -70,7 +71,14 @@ INCIDENT_KEYWORDS = {
 CITY_KEYWORDS = {
     "lagos":         ["lagos", "lekki", "ikeja", "ikorodu", "surulere", "victoria island",
                       "oshodi", "yaba", "agege", "mushin", "apapa", "festac",
-                      "ojota", "maryland", "ketu", "ajah", "third mainland"],
+                      "ojota", "maryland", "ketu", "ajah", "third mainland",
+                      # Major Lagos roads — Lagos Traffic Radio uses these names
+                      "ikorodu road", "lagos-ibadan expressway", "carter bridge",
+                      "apapa-oshodi expressway", "lekki-epe expressway",
+                      "oba akran", "airport road", "isale eko", "mile 2",
+                      "oba ogunji", "ijaye", "agege motor road", "dolphin estate",
+                      "lekki conservation", "jakande", "obalende", "cms",
+                      "lastma", "lasg", "lspwc"],
     "nairobi":       ["nairobi", "westlands", "cbd", "thika", "langata", "karen",
                       "kasarani", "embakasi", "eastleigh", "mathare", "kibera",
                       "uthiru", "kikuyu", "waiyaki", "ngong road", "mombasa road"],
@@ -84,16 +92,25 @@ CITY_KEYWORDS = {
 # Active RSS feeds for Nigeria and Kenya
 RSS_FEEDS = {
     "nigeria": [
+        # General Nigerian news
         "https://channelstv.com/feed",
         "https://pmnewsnigeria.com/feed",
         "https://vanguardngr.com/feed",
         "https://dailypost.ng/feed",
+        # Lagos Traffic Radio (LASTMA) — official government traffic updates
+        # Posts road-level flash updates every 10 min from live motorbike reporters
+        "https://trafficradio961.ng/feed",
+        "https://trafficradio961.ng/category/news/traffic-updates/feed",
+        # FRSC National Traffic Radio Abuja — try feed, falls back silently if unavailable
+        "https://frsc.gov.ng/feed",
     ],
     "kenya": [
         "https://kenyanews.go.ke/feed",
         "https://kenyans.co.ke/feeds/news",
         "https://nairobiwire.com/feed",
         "https://www.standardmedia.co.ke/rss",
+        # Nation Africa — Kenya's largest daily, strong Nairobi traffic coverage
+        "https://nation.africa/kenya/rss.xml",
     ]
 }
 
@@ -436,6 +453,124 @@ async def search_news_for_route(origin: str, destination: str, city: str) -> lis
 
 
 # ═══════════════════════════════════════════════════════════════
+# 4. OSM ROAD CLOSURES API — community-reported closures
+# ═══════════════════════════════════════════════════════════════
+
+# Bounding boxes used for OSM Overpass AND the closures.osm.ch API
+OSM_CITY_BBOXES = {
+    "lagos":         {"south": 6.38, "west": 3.10, "north": 6.71, "east": 3.72},
+    "nairobi":       {"south": -1.44, "west": 36.65, "north": -1.16, "east": 37.01},
+    "abuja":         {"south": 8.76, "west": 6.99, "north": 9.34, "east": 7.73},
+    "kano":          {"south": 11.85, "west": 8.37, "north": 12.15, "east": 8.78},
+    "ibadan":        {"south": 7.26, "west": 3.79, "north": 7.52, "east": 4.12},
+    "port harcourt": {"south": 4.65, "west": 6.89, "north": 5.02, "east": 7.21},
+    "mombasa":       {"south": -4.15, "west": 39.55, "north": -3.95, "east": 39.85},
+    "nairobi":       {"south": -1.44, "west": 36.65, "north": -1.16, "east": 37.01},
+}
+
+_osm_cache: dict = {}
+
+
+async def get_osm_road_closures(city: str) -> list:
+    """
+    Fetch community-reported road closures from OSM Road Closures API.
+    New platform built in GSoC 2025 at closures.osm.ch — free, no API key.
+    Returns closures with OpenLR location referencing for precise road matching.
+
+    Falls back to Overpass API query for highway=construction if
+    closures.osm.ch returns nothing.
+    """
+    cache_key = f"osm_closures|{city}"
+    if cache_key in _osm_cache:
+        entry = _osm_cache[cache_key]
+        if time.time() - entry["ts"] < 900:   # 15 min cache
+            return entry["data"]
+
+    bbox = OSM_CITY_BBOXES.get(city.lower())
+    if not bbox:
+        return []
+
+    incidents = []
+
+    # ── Layer 1: OSM Road Closures API (closures.osm.ch) ─────
+    try:
+        url = (
+            f"https://closures.osm.ch/api/closures"
+            f"?bbox={bbox['west']},{bbox['south']},{bbox['east']},{bbox['north']}"
+        )
+        async with httpx.AsyncClient(timeout=8, headers={"User-Agent": "CommuteIQ/2.0"}) as client:
+            r = await client.get(url)
+            if r.status_code == 200:
+                data = r.json()
+                for closure in data.get("features", []):
+                    props = closure.get("properties", {})
+                    name  = props.get("name") or props.get("description") or city
+                    start = props.get("start_date", "")
+                    end   = props.get("end_date", "")
+                    # Parse expiry
+                    try:
+                        from datetime import datetime as _dt
+                        exp_ts = _dt.fromisoformat(end).timestamp() if end else time.time() + 86400
+                    except Exception:
+                        exp_ts = time.time() + 86400
+
+                    incidents.append({
+                        "type":       "road_closure",
+                        "location":   name[:100],
+                        "city":       city,
+                        "source":     "osm_closures",
+                        "confidence": 0.75,   # community-verified, higher than news
+                        "created_at": time.time(),
+                        "expires_at": exp_ts,
+                    })
+    except Exception:
+        pass
+
+    # ── Layer 2: Overpass API — highway=construction ──────────
+    # Catches road works that OSM editors have tagged but aren't
+    # in the closures API yet. Updated daily from OSM community edits.
+    if len(incidents) < 3:   # only hit Overpass if closures API had little data
+        try:
+            overpass_query = f"""
+[out:json][timeout:15];
+(
+  way["highway"="construction"]
+     ({bbox['south']},{bbox['west']},{bbox['north']},{bbox['east']});
+  way["construction"~"primary|secondary|tertiary|trunk|motorway"]
+     ({bbox['south']},{bbox['west']},{bbox['north']},{bbox['east']});
+  way["access"="no"]["highway"]
+     ({bbox['south']},{bbox['west']},{bbox['north']},{bbox['east']});
+);
+out tags 10;
+"""
+            overpass_url = "https://overpass-api.de/api/interpreter"
+            async with httpx.AsyncClient(timeout=12, headers={"User-Agent": "CommuteIQ/2.0"}) as client:
+                r = await client.post(overpass_url, data={"data": overpass_query})
+                if r.status_code == 200:
+                    elements = r.json().get("elements", [])
+                    for el in elements[:5]:   # cap at 5 to avoid noise
+                        tags = el.get("tags", {})
+                        name = (tags.get("name") or
+                                tags.get("ref") or
+                                tags.get("description") or
+                                f"{city} road works")
+                        incidents.append({
+                            "type":       "construction",
+                            "location":   name[:100],
+                            "city":       city,
+                            "source":     "osm_overpass",
+                            "confidence": 0.65,
+                            "created_at": time.time(),
+                            "expires_at": time.time() + 86400,  # 24h — construction is slow-changing
+                        })
+        except Exception:
+            pass
+
+    _osm_cache[cache_key] = {"data": incidents, "ts": time.time()}
+    return incidents
+
+
+# ═══════════════════════════════════════════════════════════════
 # HELPER — fallback to time-based congestion when no TomTom key
 # ═══════════════════════════════════════════════════════════════
 
@@ -475,16 +610,17 @@ async def get_route_intelligence(
     - incidents: combined from TomTom + RSS news + Google News
     - confidence_boost: extra confidence if data is live (not estimated)
     """
-    # Run all three concurrently
-    congestion_result, tomtom_incidents, news_incidents, route_news = await asyncio.gather(
+    # Run all four sources concurrently — fail safe on each
+    congestion_result, tomtom_incidents, news_incidents, route_news, osm_closures = await asyncio.gather(
         get_live_congestion(lat, lng, city),
         get_live_incidents(city),
         get_news_incidents([city]),
         search_news_for_route(origin, destination, city),
+        get_osm_road_closures(city),
         return_exceptions=True
     )
 
-    # Handle exceptions
+    # Handle exceptions gracefully — one source failing never breaks the others
     if isinstance(congestion_result, Exception):
         congestion_result = _time_based_congestion()
     if isinstance(tomtom_incidents, Exception):
@@ -493,10 +629,12 @@ async def get_route_intelligence(
         news_incidents = []
     if isinstance(route_news, Exception):
         route_news = []
+    if isinstance(osm_closures, Exception):
+        osm_closures = []
 
     # Combine all incident sources
     all_incidents = []
-    for inc in (tomtom_incidents + news_incidents + route_news):
+    for inc in (tomtom_incidents + news_incidents + route_news + osm_closures):
         if isinstance(inc, dict):
             all_incidents.append(inc)
 
