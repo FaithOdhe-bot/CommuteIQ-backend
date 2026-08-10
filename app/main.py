@@ -97,6 +97,8 @@ CITY_COORDS = {
     "kisumu":       {"lat": -0.0917, "lng": 34.7680},
     "nakuru":       {"lat": -0.3031, "lng": 36.0800},
     "eldoret":      {"lat": 0.5143,  "lng": 35.2698},
+    "asaba":        {"lat": 6.1986,  "lng": 6.7322},
+    "benin city":   {"lat": 6.3350,  "lng": 5.6037},
 }
 
 # Nairobi suburb coordinates — used as fallback when Nominatim returns a
@@ -152,11 +154,40 @@ LAGOS_AREA_COORDS = {
     "mile 2":        {"lat": 6.4750,  "lng": 3.3150},
 }
 
+# Asaba area coordinates (Delta State)
+ASABA_AREA_COORDS = {
+    "okpanam":          {"lat": 6.2167, "lng": 6.6833},
+    "ibusa":            {"lat": 6.1667, "lng": 6.6667},
+    "anwai":            {"lat": 6.1800, "lng": 6.7400},
+    "cable point":      {"lat": 6.2050, "lng": 6.7280},
+    "bonsaac":          {"lat": 6.2100, "lng": 6.7350},
+    "koka":             {"lat": 6.2200, "lng": 6.7500},
+    "nnebisi":          {"lat": 6.1990, "lng": 6.7350},
+    "summit":           {"lat": 6.2050, "lng": 6.7400},
+    "federal housing":  {"lat": 6.2000, "lng": 6.7300},
+    "millennium":       {"lat": 6.1950, "lng": 6.7250},
+}
+
+# Benin City area coordinates (Edo State)
+BENIN_AREA_COORDS = {
+    "gra":              {"lat": 6.3150, "lng": 5.6150},
+    "uselu":            {"lat": 6.3750, "lng": 5.6020},
+    "ugbowo":           {"lat": 6.3980, "lng": 5.6110},
+    "ring road":        {"lat": 6.3350, "lng": 5.6037},
+    "sapele road":      {"lat": 6.3200, "lng": 5.6200},
+    "airport road":     {"lat": 6.3000, "lng": 5.5800},
+    "ramat park":       {"lat": 6.3450, "lng": 5.6300},
+    "ikpoba hill":      {"lat": 6.3600, "lng": 5.6400},
+    "textile mill":     {"lat": 6.3500, "lng": 5.5900},
+    "upper mission":    {"lat": 6.3700, "lng": 5.6000},
+}
+
 
 def get_country(city: str) -> str:
     if encoders:
         return encoders.get("city_to_country", {}).get(city.lower(), "nigeria")
-    return "kenya" if city.lower() in ["nairobi","mombasa","kisumu","nakuru","eldoret"] else "nigeria"
+    kenya_cities = ["nairobi","mombasa","kisumu","nakuru","eldoret"]
+    return "kenya" if city.lower() in kenya_cities else "nigeria"
 
 def validate_mode_for_city(mode: str, city: str) -> tuple[bool, str]:
     """Check if mode is available in city. Returns (valid, suggestion)."""
@@ -303,6 +334,24 @@ async def geocode_place(place: str, city: str) -> dict:
         result = NAIROBI_SUBURB_COORDS[place_base]
         _geocode_cache[cache_key] = result
         return result
+    if city_lower in ["lagos","abuja","kano","ibadan","port harcourt","enugu"]:
+        place_norm = place_base.replace("'","")
+        if place_norm in LAGOS_AREA_COORDS:
+            result = LAGOS_AREA_COORDS[place_norm]
+            _geocode_cache[cache_key] = result
+            return result
+    if city_lower == "asaba":
+        place_norm = place_base.replace("'","")
+        if place_norm in ASABA_AREA_COORDS:
+            result = ASABA_AREA_COORDS[place_norm]
+            _geocode_cache[cache_key] = result
+            return result
+    if city_lower == "benin city":
+        place_norm = place_base.replace("'","")
+        if place_norm in BENIN_AREA_COORDS:
+            result = BENIN_AREA_COORDS[place_norm]
+            _geocode_cache[cache_key] = result
+            return result
     if city_lower in ["lagos","abuja","kano","ibadan","port harcourt","enugu"]:
         place_norm = place_base.replace("'","")
         if place_norm in LAGOS_AREA_COORDS:
