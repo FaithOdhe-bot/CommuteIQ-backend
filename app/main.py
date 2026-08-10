@@ -25,6 +25,7 @@ import joblib
 from datetime import datetime
 from restriction_data    import get_restriction, TRANSPORT_RESTRICTIONS
 from live_intelligence   import get_route_intelligence
+from transit_data        import get_walk_to_transit, get_matatu_route, MATATU_ROUTES
 from weather_intelligence import (
     get_weather_trend, get_flood_risk,
     get_day_pattern, DAY_CONGESTION_MULT
@@ -360,12 +361,20 @@ def _formula_travel_time(distance_km, congestion, weather, mode, city):
         mode_data = transport_modes.get(country, {}).get(mode.lower(),
                     transport_modes.get(country, {}).get("driving", {}))
         speeds    = mode_data.get("avg_speed_kmh", {"urban": 30})
-        # FIX: Use the slowest (most urban) speed for city predictions.
-        # list(values())[0] picked the highway/motorway speed (100 km/h for
-        # private car) giving absurd 3-min predictions for 2km urban trips.
-        # CommuteIQ serves city commutes, not highway drives — always use
-        # the residential/urban speed which is the smallest value in the dict.
-        base_speed = min(speeds.values()) if speeds else 30.0
+        # Distance-based speed selection:
+        # Short urban trips use the slowest (residential) speed.
+        # Medium suburban routes use middle speed.
+        # Long highway routes use the fastest speed.
+        # This fixes the Thika matatu showing 5h instead of 1h45min.
+        speed_vals = list(speeds.values())
+        if distance_km > 20 and len(speed_vals) >= 1:
+            base_speed = speed_vals[0]         # highway speed
+        elif distance_km > 8 and len(speed_vals) >= 2:
+            base_speed = speed_vals[1]         # primary road speed
+        else:
+            base_speed = min(speed_vals)       # urban/residential speed
+        if not speed_vals:
+            base_speed = 30.0
 
         peak_m = mode_data.get("peak_multiplier", 0.6)
         rain_m = mode_data.get("rain_multiplier", 0.8)
@@ -495,6 +504,17 @@ def suggest_alternative_mode(
             return (f"⚠️ {distance_km:.1f}km is too far to walk safely. "
                     f"Consider {info.get('emoji','')} {info.get('label', best)} instead.")
 
+    # Walk-to-transit suggestion when driving is stuck in High traffic
+    if mode.lower() in ["driving", "rideshare", "taxi"] and high_traffic:
+        walk_sug = get_walk_to_transit(
+            origin_lat=0, origin_lng=0,   # coords not available here — handled in v2/predict
+            city=city,
+            origin_name="",
+            travel_time_driving=travel_time if hasattr(travel_time, "__float__") else 60,
+            congestion=congestion,
+        )
+        # Handled with real coords in v2/predict — skip here
+
     # Okada/boda in rain warning
     if mode.lower() in ["okada","boda_boda","boda"] and rain:
         safe_alt = "brt" if country == "nigeria" else "matatu"
@@ -579,6 +599,16 @@ def generate_ai_explanation(
         lines.append(f"Road quality is poor on this route ({rq_score:.0f}/100) — expect rough conditions.")
     elif rq_score > 70:
         lines.append(f"Road quality is good ({rq_score:.0f}/100).")
+
+    # Matatu route number tip — tells user which route to board
+    if mode.lower() == "matatu" and city.lower() in ["nairobi"]:
+        route_info = get_matatu_route(origin.split(",")[0].lower().strip(), city)
+        if route_info:
+            routes = "/".join(route_info["routes"])
+            lines.append(
+                f"🚐 Board Matatu Route {routes} from {route_info['stage']} "
+                f"via {route_info['via']}."
+            )
 
     # Mode-specific warning
     if mode.lower() in ["okada","boda_boda","boda"] and weather in ["Rainy","Foggy"]:
@@ -1274,8 +1304,22 @@ async def predict_v2(req: PredictRequest, user_id: Optional[str] = None):
     # Demand balancer
     staggered = get_staggered_departure(user_id, congestion, travel_time, req.time)
 
-    # Alternative suggestion
+    # Alternative suggestion (mode restrictions + better mode tips)
     alt_suggestion = suggest_alternative_mode(mode, city, congestion, weather, distance_km)
+
+    # Walk-to-transit — when driving is stuck, suggest walking to transit hub
+    # Uses real origin coordinates for accurate walking distance calculation
+    if not alt_suggestion and mode.lower() in ["driving","rideshare","taxi"]:
+        walk_suggestion = get_walk_to_transit(
+            origin_lat   = origin_coords.get("lat", coords["lat"]),
+            origin_lng   = origin_coords.get("lng", coords["lng"]),
+            city         = city,
+            origin_name  = req.origin.split(",")[0].strip(),
+            travel_time_driving = travel_time,
+            congestion   = congestion,
+        )
+        if walk_suggestion:
+            alt_suggestion = walk_suggestion["suggestion"]
 
     # Weather intelligence — trend + flood risk + day pattern
     weather_trend = await get_weather_trend(coords["lat"], coords["lng"])
