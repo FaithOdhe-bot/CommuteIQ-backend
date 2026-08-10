@@ -154,3 +154,59 @@ def get_walk_to_transit(
             f"in current traffic. Saves ~{time_saved} min.{route_str}"
         ),
     }
+
+
+# ── City-level bottleneck context ─────────────────────────────
+# Used in AI explanation to warn about specific corridors at peak
+BOTTLENECK_WARNINGS = {
+    "abuja": {
+        "nyanya-mararaba":   "Heavy Nasarawa commuter inflow — allow extra time.",
+        "lugbe airport road":"Galadimawa Roundabout gridlock during morning rush.",
+        "dei-dei":           "Heavy freight on Kubwa Expressway — frequent gridlock.",
+        "shehu shagari way": "Peak-hour signal delays at Ahmadu Bello Way intersection.",
+    },
+    "kano": {
+        "baban gwari":       "Baban Gwari Roundabout — key bottleneck, allow 20 min extra.",
+        "gwarzo road":       "BUK traffic + Kabuga Roundabout friction at peak.",
+        "katsina road":      "Katsina Road Flyover merges — allow extra time.",
+    },
+    "ibadan": {
+        "iwo road":          "Iwo Road Interchange — worst bottleneck, 45-90 min peak.",
+        "challenge":         "Challenge Roundabout high-density — 50-90 min peak.",
+        "ojoo":              "Ojoo Transit Hub — interstate bus loading causes gridlock.",
+    },
+    "port harcourt": {
+        "rumuola":           "Rumuola Junction — commercial loading + Flyover approaches.",
+        "aba road":          "Aba Road merges cause 35-60 min delays peak.",
+    },
+    "asaba": {
+        "nnebisi road":      "Dense retail traffic + keke loading — 30-50 min peak.",
+        "head bridge":       "Asaba↔Onitsha Head Bridge — 45 min to 2+ hours peak.",
+        "inter-bau":         "Inter-Bau Flyover junction — secretariat inflow 7-9AM.",
+    },
+    "benin city": {
+        "ring road":         "King's Square (Ring Road) — all arterials converge here.",
+        "uselu market":      "Uselu Market + Shell Axis — informal loading causes gridlock.",
+        "ikpoba hill":       "Ikpoba Hill Bridge — truck breakdowns cause immediate gridlock.",
+        "sapele road":       "Commercial parks + interstate trucks on Sapele Road.",
+    },
+    "mombasa": {
+        "nyali bridge":      "Nyali Bridge — 35-70 min peak. Trucks banned 6AM-9:30AM.",
+        "likoni ferry":      "Likoni Ferry — 35-75 min peak with vehicle queuing.",
+        "tudor bridge":      "Tudor Bridge — diversion from Nyali, still congested.",
+    },
+    "nakuru": {
+        "railway bridge":    "Railway Bridge underpass — key bottleneck CBD entry.",
+        "kenyatta avenue":   "Kenyatta Ave — retail drop-offs cause 15-30 min delays.",
+    },
+    "kisumu": {
+        "kondele":           "Kondele Interchange — informal pick-ups cause choke.",
+        "patel roundabout":  "Patel Roundabout — 25-45 min peak from Nyamasaria.",
+        "oginga odinga":     "Oginga Odinga St — double parking + pedestrian gridlock.",
+    },
+    "eldoret": {
+        "uganda road iten":  "Uganda/Iten Junction Roundabout — primary central bottleneck.",
+        "maili tisa":        "Maili Tisa Junction — heavy truck density from bypass.",
+        "kapsabet roundabout":"Southern residential merge — high morning congestion.",
+    },
+}
