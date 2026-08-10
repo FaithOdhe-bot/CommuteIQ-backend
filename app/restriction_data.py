@@ -55,22 +55,28 @@ TRANSPORT_RESTRICTIONS = {
             },
 
             "abuja": {
-                # FCTA banned okada from city centre (August 2026)
-                # Ongoing enforcement by FCT Joint Task Force
+                # Phase 1 Central City Districts ban — Aug 2026
+                # Includes CBD, Maitama, Asokoro, Wuse, Garki
+                # Security rationale: links to bandit activity + traffic management
                 "status":          "BANNED_CITY_CENTRE",
                 "max_direct_km":   6.0,
                 "restricted_areas": [
-                    "Abuja City Centre", "Central Business District",
-                    "Maitama", "Asokoro", "Garki",
+                    "Central Business District", "Maitama", "Asokoro",
+                    "Wuse", "Garki",
+                ],
+                "restricted_roads": [
+                    "Shehu Shagari Way", "Ahmadu Bello Way",
+                    "Yakubu Gowon Way", "Ring Road 1", "Central Expressway",
                 ],
                 "legal_alt":       "rideshare",
                 "legal_alt_label": "Ride Share (Bolt/Uber)",
                 "courier_allowed": True,
                 "message": (
-                    "⚠️ Okadas and keke napep are banned in Abuja city centre "
-                    "(FCTA order, August 2026). For a {dist:.0f}km trip use "
-                    "🚖 Ride Share (Bolt/Uber) or 🚗 Taxi instead. "
-                    "Okada may still operate in outer districts."
+                    "⚠️ Okadas and keke napep are banned in Abuja Phase 1 districts "
+                    "(CBD, Maitama, Asokoro, Wuse, Garki) by FCTA order, August 2026. "
+                    "Use 🚖 Bolt/Uber or the Abuja Metro Light Rail instead. "
+                    "Also available: 'along-along' shared taxis from Berger Roundabout, "
+                    "Area 1 Bridge, and Airport Road junctions."
                 ),
             },
 
@@ -116,6 +122,46 @@ TRANSPORT_RESTRICTIONS = {
                 "message": (
                     "⚠️ Okadas are banned in Enugu (ban since 2011). "
                     "Use 🛺 Keke Napep or 🚖 Taxi for a {dist:.0f}km trip."
+                ),
+            },
+
+            "asaba": {
+                # Delta State okada ban — entire Asaba Capital Territory
+                # Enforced by DESTMA + Nigeria Police Force Task Force
+                # Primary modes now: Keke Napep + Town Buses
+                "status":          "BANNED",
+                "max_direct_km":   0,
+                "restricted_areas": ["Asaba Capital Territory"],
+                "legal_alt":       "keke",
+                "legal_alt_label": "Keke Napep",
+                "courier_allowed": True,
+                "message": (
+                    "⚠️ Okadas are fully banned in Asaba Capital Territory "
+                    "(Delta State Government ban, enforced by DESTMA). "
+                    "Use 🛺 Keke Napep for short trips or 🚌 Town Bus for "
+                    "medium distances (Okpanam, Ibusa, Koka routes)."
+                ),
+            },
+
+            "benin city": {
+                # Banned in core LGAs: Oredo, Egor, Ikpoba Okha
+                # Also restricted in selected Ovia North-East and Uhunmwonde corridors
+                # Enforced by EDSTMA
+                "status":          "BANNED",
+                "max_direct_km":   4.0,
+                "restricted_areas": [
+                    "Oredo LGA", "Egor LGA", "Ikpoba Okha LGA",
+                    "Ring Road", "King's Square",
+                ],
+                "legal_alt":       "keke",
+                "legal_alt_label": "Keke Napep",
+                "courier_allowed": True,
+                "message": (
+                    "⚠️ Okadas are banned in Benin City core LGAs (Oredo, Egor, "
+                    "Ikpoba Okha) enforced by EDSTMA. "
+                    "Use 🛺 Keke Napep or 🚌 Danfo/Taxi. "
+                    "ECTS government buses operate on Ugbowo, Airport Road, "
+                    "and Sapele Road corridors at regulated fares."
                 ),
             },
 
@@ -260,4 +306,3 @@ def get_restriction(mode: str, city: str, country: str) -> dict | None:
         .get(mode.lower(), {})
         .get(city.lower())
     )
-
