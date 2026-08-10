@@ -32,12 +32,21 @@ OSRM_PROFILE = {
 
 
 async def get_route(origin: dict, destination: dict, mode: str) -> dict:
+    """
+    Get real road route from OSRM with actual geometry.
+    Returns distance, duration, and route_geometry as [[lat,lng],...] 
+    ready for Leaflet Polyline — coordinates are flipped from OSRM's
+    [lng,lat] format to Leaflet's [lat,lng] format here on the backend.
+    """
     profile = OSRM_PROFILE.get(mode.lower(), "driving")
     coords  = f"{origin['lng']},{origin['lat']};{destination['lng']},{destination['lat']}"
     url     = f"{OSRM_URL}/{profile}/{coords}"
 
     async with httpx.AsyncClient(timeout=10) as client:
-        res = await client.get(url, params={"overview": "false"})
+        res = await client.get(url, params={
+            "overview":    "full",       # return complete route geometry
+            "geometries":  "geojson",    # geojson format: coordinates as [lng,lat]
+        })
         res.raise_for_status()
         data = res.json()
 
@@ -45,7 +54,15 @@ async def get_route(origin: dict, destination: dict, mode: str) -> dict:
         raise ValueError("No route found between those points")
 
     route = data["routes"][0]
+
+    # Extract geometry — OSRM returns [lng, lat], Leaflet needs [lat, lng]
+    geometry = route.get("geometry", {})
+    coordinates = geometry.get("coordinates", [])
+    # Flip [lng, lat] → [lat, lng] for Leaflet
+    route_geometry = [[lat, lng] for lng, lat in coordinates] if coordinates else []
+
     return {
-        "distance_km":          route["distance"] / 1000,
-        "base_duration_minutes": route["duration"] / 60,  # free-flow, congestion applied in main.py
+        "distance_km":           route["distance"] / 1000,
+        "base_duration_minutes": route["duration"] / 60,
+        "route_geometry":        route_geometry,   # [[lat,lng],...] for Leaflet
     }
