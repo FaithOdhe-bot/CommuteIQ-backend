@@ -243,7 +243,10 @@ async def geocode_place(place: str, city: str) -> dict:
         a = math.sin(dlat/2)**2 + math.cos(lat1*math.pi/180)*math.cos(lat2*math.pi/180)*math.sin(dlng/2)**2
         return 6371 * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
 
+    # enrichPlace() in client.js sends "Kingeero, Nairobi" not "Kingeero".
+    # Extract just the place name before the comma so suburb lookups work.
     place_lower = place.lower().strip().rstrip(",")
+    place_base  = place_lower.split(",")[0].strip()   # "kingeero, nairobi" → "kingeero"
     city_lower  = city.lower().strip()
 
     try:
@@ -259,15 +262,35 @@ async def geocode_place(place: str, city: str) -> dict:
             if results:
                 rlat = float(results[0]["lat"])
                 rlng = float(results[0]["lon"])
-                # Nairobi suburb validation: reject result if it lands < 1.5km
-                # from CBD but the area is known to be > 3km away
-                if city_lower == "nairobi" and place_lower in NAIROBI_SUBURB_COORDS:
+                # Nairobi suburb validation — uses place_base (not place_lower)
+                # because client.js enriches "Kingeero" to "Kingeero, Nairobi"
+                # before sending. Threshold 5km catches suburbs placed near CBD
+                # by Nominatim when the real suburb is 7-15km away.
+                if city_lower == "nairobi" and place_base in NAIROBI_SUBURB_COORDS:
                     cbd    = CITY_COORDS["nairobi"]
-                    known  = NAIROBI_SUBURB_COORDS[place_lower]
+                    known  = NAIROBI_SUBURB_COORDS[place_base]
                     r_cbd  = dist_km(rlat, rlng, cbd["lat"], cbd["lng"])
                     k_cbd  = dist_km(known["lat"], known["lng"], cbd["lat"], cbd["lng"])
-                    if r_cbd < 1.5 and k_cbd > 3.0:
-                        return known
+                    if r_cbd < 5.0 and k_cbd > 3.0:
+                        result = known
+                        _geocode_cache[cache_key] = result
+                        return result
+
+                # Lagos suburb validation: reject result if Nominatim returns
+                # a location more than 15km from the known coordinates.
+                # Catches cases like "Ikoyi" resolving to Ojo LGA (Satellite Town
+                # area, ~3.22 lng) instead of Ikoyi GRA on Lagos Island (~3.43 lng).
+                if city_lower == "lagos":
+                    place_norm = place_base.replace("'", "")
+                    if place_norm in LAGOS_AREA_COORDS:
+                        known    = LAGOS_AREA_COORDS[place_norm]
+                        err_dist = dist_km(rlat, rlng, known["lat"], known["lng"])
+                        if err_dist > 15.0:
+                            # Nominatim found the wrong place — use known coords
+                            result = known
+                            _geocode_cache[cache_key] = result
+                            return result
+
                 result = {"lat": rlat, "lng": rlng}
                 _geocode_cache[cache_key] = result
                 return result
@@ -275,12 +298,12 @@ async def geocode_place(place: str, city: str) -> dict:
         pass
 
     # Known suburb fallback
-    if city_lower == "nairobi" and place_lower in NAIROBI_SUBURB_COORDS:
-        result = NAIROBI_SUBURB_COORDS[place_lower]
+    if city_lower == "nairobi" and place_base in NAIROBI_SUBURB_COORDS:
+        result = NAIROBI_SUBURB_COORDS[place_base]
         _geocode_cache[cache_key] = result
         return result
     if city_lower in ["lagos","abuja","kano","ibadan","port harcourt","enugu"]:
-        place_norm = place_lower.replace("'","")
+        place_norm = place_base.replace("'","")
         if place_norm in LAGOS_AREA_COORDS:
             result = LAGOS_AREA_COORDS[place_norm]
             _geocode_cache[cache_key] = result
