@@ -726,6 +726,7 @@ class PredictResponse(BaseModel):
     mode_emoji:         Optional[str] = None
     alt_suggestion:     Optional[str] = None
     arrival_time:       Optional[str] = None
+    route_geometry:     Optional[list] = None   # [[lat,lng],...] for Leaflet Polyline
 
 class RecommendRequest(BaseModel):
     origin:      str
@@ -831,11 +832,13 @@ async def predict(req: PredictRequest):
     mode_emoji = mode_data.get("emoji", "")
 
     # 1. Route
+    route_geometry = None
     try:
         origin_coords = await geocode_place(req.origin, city)
         dest_coords   = await geocode_place(req.destination, city)
         route         = await get_route(origin_coords, dest_coords, mode)
         distance_km   = route["distance_km"]
+        route_geometry = route.get("route_geometry")
     except Exception:
         distance_km = 12.0   # reasonable urban fallback
 
@@ -903,6 +906,7 @@ async def predict(req: PredictRequest):
         mode_emoji=mode_emoji,
         alt_suggestion=alt_suggestion,
         arrival_time=calculate_arrival_time(req.time, travel_time),
+        route_geometry=route_geometry,
     )
 
 
@@ -1281,8 +1285,9 @@ async def predict_v2(req: PredictRequest, user_id: Optional[str] = None):
     try:
         origin_coords = await geocode_place(req.origin, city)
         dest_coords   = await geocode_place(req.destination, city)
-        route         = await get_route(origin_coords, dest_coords, mode)
-        distance_km   = route["distance_km"]
+        route          = await get_route(origin_coords, dest_coords, mode)
+        distance_km    = route["distance_km"]
+        route_geometry = route.get("route_geometry")
     except Exception:
         distance_km = 12.0
 
@@ -1420,6 +1425,7 @@ async def predict_v2(req: PredictRequest, user_id: Optional[str] = None):
         mode_emoji=mode_emoji,
         alt_suggestion=alt_suggestion,
         arrival_time=calculate_arrival_time(req.time, travel_time),
+        route_geometry=route_geometry,
         confidence=confidence,
         route_confidence=route_conf,
         staggered_departure=staggered if staggered["staggered"] else None,
