@@ -20,9 +20,23 @@ Endpoints:
 """
 
 import os
+import sys
 import time
-import joblib
+from pathlib import Path
 from datetime import datetime
+from typing import Optional, List
+
+# Ensure current directory is on sys.path for submodule resolution
+APP_DIR = Path(__file__).resolve().parent
+if str(APP_DIR) not in sys.path:
+    sys.path.insert(0, str(APP_DIR))
+
+import joblib
+import httpx
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+
 from restriction_data    import get_restriction, TRANSPORT_RESTRICTIONS
 from live_intelligence   import get_route_intelligence
 from transit_data        import get_walk_to_transit, get_matatu_route, MATATU_ROUTES
@@ -30,14 +44,6 @@ from weather_intelligence import (
     get_weather_trend, get_flood_risk,
     get_day_pattern, DAY_CONGESTION_MULT
 )
-import httpx
-from pathlib import Path
-from typing import Optional, List
-
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-
 from models  import PredictRequest, ReportRequest
 from routing import get_route
 from storage import save_report, list_reports
@@ -51,9 +57,13 @@ app = FastAPI(
     version="2.0.0",
 )
 
+frontend_origin = os.getenv("FRONTEND_URL", "*")
+allowed_origins = [frontend_origin] if frontend_origin != "*" else ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins,
+    allow_origin_regex=".*",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
